@@ -33,6 +33,16 @@ public class Player : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Time.deltaTime * hiz);
 
+
+            if(Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(-Vector3.right * Time.deltaTime * donusHizi * 20);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * Time.deltaTime * donusHizi * 20);
+            }
         }
 
         if (Input.touchCount > 0 && !oyunBitti)
