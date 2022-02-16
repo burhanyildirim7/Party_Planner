@@ -19,7 +19,7 @@ public class GameController1 : MonoBehaviour
     [SerializeField] Image paraGosterici;
 
 
-    WaitForSeconds beklemeSuresi = new WaitForSeconds(.6f);
+    WaitForSeconds beklemeSuresi = new WaitForSeconds(.5f);
 
     void Start()
     {

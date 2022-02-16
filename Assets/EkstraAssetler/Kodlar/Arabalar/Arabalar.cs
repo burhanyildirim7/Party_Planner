@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class Arabalar : MonoBehaviour
 {
     [Header("TakipIcinGerekli")]
-    GameObject Karakter;
-    public GameObject hedef;
+    private Transform Karakter;
+    private Vector3 hedef = Vector3.forward * .4f;
     bool oyunBittiMi = false;
     [SerializeField] int siralama = 0; //ilk arabanýn "siralama" degeri 1 olmalidir
 
@@ -17,9 +17,8 @@ public class Arabalar : MonoBehaviour
 
     void Start()
     {
-        Karakter = GameObject.FindWithTag("Player");
+        Karakter = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        hedef = Karakter;
 
         StartCoroutine(TakipEt());
     }
@@ -34,16 +33,15 @@ public class Arabalar : MonoBehaviour
     {
         while (!oyunBittiMi)
         {
-            agent.SetDestination(hedef.transform.position - hedef.transform.forward * .4f);
+            agent.SetDestination(Karakter.position - hedef);
             yield return beklemeSuresi;
         }
     }
 
 
     //olusan her araba en önde olacagi icin böyle bir fonksiyona ihtiyac vardir
-    public void SiralamaDegistir(GameObject yeniHedef)
+    public void HedefDegistir(Vector3 yeniHedef)
     {
-        transform.position -= Vector3.forward * .5f;
         hedef = yeniHedef;
     }
 }
