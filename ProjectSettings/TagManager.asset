@@ -11,6 +11,12 @@ TagManager:
   - finish
   - collectible
   - elmas
+  - Arabalar
+  - BolumSonu
+  - Para
+  - Araba
+  - Restaurant
+  - Zemin
   layers:
   - Default
   - TransparentFX

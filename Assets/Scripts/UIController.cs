@@ -11,7 +11,11 @@ public class UIController : MonoBehaviour
 	public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
 	public Animator ScoreTextAnim;
 
-
+	WaitForSeconds beklemeSuresi = new WaitForSeconds(3.5f); //sayac sistemi icin gereklidir
+	WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.05f); //sayac sistemi icin gereklidir
+	WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.015f); //sayac sistemi icin gereklidir
+    WaitForSeconds beklemeSuresi3 = new WaitForSeconds(.025f); //sayac sistemi icin gereklidir
+	WaitForSeconds beklemeSuresi4 = new WaitForSeconds(.03f); //sayac sistemi icin gereklidir
 
 	// singleton yapisi burada kuruluyor.
 	private void Awake()
@@ -114,14 +118,14 @@ public class UIController : MonoBehaviour
 	/// </summary>
 	public void ActivateWinScreen()
 	{
-		GamePanel.SetActive(false);
+	   // GamePanel.SetActive(false);
 		StartCoroutine(WinScreenDelay());
 	}
 
 	IEnumerator WinScreenDelay()
 	{
-		WinPanel.SetActive(true);
-		winScreenScoreText.text = "0";
+		//WinPanel.SetActive(true);
+		
 		int sayac = 0;
 		while(sayac < GameController.instance.score)
 		{
@@ -136,8 +140,14 @@ public class UIController : MonoBehaviour
 				StartCoroutine(WinScreenEffect(effectObj));
 			}
 			winScreenScoreText.text = sayac.ToString();
-			yield return new WaitForSeconds(.05f);
+			yield return beklemeSuresi1; //.05f
 		}
+
+		yield return beklemeSuresi; //3f
+	    GamePanel.SetActive(false);
+		WinPanel.SetActive(true);
+		winScreenScoreText.text = "0";
+
 	}
 
 	IEnumerator WinScreenEffect(GameObject effectObj)
@@ -150,7 +160,7 @@ public class UIController : MonoBehaviour
 			scale = Mathf.Lerp(effectObj.transform.localScale.x,winScreenCoinImage.transform.localScale.x,sayac);
 			effectObj.transform.localScale = Vector3.one * scale;
 			sayac += .02f;
-			yield return new WaitForSeconds(.015f);
+			yield return beklemeSuresi2;  //.015f
 		}
 		Destroy(effectObj);
 	}
@@ -166,10 +176,9 @@ public class UIController : MonoBehaviour
 			adet++;
 			sayac += .01f;
 			startScreenCoinImage.transform.position = Vector2.Lerp(startScreenCoinImage.transform.position, tapToStartScoreText.transform.position, sayac);
-			yield return new WaitForSeconds(.025f);
-			if(adet %3 == 0)
+			yield return beklemeSuresi3;  //.025f
+			if (adet %3 == 0)
 			{
-				Debug.Log("çalýþtýýýý");
 				GameObject coin = Instantiate(winScreenEffectObject, startScreenCoinImage.transform.position, Quaternion.identity,TapToStartPanel.transform);
 				coin.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
 				coin.transform.rotation = startScreenCoinImage.transform.rotation;
@@ -190,7 +199,7 @@ public class UIController : MonoBehaviour
 			obj.transform.localScale = new Vector3(obj.transform.localScale.x - .05f, obj.transform.localScale.y - .05f, obj.transform.localScale.z - .05f);
 			tempColor.a = tempColor.a - .05f;
 			obj.GetComponent<Image>().color = tempColor;
-			yield return new WaitForSeconds(.03f);
+			yield return beklemeSuresi4; //.03f
 		}
 		Destroy(obj);
 	}
@@ -226,7 +235,4 @@ public class UIController : MonoBehaviour
 		GamePanel.SetActive(false);
 		tapToStartScoreText.text = PlayerPrefs.GetInt("total").ToString();
 	}
-
-	
-
 }

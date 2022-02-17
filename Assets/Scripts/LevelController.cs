@@ -80,6 +80,5 @@ public class LevelController : MonoBehaviour
 	{
 		Elephant.LevelFailed(totalLevelNo);
 		PlayerController.instance.StartingEvents();
-
 	}
 }

@@ -11,6 +11,19 @@ public class PlayerController : MonoBehaviour
     public bool xVarMi = true;
     public bool collectibleVarMi = true;
 
+    [Header("AnimatorIcinGerekli")]
+    [SerializeField] private Animator anim;
+
+    [Header("KosuIcin")]
+    private bool oyunBitti = false;
+
+    [Header("KarakterYönBelirlemeIcin")]
+    private Touch ilkDokunus;
+    private Vector3 haraketEttirme;
+
+    [Header("OyunSonuIcınGerekli")]
+    GameObject gameController;
+
 
     private void Awake()
     {
@@ -30,7 +43,6 @@ public class PlayerController : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("collectible"))
         {
             // COLLECTIBLE CARPINCA YAPILACAKLAR...
@@ -48,22 +60,22 @@ public class PlayerController : MonoBehaviour
                 UIController.instance.ActivateLooseScreen(); // Bu fonksiyon direk çağrılada bilir veya herhangi bir effect veya animasyon bitiminde de çağrılabilir..
                 // oyuncu fail durumunda bu fonksiyon çağrılacak.. 
 			}
-
-
         }
         else if (other.CompareTag("finish")) 
         {
             // finishe collider eklenecek levellerde...
             // FINISH NOKTASINA GELINCE YAPILACAKLAR... Totalscore artırma, x işlemleri, efektler v.s. v.s.
             GameController.instance.isContinue = false;
-            GameController.instance.ScoreCarp(3);  // Bu fonksiyon normalde x ler hesaplandıktan sonra çağrılacak. Parametre olarak x i alıyor. 
+         //   GameController.instance.ScoreCarp(3);  // Bu fonksiyon normalde x ler hesaplandıktan sonra çağrılacak. Parametre olarak x i alıyor. 
             // x değerine göre oyuncunun total scoreunu hesaplıyor.. x li olmayan oyunlarda parametre olarak 1 gönderilecek.
             UIController.instance.ActivateWinScreen(); // finish noktasına gelebildiyse her türlü win screen aktif edilecek.. ama burada değil..
-            // normal de bu kodu x ler hesaplandıktan sonra çağıracağız. Ve bu kod çağrıldığında da kazanılan puanlar animasyonlu şekilde artacak..
+            // normal de bu kodu x ler hesaplandıktan sonra çağıracağız. Ve bu kod çağrıldığında da kazanılan puanlar animasyonlu şekilde artacak..  
 
-            
+            gameController.GetComponent<GameController>().OyunSonu();
+            anim.SetBool("KosmaP", false);
+            other.gameObject.SetActive(false);
+            oyunBitti = true;
         }
-
     }
 
 
@@ -72,7 +84,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void StartingEvents()
     {
-
+        
         transform.parent.transform.rotation = Quaternion.Euler(0, 0, 0);
         transform.parent.transform.position = Vector3.zero;
         GameController.instance.isContinue = false;
@@ -80,6 +92,6 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(0, transform.position.y, 0);
         GetComponent<Collider>().enabled = true;
 
+        gameController = GameObject.FindWithTag("GameController");
     }
-
 }
