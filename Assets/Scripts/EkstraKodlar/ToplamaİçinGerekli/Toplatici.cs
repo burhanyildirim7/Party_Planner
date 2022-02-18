@@ -7,7 +7,7 @@ public class Toplatici : MonoBehaviour
 {
     [SerializeField] BolumTuru bolumTuru;
     [SerializeField] Bar bar;
-    [SerializeField] MuzikGurubu muzikGrubu;
+    [SerializeField] KonserAlani konserAlani;
     [SerializeField] Davetliler davetliler;
 
     [Header("FiyatlaIlgiliDuzenleme")]
@@ -77,19 +77,19 @@ public class Toplatici : MonoBehaviour
         }
         else if (bolumTuru.ToString() == "MuzikGurubu")
         {
-            if (muzikGrubu.ToString() == "HoparlorKýrmýzý")
+            if (konserAlani.ToString() == "HoparlorKirmizi")
             {
                 muzikGrubuResimleri[0].SetActive(true);
             }
-            else if (muzikGrubu.ToString() == "HoparlorMavi")
+            else if (konserAlani.ToString() == "HoparlorMavi")
             {
                 muzikGrubuResimleri[1].SetActive(true);
             }
-            else if (muzikGrubu.ToString() == "MasaSari")
+            else if (konserAlani.ToString() == "MasaSari")
             {
                 muzikGrubuResimleri[2].SetActive(true);
             }
-            else if (muzikGrubu.ToString() == "MasaYesil")
+            else if (konserAlani.ToString() == "MasaYesil")
             {
                 muzikGrubuResimleri[3].SetActive(true);
             }
@@ -193,13 +193,13 @@ public class Toplatici : MonoBehaviour
         {
             arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), bar.ToString());
         }
-        else if (bolumTuru.ToString() == "MuzikGurubu")
+        else if (bolumTuru.ToString() == "KonserAlani")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), muzikGrubu.ToString());
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), konserAlani.ToString());
         }
         else if (bolumTuru.ToString() == "Davetliler")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), muzikGrubu.ToString());
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), konserAlani.ToString());
         }
     }
 
