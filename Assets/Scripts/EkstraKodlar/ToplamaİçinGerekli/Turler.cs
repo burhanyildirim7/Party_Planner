@@ -6,7 +6,7 @@ using UnityEngine;
 public enum BolumTuru
 {
     Bar,
-    MuzikGurubu,
+    KonserAlani,
     Davetliler
 }
 
@@ -20,10 +20,10 @@ public enum Bar
    IcecekMavi
 }
 
-public enum MuzikGurubu
+public enum KonserAlani
 {
     Any = 0,
-    HoparlorKýrmýzý,
+    HoparlorKirmizi,
     HoparlorMavi,
     Sarkici,
     Dansci

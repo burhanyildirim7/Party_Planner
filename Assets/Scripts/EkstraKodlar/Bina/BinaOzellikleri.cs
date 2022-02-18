@@ -22,13 +22,13 @@ public class BinaOzellikleri : MonoBehaviour
         if (!PlayerPrefs.HasKey("BarOlustur"))
         {
             PlayerPrefs.SetInt("BarOlustur", 0);
-            PlayerPrefs.SetInt("MuzikGrubuOlustur", 0);
+            PlayerPrefs.SetInt("KonserAlaniOlustur", 0);
 
             //Bardaki Obje Sayisi
             PlayerPrefs.SetInt("Bar_ObjeSayisi", 0);
 
             //Muzik gurubu obje sayisi
-            PlayerPrefs.SetInt("MuzikGrubu_ObjeSayisi", 0);
+            PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", 0);
         }
 
         OlusturOncekiLeveldekileri();
@@ -38,7 +38,7 @@ public class BinaOzellikleri : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            PlayerPrefs.SetInt("BarOlustur", 1);
+            PlayerPrefs.SetInt("KonserAlaniOlustur", 1);
         }
     }
 
@@ -54,18 +54,18 @@ public class BinaOzellikleri : MonoBehaviour
             }
         }
 
-        if (PlayerPrefs.GetInt("MuzikGrubuOlustur") == 1)
+        if (PlayerPrefs.GetInt("KonserAlaniOlustur") == 1)
         {
-            for (int i = 0; i < PlayerPrefs.GetInt("MuzikGrubu_ObjeSayisi"); i++)
+            for (int i = 0; i < PlayerPrefs.GetInt("KonserAlani_ObjeSayisi"); i++)
             {
-                bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("MuzikGrubu" + i.ToString()));
+                bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("KonserAlani" + i.ToString()));
             }
         }
     }
 
 
     //Insa etme kýsýmlarý burdan soradýr
-    public void BarKayitEt(string levelIsmi, string objeTuru)
+    public void BarKayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru);
 
@@ -74,12 +74,17 @@ public class BinaOzellikleri : MonoBehaviour
     }
 
 
-    public void MuzikGrubuKayitEt(string levelIsmi, string objeTuru)
+    public void KonserAlaniKayitEt(string levelIsmi, string objeTuru)  // Binanin ismi ve obje türü
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi, objeTuru);
 
-        PlayerPrefs.SetInt("MuzikGrubu_ObjeSayisi", leveldekiObjeSayisi);
+        PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
         leveldekiObjeSayisi++;
+    }
+
+    public void Sifirla_BinaOzellikleri()
+    {
+       //Daha sonrasinda burayi doldur.
     }
 
 }

@@ -31,13 +31,6 @@ public class Bina_Bar : MonoBehaviour
         CarpismaKontrol(esya);
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Esya"))
-        {
-            CarpismaKontrol(other.gameObject);
-        }
-    }
 
     private void CarpismaKontrol(GameObject other)
     {
@@ -55,19 +48,22 @@ public class Bina_Bar : MonoBehaviour
     //Sandalye yerlestirme için gereklidir
     private void SandalyeYerlestir(string isim)
     {
-        Debug.Log(isim);
         GameObject obje;
         if (isim == "KirmiziSandalye(Clone)")
         {
+            Debug.Log(sandalyeSirasi);
             obje = Instantiate(Sandalyeler[0], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             obje.transform.localScale = Vector3.one * 4;
+
+            sandalyeSirasi++;
         }
         else if (isim == "MaviSandalye(Clone)")
         {
             obje = Instantiate(Sandalyeler[1], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             obje.transform.localScale = Vector3.one * 4;
+
+            sandalyeSirasi++;
         }
-        sandalyeSirasi++;
     }
 
     //icecek yerlestirme icin gereklidir
@@ -76,11 +72,14 @@ public class Bina_Bar : MonoBehaviour
         if (isim == "KirmiziIcecek(Clone)")
         {
             Instantiate(Icecekler[0], icecekKonumlari[IcecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+
+            IcecekSirasi++;
         }
         else if (isim == "MaviIcecek(Clone)")
         {
             Instantiate(Icecekler[1], icecekKonumlari[IcecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+
+            IcecekSirasi++;
         }
-        IcecekSirasi++;
     }
 }

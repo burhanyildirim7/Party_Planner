@@ -6,16 +6,16 @@ public class Bina_KonserAlani : MonoBehaviour
 {
 
     [Header("Konumlar")]
-    [SerializeField] private Transform[] sandalyeKonumlari;
-    [SerializeField] private Transform[] icecekKonumlari;
+    [SerializeField] private Transform[] hoparlorKonumlari;
+    [SerializeField] private Transform[] sarkiciKonumlari;
 
     [Header("SiraSayilari")]
-    private int sandalyeSirasi = 0;
-    private int IcecekSirasi = 0;
+    private int hoparlorSirasi = 0;
+    private int sarkiciSirasi = 0;
 
     [Header("OlusacakObjeler")]
-    [SerializeField] GameObject[] Sandalyeler;
-    [SerializeField] GameObject[] Icecekler;
+    [SerializeField] GameObject[] hoparlorler;
+    [SerializeField] GameObject[] sarkicilar;
 
     private BinaOzellikleri binaOzellikleri;
 
@@ -25,18 +25,17 @@ public class Bina_KonserAlani : MonoBehaviour
         binaOzellikleri = GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>();
     }
 
-    private void OnCollisionEnter(Collision other)
+    public void EsyaCikarBar(GameObject esya)
     {
-        if (other.gameObject.CompareTag("Esya"))
-        {
-            CarpismaKontrol(other.gameObject);
-        }
+
+        CarpismaKontrol(esya);
     }
+
 
     private void CarpismaKontrol(GameObject other)
     {
         other.gameObject.SetActive(false);
-        binaOzellikleri.BarKayitEt("Bar", other.gameObject.name);
+        binaOzellikleri.KonserAlaniKayitEt("KonserAlani", other.gameObject.name);
         ObjeyiYerlestir(other.gameObject.name);
     }
 
@@ -50,17 +49,20 @@ public class Bina_KonserAlani : MonoBehaviour
     private void SandalyeYerlestir(string isim)
     {
         GameObject obje;
-        if (isim == "KirmiziSandalye(Clone)")
+        if (isim == "HoparlorKirmizi(Clone)")
         {
-            obje = Instantiate(Sandalyeler[0], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            obje.transform.localScale = Vector3.one * 4;
+            obje = Instantiate(hoparlorler[0], hoparlorKonumlari[hoparlorSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale = Vector3.one * 1;
+
+            hoparlorSirasi++;
         }
-        else if (isim == "MaviSandalye(Clone)")
+        else if (isim == "HoparlorMavi(Clone)")
         {
-            obje = Instantiate(Sandalyeler[1], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            obje.transform.localScale = Vector3.one * 4;
+            obje = Instantiate(hoparlorler[1], hoparlorKonumlari[hoparlorSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale = Vector3.one * 1;
+
+            hoparlorSirasi++;
         }
-        sandalyeSirasi++;
     }
 
     //icecek yerlestirme icin gereklidir
@@ -68,12 +70,15 @@ public class Bina_KonserAlani : MonoBehaviour
     {
         if (isim == "KirmiziIcecek(Clone)")
         {
-            Instantiate(Icecekler[0], icecekKonumlari[IcecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(sarkicilar[0], sarkiciKonumlari[sarkiciSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+
+            sarkiciSirasi++;
         }
         else if (isim == "MaviIcecek(Clone)")
         {
-            Instantiate(Icecekler[1], icecekKonumlari[IcecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(sarkicilar[1], sarkiciKonumlari[sarkiciSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+
+            sarkiciSirasi++;
         }
-        IcecekSirasi++;
     }
 }

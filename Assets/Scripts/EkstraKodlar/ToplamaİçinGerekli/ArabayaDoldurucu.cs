@@ -23,8 +23,9 @@ public class ArabayaDoldurucu : MonoBehaviour
     [SerializeField] private int arabaKapasitesi;
 
     [Header("BolumSonuIcinKonumlar")]
-    GameObject bar;
-    GameObject konserAlani;
+    private GameObject hedefEsya = null;            //Gidilecek hedefi belirler
+    private GameObject bar;
+    private GameObject konserAlani;
 
     [Header("Listeler")]
     List<GameObject> tumEsyalar = new List<GameObject>();
@@ -39,6 +40,8 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
+
+
         bar = GameObject.FindWithTag("Bar");
         konserAlani = GameObject.FindWithTag("KonserAlani");
     }
@@ -64,14 +67,15 @@ public class ArabayaDoldurucu : MonoBehaviour
             {
                 MeyveYerlestir(bar_Objeler[3]);
             }
+            hedefEsya = bar;
         }
-        else if (bolumIsmi == "MuzikGurubu")
+        else if (bolumIsmi == "KonserAlani")
         {
-            if (meyveIsmi == "SandalyeKirmizi")
+            if (meyveIsmi == "HoparlorKirmizi")
             {
                 MeyveYerlestir(muzikGrubu_Objeler[0]);
             }
-            else if (meyveIsmi == "SandalyeMavi")
+            else if (meyveIsmi == "HoparlorMavi")
             {
                 MeyveYerlestir(muzikGrubu_Objeler[1]);
             }
@@ -83,6 +87,7 @@ public class ArabayaDoldurucu : MonoBehaviour
             {
                 MeyveYerlestir(muzikGrubu_Objeler[3]);
             }
+            hedefEsya = konserAlani;
         }
         else if (bolumIsmi == "Davetliler")
         {
@@ -227,7 +232,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
         while (firlatilanMeyveSayisi < tumEsyalar.Count)
         {
-            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<EsyaGonder>().EsyayiGonder(bar);
+            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<EsyaGonder>().EsyayiGonder(hedefEsya);
             arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].transform.position;
             arabaOlusmaEfekt.Play();
 
@@ -244,4 +249,6 @@ public class ArabayaDoldurucu : MonoBehaviour
             yield return beklemeSuresi;
         }
     }
+
+
 }

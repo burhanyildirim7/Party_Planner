@@ -12,7 +12,7 @@ public class EsyaGonder : MonoBehaviour
 
     public void EsyayiGonder(GameObject hedef)
     {
-        hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);
+        hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
         gameObject.SetActive(false);
     }
 
