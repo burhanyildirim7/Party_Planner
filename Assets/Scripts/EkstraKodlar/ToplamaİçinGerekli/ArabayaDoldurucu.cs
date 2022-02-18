@@ -23,7 +23,8 @@ public class ArabayaDoldurucu : MonoBehaviour
     [SerializeField] private int arabaKapasitesi;
 
     [Header("BolumSonuIcinKonumlar")]
-    Transform bar;
+    GameObject bar;
+    GameObject konserAlani;
 
     [Header("Listeler")]
     List<GameObject> tumEsyalar = new List<GameObject>();
@@ -38,7 +39,8 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
-        bar = GameObject.FindWithTag("Bar").transform;
+        bar = GameObject.FindWithTag("Bar");
+        konserAlani = GameObject.FindWithTag("KonserAlani");
     }
 
     //Hangi meyve olacagi ve nereye konulacagi icin gereklidir
@@ -225,9 +227,11 @@ public class ArabayaDoldurucu : MonoBehaviour
 
         while (firlatilanMeyveSayisi < tumEsyalar.Count)
         {
-            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<Meyveler>().OyunSonuMeyveKontrol(bar);
+            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<EsyaGonder>().EsyayiGonder(bar);
+            arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].transform.position;
+            arabaOlusmaEfekt.Play();
 
-           if(((tumEsyalar.Count - 1) - firlatilanMeyveSayisi) % 3 == 0)
+            if (((tumEsyalar.Count - 1) - firlatilanMeyveSayisi) % 3 == 0)
            {
                 arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
                 arabaOlusmaEfekt.Play();

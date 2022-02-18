@@ -25,6 +25,12 @@ public class Bina_Bar : MonoBehaviour
         binaOzellikleri = GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>();
     }
 
+    public void EsyaCikarBar(GameObject esya)
+    {
+        
+        CarpismaKontrol(esya);
+    }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Esya"))
@@ -49,6 +55,7 @@ public class Bina_Bar : MonoBehaviour
     //Sandalye yerlestirme için gereklidir
     private void SandalyeYerlestir(string isim)
     {
+        Debug.Log(isim);
         GameObject obje;
         if (isim == "KirmiziSandalye(Clone)")
         {

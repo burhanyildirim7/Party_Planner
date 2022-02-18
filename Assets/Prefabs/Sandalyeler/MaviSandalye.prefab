@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3185294602414453861}
   - component: {fileID: 3033808045601104587}
   - component: {fileID: 3603478296509097952}
-  - component: {fileID: -6367161687819601847}
+  - component: {fileID: 6439586764154741746}
   m_Layer: 0
   m_Name: MaviSandalye
   m_TagString: Esya
@@ -154,7 +154,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6367161687819601847
+--- !u!114 &6439586764154741746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3185294602414453860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599513bae8abe764ca15de6f9fcda3a8, type: 3}
+  m_Script: {fileID: 11500000, guid: ced53f290fc2c1b45bfab5a6fefa7884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3185294602481113798
