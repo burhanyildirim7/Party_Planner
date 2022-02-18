@@ -15,8 +15,11 @@ TagManager:
   - BolumSonu
   - Para
   - Araba
-  - Restaurant
   - Zemin
+  - Bar
+  - Esya
+  - BuildingController
+  - KonserAlani
   layers:
   - Default
   - TransparentFX

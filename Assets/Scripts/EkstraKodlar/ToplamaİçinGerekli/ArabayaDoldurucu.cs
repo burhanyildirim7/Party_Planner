@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ArabayaDoldurucu : MonoBehaviour
 {
-    [Header("Doldurulacaklar")]
-    [SerializeField] GameObject[] meyveler;
-    [SerializeField] GameObject[] esyalar;
+
+    //Resimler icin gereklidir
+    [Header("Doldurulacaklar")]  
+    [SerializeField] GameObject[] bar_Objeler;
+    [SerializeField] GameObject[] muzikGrubu_Objeler;
+    [SerializeField] GameObject[] davetli_Objeler;
 
 
     [Header("ArabaIcin")]
@@ -17,12 +20,13 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("YerlestirmeIcinGerekli")]
     int meyveSayisi = 0;
+    [SerializeField] private int arabaKapasitesi;
 
     [Header("BolumSonuIcinKonumlar")]
-    Transform restaurant;
+    Transform bar;
 
     [Header("Listeler")]
-    List<GameObject> tumMeyveler = new List<GameObject>();
+    List<GameObject> tumEsyalar = new List<GameObject>();
     List<GameObject> tumArabalar = new List<GameObject>();
 
     [Header("Efektler")]
@@ -34,48 +38,67 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
-        restaurant = GameObject.FindWithTag("Restaurant").transform;
+        bar = GameObject.FindWithTag("Bar").transform;
     }
 
     //Hangi meyve olacagi ve nereye konulacagi icin gereklidir
     public void MeyveYerlestirmeAyarlayici(string bolumIsmi,string meyveIsmi)
     {
-        if(bolumIsmi == "Pasta")
-        {
-            if (meyveIsmi == "Kirmizi")
-            {
-                MeyveYerlestir(meyveler[0]);
-            }
-            else if (meyveIsmi == "Mavi")
-            {
-                MeyveYerlestir(meyveler[1]);
-            }
-            else if (meyveIsmi == "Sari")
-            {
-                MeyveYerlestir(meyveler[2]);
-            }
-            else if (meyveIsmi == "Yesil")
-            {
-                MeyveYerlestir(meyveler[3]);
-            }
-        }
-        else if (bolumIsmi == "Bar")
+        if (bolumIsmi == "Bar")
         {
             if (meyveIsmi == "SandalyeKirmizi")
             {
-                MeyveYerlestir(esyalar[0]);
+                MeyveYerlestir(bar_Objeler[0]);
             }
             else if (meyveIsmi == "SandalyeMavi")
             {
-                MeyveYerlestir(esyalar[1]);
+                MeyveYerlestir(bar_Objeler[1]);
+            }
+            else if (meyveIsmi == "IcecekKirmizi")
+            {
+                MeyveYerlestir(bar_Objeler[2]);
+            }
+            else if (meyveIsmi == "IcecekMavi")
+            {
+                MeyveYerlestir(bar_Objeler[3]);
+            }
+        }
+        else if (bolumIsmi == "MuzikGurubu")
+        {
+            if (meyveIsmi == "SandalyeKirmizi")
+            {
+                MeyveYerlestir(muzikGrubu_Objeler[0]);
+            }
+            else if (meyveIsmi == "SandalyeMavi")
+            {
+                MeyveYerlestir(muzikGrubu_Objeler[1]);
             }
             else if (meyveIsmi == "MasaSari")
             {
-                MeyveYerlestir(esyalar[2]);
+                MeyveYerlestir(muzikGrubu_Objeler[2]);
             }
             else if (meyveIsmi == "MasaYesil")
             {
-                MeyveYerlestir(esyalar[3]);
+                MeyveYerlestir(muzikGrubu_Objeler[3]);
+            }
+        }
+        else if (bolumIsmi == "Davetliler")
+        {
+            if (meyveIsmi == "SandalyeKirmizi")
+            {
+                MeyveYerlestir(davetli_Objeler[0]);
+            }
+            else if (meyveIsmi == "SandalyeMavi")
+            {
+                MeyveYerlestir(davetli_Objeler[1]);
+            }
+            else if (meyveIsmi == "MasaSari")
+            {
+                MeyveYerlestir(davetli_Objeler[2]);
+            }
+            else if (meyveIsmi == "MasaYesil")
+            {
+                MeyveYerlestir(davetli_Objeler[3]);
             }
         }
     }
@@ -87,11 +110,11 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         GameObject gelenMeyve = Instantiate(meyve, tumArabalar[tumArabalar.Count - 1].transform.position + Vector3.up * .3f + Vector3.right * Random.Range(-.1f, .1f), Quaternion.identity);
         gelenMeyve.transform.parent = tumArabalar[tumArabalar.Count - 1].transform;
-        tumMeyveler.Add(gelenMeyve);
+        tumEsyalar.Add(gelenMeyve);
 
 
         meyveSayisi++;
-        if (meyveSayisi >= 3)
+        if (meyveSayisi >= arabaKapasitesi)
         {
             meyveSayisi = 0;
 
@@ -200,11 +223,11 @@ public class ArabayaDoldurucu : MonoBehaviour
         int firlatilanMeyveSayisi = 0;
         int yokEdilenArabaSayisi = 0;
 
-        while (firlatilanMeyveSayisi < tumMeyveler.Count)
+        while (firlatilanMeyveSayisi < tumEsyalar.Count)
         {
-            tumMeyveler[(tumMeyveler.Count - 1) - firlatilanMeyveSayisi].GetComponent<Meyveler>().OyunSonuMeyveKontrol(restaurant);
+            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<Meyveler>().OyunSonuMeyveKontrol(bar);
 
-           if(((tumMeyveler.Count - 1) - firlatilanMeyveSayisi) % 3 == 0)
+           if(((tumEsyalar.Count - 1) - firlatilanMeyveSayisi) % 3 == 0)
            {
                 arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
                 arabaOlusmaEfekt.Play();

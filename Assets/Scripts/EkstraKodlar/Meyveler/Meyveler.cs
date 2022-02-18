@@ -45,15 +45,9 @@ public class Meyveler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
         if (collision.gameObject.CompareTag("Zemin")) //Yere dusen meyve icin gecerlidir
         {
             transform.position = GameObject.FindWithTag("Player").transform.position - Vector3.forward * 20;
-        }
-
-        if (collision.gameObject.CompareTag("Restaurant")) //Buradan sonra restaurant icin insa etme sureci eklenecektir
-        {
-            gameObject.SetActive(false);
         }
 
     }

@@ -9,7 +9,6 @@ public class Arabalar : MonoBehaviour
     private Transform Karakter;
     private Vector3 hedef = Vector3.forward * .4f;
     bool oyunBittiMi = false;
-    [SerializeField] int siralama = 0; //ilk arabanýn "siralama" degeri 1 olmalidir
 
     [Header("IcerdenGerekli")]
     NavMeshAgent agent;

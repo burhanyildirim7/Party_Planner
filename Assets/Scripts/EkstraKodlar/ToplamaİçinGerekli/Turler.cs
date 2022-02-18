@@ -5,51 +5,35 @@ using UnityEngine;
 
 public enum BolumTuru
 {
-    Punch,
-    Bar
+    Bar,
+    MuzikGurubu,
+    Davetliler
 }
 
-public enum Punch
+
+public enum Bar
 {
    Any = 0, 
-   Kirmizi,
-   Sari,
-   Mavi,
-   Yesil
+   SandalyeKirmizi,
+   SandalyeMavi,
+   IcecekKirmizi,
+   IcecekMavi
 }
 
-public enum Bina1
+public enum MuzikGurubu
 {
     Any = 0,
-    SandalyeKirmizi,
-    SandalyeMavi,
-    MasaSari,
-    MasaYesil
-}
-
-public enum Bina2
-{
-    Any = 0,
-    Kirmizi,
-    Sari,
-    Mavi,
-    Yesil
-}
-
-public enum MuzikGrubu
-{
-    Any = 0,
-    Kirmizi,
-    Sari,
-    Mavi,
-    Yesil
+    HoparlorKırmızı,
+    HoparlorMavi,
+    Sarkici,
+    Dansci
 }
 
 public enum Davetliler
 {
     Any = 0,
     Kirmizi,
-    Sari,
     Mavi,
+    Sari,
     Yesil
 }

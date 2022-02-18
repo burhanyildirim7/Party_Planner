@@ -81,6 +81,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator OyunSonuEfektleriAyarla()
     {
+        yield return new WaitForSeconds(3);
         for (int i = 0; i < efektler.Length / 2; i++)
         {
             efektler[i * 2].Play();

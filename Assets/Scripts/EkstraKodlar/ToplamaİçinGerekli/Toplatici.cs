@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class Toplatici : MonoBehaviour
 {
     [SerializeField] BolumTuru bolumTuru;
-    [SerializeField] Bina0 pasta;
-    [SerializeField] Bina1 bar;
+    [SerializeField] Bar bar;
+    [SerializeField] MuzikGurubu muzikGrubu;
+    [SerializeField] Davetliler davetliler;
+
+    [Header("FiyatlaIlgiliDuzenleme")]
+    [SerializeField] int fiyat;
+    [SerializeField] Text fiyatYazdirici;
 
 
     [Header("KaraktereErisim")]
@@ -15,8 +20,9 @@ public class Toplatici : MonoBehaviour
     KarakterPara karakterPara;
 
     [Header("MeyveResimleriniIcinGerekli")]
-    [SerializeField] GameObject[] pastaResimleri;
     [SerializeField] GameObject[] barResimleri;
+    [SerializeField] GameObject[] muzikGrubuResimleri;
+    [SerializeField] GameObject[] davetlilerResimleri;
 
 
     [Header("MeshPasiflestirmeIcinGerekli")]
@@ -24,10 +30,6 @@ public class Toplatici : MonoBehaviour
 
     [Header("MeyveninArabayaKoyulmasi")]
     ArabayaDoldurucu arabayadoldurucu;
-
-    [Header("FiyatlaIlgiliDuzenleme")]
-    [SerializeField] int fiyat;
-    [SerializeField] Text fiyatYazdirici;
 
     [Header("KapiRenkleriIcin")]
     [SerializeField] private Material[] renk;
@@ -54,26 +56,7 @@ public class Toplatici : MonoBehaviour
     //Kapida olusacak olan resimi belirler
     private void ResimiBelirleKapi()
     {
-        if(bolumTuru.ToString() == "Pasta")
-        {
-            if (pasta.ToString() == "Kirmizi")
-            {
-                pastaResimleri[0].SetActive(true);
-            }
-            else if (pasta.ToString() == "Sari")
-            {
-                pastaResimleri[1].SetActive(true);
-            }
-            else if (pasta.ToString() == "Mavi")
-            {
-                pastaResimleri[2].SetActive(true);
-            }
-            else if (pasta.ToString() == "Yesil")
-            {
-                pastaResimleri[3].SetActive(true);
-            }
-        }
-        else if (bolumTuru.ToString() == "Bar")
+        if(bolumTuru.ToString() == "Bar")
         {
             if (bar.ToString() == "SandalyeKirmizi")
             {
@@ -83,15 +66,53 @@ public class Toplatici : MonoBehaviour
             {
                 barResimleri[1].SetActive(true);
             }
-            else if (bar.ToString() == "MasaSari")
+            else if (bar.ToString() == "IcecekKirmizi")
             {
                 barResimleri[2].SetActive(true);
             }
-            else if (bar.ToString() == "MasaYesil")
+            else if (bar.ToString() == "IcecekMavi")
             {
                 barResimleri[3].SetActive(true);
             }
         }
+        else if (bolumTuru.ToString() == "MuzikGurubu")
+        {
+            if (muzikGrubu.ToString() == "HoparlorKýrmýzý")
+            {
+                muzikGrubuResimleri[0].SetActive(true);
+            }
+            else if (muzikGrubu.ToString() == "HoparlorMavi")
+            {
+                muzikGrubuResimleri[1].SetActive(true);
+            }
+            else if (muzikGrubu.ToString() == "MasaSari")
+            {
+                muzikGrubuResimleri[2].SetActive(true);
+            }
+            else if (muzikGrubu.ToString() == "MasaYesil")
+            {
+                muzikGrubuResimleri[3].SetActive(true);
+            }
+        }
+      /*  else if (bolumTuru.ToString() == "Davetliler")
+        {
+            if (davetliler.ToString() == "SandalyeKirmizi")
+            {
+                davetlilerResimleri[0].SetActive(true);
+            }
+            else if (davetliler.ToString() == "SandalyeMavi")
+            {
+                davetlilerResimleri[1].SetActive(true);
+            }
+            else if (davetliler.ToString() == "MasaSari")
+            {
+                davetlilerResimleri[2].SetActive(true);
+            }
+            else if (davetliler.ToString() == "MasaYesil")
+            {
+                davetlilerResimleri[3].SetActive(true);
+            }
+        }*/
 
     }
 
@@ -132,26 +153,33 @@ public class Toplatici : MonoBehaviour
     private void ResimPasiflestir()
     {
         mesh.enabled = false;
-        if (bolumTuru.ToString() == "Pasta")
+        if (bolumTuru.ToString() == "Bar")
         {
-            for (int i = 0; i < pastaResimleri.Length; i++)
-            {
-                pastaResimleri[i].SetActive(false);
-            }
-        }
-        else if(bolumTuru.ToString() == "Bar")
-        {
-           
-            for (int i = 0; i < pastaResimleri.Length; i++)
+            for (int i = 0; i < barResimleri.Length; i++)
             {
                 barResimleri[i].SetActive(false);
+            }
+        }
+        else if(bolumTuru.ToString() == "MuzikGurubu")
+        {
+           
+            for (int i = 0; i < muzikGrubuResimleri.Length; i++)
+            {
+                muzikGrubuResimleri[i].SetActive(false);
+            }
+        }
+        else if (bolumTuru.ToString() == "Davetliler")
+        {
+            for (int i = 0; i < davetlilerResimleri.Length; i++)
+            {
+                davetlilerResimleri[i].SetActive(false);
             }
         }
     }
 
     IEnumerator meyveCikarmaAyari()
     {
-        for (int i = 0; i < Random.Range(3, 7); i++)
+        for (int i = 0; i < 1; i++)
         {
             MeyveCikar();
             yield return beklemeSuresi1;
@@ -161,14 +189,18 @@ public class Toplatici : MonoBehaviour
     //
     private void MeyveCikar()
     {
-        if(bolumTuru.ToString() == "Pasta")
+        if(bolumTuru.ToString() == "Bar")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), pasta.ToString());
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), bar.ToString());
         }
-        else if (bolumTuru.ToString() == "Bar")
+        else if (bolumTuru.ToString() == "MuzikGurubu")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(),bar.ToString());
-        }    
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), muzikGrubu.ToString());
+        }
+        else if (bolumTuru.ToString() == "Davetliler")
+        {
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(bolumTuru.ToString(), muzikGrubu.ToString());
+        }
     }
 
     //Iki kapidan ayni anda meyve almasini engeller

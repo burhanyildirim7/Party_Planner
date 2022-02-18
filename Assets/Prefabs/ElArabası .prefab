@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 6881951458042588019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.017547, y: 0.2438, z: 0}
-  m_LocalScale: {x: 0.68006355, y: 0.68006355, z: 0.68006355}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8701791698474671463}
@@ -84,7 +84,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 4
+  m_Speed: 3.4
   m_Acceleration: 10000
   avoidancePriority: 50
   m_AngularSpeed: 5000
@@ -93,7 +93,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.29
-  m_BaseOffset: 0.18
+  m_BaseOffset: 0.13
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &8960893126239034037
@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7962a4aadd8c1b44bcc61ea6a716a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siralama: 0
 --- !u!1 &6881951458118881115
 GameObject:
   m_ObjectHideFlags: 0
