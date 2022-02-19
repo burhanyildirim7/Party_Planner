@@ -239,21 +239,21 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Meyvelerin yukari firlatilmasini duzenler
     public void MeyveOyunSonuAyarlayici()
     {
-        StartCoroutine(MeyveleriFirlat());
+        StartCoroutine(EsyalariGonder());
     }
 
-    public IEnumerator MeyveleriFirlat()
+    public IEnumerator EsyalariGonder()
     {
-        int firlatilanMeyveSayisi = 0;
+        int firlatilanEsyaSayisi = 0;
         int yokEdilenArabaSayisi = 0;
 
-        while (firlatilanMeyveSayisi < tumEsyalar.Count)
+        while (firlatilanEsyaSayisi < tumEsyalar.Count)
         {
-            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].GetComponent<EsyaGonder>().EsyayiGonder(hedefEsya);
-            arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanMeyveSayisi].transform.position;
+            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].GetComponent<EsyaGonder>().EsyayiGonder(hedefEsya);
+            arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].transform.position;
             arabaOlusmaEfekt.Play();
 
-            if (((tumEsyalar.Count - 1) - firlatilanMeyveSayisi) % 3 == 0)
+            if (((tumEsyalar.Count - 1) - firlatilanEsyaSayisi) % 3 == 0)
            {
                 arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
                 arabaOlusmaEfekt.Play();
@@ -262,7 +262,7 @@ public class ArabayaDoldurucu : MonoBehaviour
                 yokEdilenArabaSayisi++;
             }
 
-            firlatilanMeyveSayisi++;
+            firlatilanEsyaSayisi++;
             yield return beklemeSuresi;
         }
     }

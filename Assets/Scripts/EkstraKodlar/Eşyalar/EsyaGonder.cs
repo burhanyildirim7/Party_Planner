@@ -13,6 +13,7 @@ public class EsyaGonder : MonoBehaviour
 
     public void EsyayiGonder(GameObject hedef)
     {
+
         if(bolumIsmi == "Bar")
         {
             hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
