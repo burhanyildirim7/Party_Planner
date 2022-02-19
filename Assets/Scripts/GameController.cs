@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     [SerializeField] ParticleSystem[] efektler;
 
     [Header("ParaBelirtmekIcin")]
-    public static int dolar; 
+    public static int dolar;
     [SerializeField] Text paraYazi;
 
     WaitForSeconds beklemeSuresi = new WaitForSeconds(.6f);
@@ -31,11 +31,11 @@ public class GameController : MonoBehaviour
 
 
     private void Awake()
-	{
+    {
         if (instance == null) instance = this;
     }
 
-	void Start()
+    void Start()
     {
         isContinue = false;
 
