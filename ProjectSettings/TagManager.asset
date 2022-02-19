@@ -20,6 +20,16 @@ TagManager:
   - Esya
   - BuildingController
   - KonserAlani
+  - Kobje1
+  - Kobje2
+  - Kobje3
+  - Iobje1
+  - Iobje2
+  - Iobje3
+  - Kobje1Tek
+  - Kobje2Tek
+  - Iobje1Tek
+  - Iobje2Tek
   layers:
   - Default
   - TransparentFX

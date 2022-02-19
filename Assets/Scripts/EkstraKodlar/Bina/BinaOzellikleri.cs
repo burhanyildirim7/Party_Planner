@@ -38,12 +38,12 @@ public class BinaOzellikleri : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            PlayerPrefs.SetInt("KonserAlaniOlustur", 1);
+            PlayerPrefs.SetInt("BarOlustur", 1);
         }
     }
 
     //Onceki levellerde insa edilenleri getir
-    private void OlusturOncekiLeveldekileri()
+    /*private void OlusturOncekiLeveldekileri()
     {
         
         if (PlayerPrefs.GetInt("BarOlustur") == 1)
@@ -51,8 +51,6 @@ public class BinaOzellikleri : MonoBehaviour
             for (int i = 0; i < PlayerPrefs.GetInt("Bar_ObjeSayisi"); i++)
             {
                 bina_Bar.ObjeyiYerlestir(PlayerPrefs.GetString("Bar" + i.ToString()));
-            }
-        }
 
         if (PlayerPrefs.GetInt("KonserAlaniOlustur") == 1)
         {
@@ -61,6 +59,20 @@ public class BinaOzellikleri : MonoBehaviour
                 bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("KonserAlani" + i.ToString()));
             }
         }
+    }*/
+
+    private void OlusturOncekiLeveldekileri()
+    {
+        for (int i = 0; i < PlayerPrefs.GetInt("Bar_ObjeSayisi"); i++)
+        {
+            bina_Bar.ObjeyiYerlestir(PlayerPrefs.GetString("Bar" + i.ToString()));
+        }
+
+        for (int i = 0; i < PlayerPrefs.GetInt("KonserAlani_ObjeSayisi"); i++)
+        {
+            bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("KonserAlani" + i.ToString()));
+        }
+
     }
 
 
@@ -68,9 +80,9 @@ public class BinaOzellikleri : MonoBehaviour
     public void BarKayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru);
-
-        PlayerPrefs.SetInt("Bar_ObjeSayisi", leveldekiObjeSayisi);
+        
         leveldekiObjeSayisi++;
+        PlayerPrefs.SetInt("Bar_ObjeSayisi", leveldekiObjeSayisi);
     }
 
 
@@ -78,13 +90,13 @@ public class BinaOzellikleri : MonoBehaviour
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi, objeTuru);
 
-        PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
         leveldekiObjeSayisi++;
+        PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
     }
 
     public void Sifirla_BinaOzellikleri()
     {
-       //Daha sonrasinda burayi doldur.
+        //Daha sonrasinda burayi doldur.
     }
 
 }

@@ -27,7 +27,6 @@ public class Bina_Bar : MonoBehaviour
 
     public void EsyaCikarBar(GameObject esya)
     {
-        
         CarpismaKontrol(esya);
     }
 
@@ -51,7 +50,6 @@ public class Bina_Bar : MonoBehaviour
         GameObject obje;
         if (isim == "KirmiziSandalye(Clone)")
         {
-            Debug.Log(sandalyeSirasi);
             obje = Instantiate(Sandalyeler[0], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             obje.transform.localScale = Vector3.one * 4;
 

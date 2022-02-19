@@ -11,29 +11,18 @@ public enum BolumTuru
 }
 
 
-public enum Bar
+public enum Kalite
 {
    Any = 0, 
-   SandalyeKirmizi,
-   SandalyeMavi,
-   IcecekKirmizi,
-   IcecekMavi
+   Iyi,
+   Kotu
 }
 
-public enum KonserAlani
+public enum NesneNumarasi
 {
     Any = 0,
-    HoparlorKirmizi,
-    HoparlorMavi,
-    Sarkici,
-    Dansci
-}
-
-public enum Davetliler
-{
-    Any = 0,
-    Kirmizi,
-    Mavi,
-    Sari,
-    Yesil
+    Nesne0,
+    Nesne1,
+    Nesne2,
+    Nesne3
 }
