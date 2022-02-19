@@ -21,6 +21,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     [Header("YerlestirmeIcinGerekli")]
     int meyveSayisi = 0;
     [SerializeField] private int arabaKapasitesi;
+    string bolumIsmi;
 
     [Header("BolumSonuIcinKonumlar")]
     private GameObject hedefEsya = null;            //Gidilecek hedefi belirler
@@ -40,6 +41,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
+        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
 
 
         bar = GameObject.FindWithTag("Bar");
@@ -47,66 +49,81 @@ public class ArabayaDoldurucu : MonoBehaviour
     }
 
     //Hangi meyve olacagi ve nereye konulacagi icin gereklidir
-    public void MeyveYerlestirmeAyarlayici(string bolumIsmi,string meyveIsmi)
+    public void MeyveYerlestirmeAyarlayici(string esyaIsmi)
     {
         if (bolumIsmi == "Bar")
         {
-            if (meyveIsmi == "SandalyeKirmizi")
-            {
-                MeyveYerlestir(bar_Objeler[0]);
-            }
-            else if (meyveIsmi == "SandalyeMavi")
-            {
-                MeyveYerlestir(bar_Objeler[1]);
-            }
-            else if (meyveIsmi == "IcecekKirmizi")
-            {
-                MeyveYerlestir(bar_Objeler[2]);
-            }
-            else if (meyveIsmi == "IcecekMavi")
-            {
-                MeyveYerlestir(bar_Objeler[3]);
-            }
-            hedefEsya = bar;
+            BarEsyaCikar(esyaIsmi);
         }
         else if (bolumIsmi == "KonserAlani")
         {
-            if (meyveIsmi == "HoparlorKirmizi")
-            {
-                MeyveYerlestir(muzikGrubu_Objeler[0]);
-            }
-            else if (meyveIsmi == "HoparlorMavi")
-            {
-                MeyveYerlestir(muzikGrubu_Objeler[1]);
-            }
-            else if (meyveIsmi == "MasaSari")
-            {
-                MeyveYerlestir(muzikGrubu_Objeler[2]);
-            }
-            else if (meyveIsmi == "MasaYesil")
-            {
-                MeyveYerlestir(muzikGrubu_Objeler[3]);
-            }
-            hedefEsya = konserAlani;
+            KonserAlaniEsyaCikar(esyaIsmi);
         }
         else if (bolumIsmi == "Davetliler")
         {
-            if (meyveIsmi == "SandalyeKirmizi")
-            {
-                MeyveYerlestir(davetli_Objeler[0]);
-            }
-            else if (meyveIsmi == "SandalyeMavi")
-            {
-                MeyveYerlestir(davetli_Objeler[1]);
-            }
-            else if (meyveIsmi == "MasaSari")
-            {
-                MeyveYerlestir(davetli_Objeler[2]);
-            }
-            else if (meyveIsmi == "MasaYesil")
-            {
-                MeyveYerlestir(davetli_Objeler[3]);
-            }
+            
+        }
+    }
+
+    private void BarEsyaCikar(string esyaIsmi)
+    {
+        if (esyaIsmi == "Kobje1")
+        {
+            MeyveYerlestir(bar_Objeler[0]);
+        }
+        else if (esyaIsmi == "Iobje1")
+        {
+            MeyveYerlestir(bar_Objeler[1]);
+        }
+        else if (esyaIsmi == "Kobje2")
+        {
+            MeyveYerlestir(bar_Objeler[2]);
+        }
+        else if (esyaIsmi == "Iobje2")
+        {
+            MeyveYerlestir(bar_Objeler[3]);
+        }
+        hedefEsya = bar;
+    }
+
+    private void KonserAlaniEsyaCikar(string esyaIsmi)
+    {
+        if (esyaIsmi == "Kobje1")
+        {
+            MeyveYerlestir(muzikGrubu_Objeler[0]);
+        }
+        else if (esyaIsmi == "Iobje1")
+        {
+            MeyveYerlestir(muzikGrubu_Objeler[1]);
+        }
+        else if (esyaIsmi == "Kobje2")
+        {
+            MeyveYerlestir(muzikGrubu_Objeler[2]);
+        }
+        else if (esyaIsmi == "Iobje2")
+        {
+            MeyveYerlestir(muzikGrubu_Objeler[3]);
+        }
+        hedefEsya = konserAlani;
+    }
+
+    private void DavetlilerEsyaCikar(string esyaIsmi)
+    {
+        if (esyaIsmi == "Kobje1")
+        {
+            MeyveYerlestir(davetli_Objeler[0]);
+        }
+        else if (esyaIsmi == "Iobje1")
+        {
+            MeyveYerlestir(davetli_Objeler[1]);
+        }
+        else if (esyaIsmi == "Kobje2")
+        {
+            MeyveYerlestir(davetli_Objeler[2]);
+        }
+        else if (esyaIsmi == "Iobje2")
+        {
+            MeyveYerlestir(davetli_Objeler[3]);
         }
     }
 

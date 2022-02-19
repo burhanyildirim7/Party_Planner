@@ -234,10 +234,36 @@ public class Toplatici : MonoBehaviour
             karakterPara.meyveSatinAl(fiyat);
 
             ResimPasiflestir();
-            StartCoroutine(meyveCikarmaAyari());
+            StartCoroutine(esyaCikarmaAyari());
             DigerKapidanMeyveAlmayiPasiflestir();
         }
     }
+
+    IEnumerator esyaCikarmaAyari()
+    {
+        for (int i = 0; i < 1; i++)
+        {
+            esyaCikar();
+            yield return beklemeSuresi1;
+        }
+    }
+
+    private void esyaCikar()
+    {
+        if(bolumIsmi == "Bar")
+        {
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+        }
+        else if (bolumIsmi == "KonserAlani")
+        {
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+        }
+        else if (bolumIsmi == "Davetliler")
+        {
+            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+        }
+    }
+
 
     //kapiya temastan sonra resimi pasiflestirir
     private void ResimPasiflestir()
@@ -250,7 +276,7 @@ public class Toplatici : MonoBehaviour
                 barResimleri[i].SetActive(false);
             }
         }
-        else if(bolumIsmi == "KonserAlani")
+        else if (bolumIsmi == "KonserAlani")
         {
             for (int i = 0; i < konserAlaniResimleri.Length; i++)
             {
@@ -264,32 +290,6 @@ public class Toplatici : MonoBehaviour
                 davetlilerResimleri[i].SetActive(false);
             }
         }
-    }
-
-    IEnumerator meyveCikarmaAyari()
-    {
-        for (int i = 0; i < 1; i++)
-        {
-            MeyveCikar();
-            yield return beklemeSuresi1;
-        }
-    }
-
-   
-    private void MeyveCikar()
-    {
-      /*  if(GameController.bolumTuru.ToString() == "Bar")
-        {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(GameController.bolumTuru.ToString(), kalite.ToString());
-        }
-        else if (GameController.bolumTuru.ToString() == "KonserAlani")
-        {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(GameController.bolumTuru.ToString(), kalite.ToString());
-        }
-        else if (GameController.bolumTuru.ToString() == "Davetliler")
-        {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(GameController.bolumTuru.ToString(), kalite.ToString());
-        }*/
     }
 
     //Iki kapidan ayni anda meyve almasini engeller
