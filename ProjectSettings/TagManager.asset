@@ -21,14 +21,18 @@ TagManager:
   - BuildingController
   - KonserAlani
   - Kobje1
-  - Kobje2
-  - Kobje3
   - Iobje1
+  - Kobje2
   - Iobje2
+  - Kobje3
   - Iobje3
+  - Kobje4
+  - Iobje4
+  - Kobje5
+  - Iobje5
   - Kobje1Tek
-  - Kobje2Tek
   - Iobje1Tek
+  - Kobje2Tek
   - Iobje2Tek
   layers:
   - Default

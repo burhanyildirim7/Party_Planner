@@ -268,7 +268,9 @@ public class Toplatici : MonoBehaviour
     //kapiya temastan sonra resimi pasiflestirir
     private void ResimPasiflestir()
     {
+        fiyatYazdirici.text = "";
         mesh.enabled = false;
+
         if (bolumIsmi == "Bar")
         {
             for (int i = 0; i < barResimleri.Length; i++)

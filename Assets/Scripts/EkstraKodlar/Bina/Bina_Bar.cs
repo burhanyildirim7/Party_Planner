@@ -87,10 +87,8 @@ public class Bina_Bar : MonoBehaviour
 
     private void BarmenYerlestir(string isim)
     {
-      
         if(isim == "BarmenIyi(Clone)")
         {
-            Debug.Log(isim);
             Instantiate(barmenler[0], barmenKonumlari[barmenSirasi].transform.position, Quaternion.identity);
         }
         else if (isim == "BarmenKotu(Clone)")

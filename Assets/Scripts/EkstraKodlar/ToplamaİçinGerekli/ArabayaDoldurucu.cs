@@ -9,8 +9,8 @@ public class ArabayaDoldurucu : MonoBehaviour
     [Header("Doldurulacaklar")]  
     [SerializeField] GameObject[] bar_Objeler;
     [SerializeField] GameObject[] bar_Objeler_Tek;
-    [SerializeField] GameObject[] muzikGrubu_Objeler;
-    [SerializeField] GameObject[] muzikGrubu_Objeler_Tek;
+    [SerializeField] GameObject[] KonserAlani_Objeler;
+    [SerializeField] GameObject[] KonserAlani_Objeler_Tek;
     [SerializeField] GameObject[] davetli_Objeler;
     [SerializeField] GameObject[] davetli_Objeler_Tek;
 
@@ -102,19 +102,28 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Kobje1")
         {
-            esyaYerlestir(muzikGrubu_Objeler[0]);
+            esyaYerlestir(KonserAlani_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            esyaYerlestir(muzikGrubu_Objeler[1]);
+            esyaYerlestir(KonserAlani_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            esyaYerlestir(muzikGrubu_Objeler[2]);
+            esyaYerlestir(KonserAlani_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            esyaYerlestir(muzikGrubu_Objeler[3]);
+            esyaYerlestir(KonserAlani_Objeler[3]);
+        }
+
+        if (esyaIsmi == "Kobje1Tek")
+        {
+            esyaYerlestir(KonserAlani_Objeler_Tek[0]);
+        }
+        else if (esyaIsmi == "Iobje1Tek")
+        {
+            esyaYerlestir(KonserAlani_Objeler_Tek[1]);
         }
         hedefEsya = konserAlani;
     }

@@ -7,5 +7,6 @@ public enum BolumTuru
 {
     Bar,
     KonserAlani,
+    MeyveBolumu,
     Davetliler
 }
