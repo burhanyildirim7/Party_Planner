@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public static BolumTuru bolumTuru;
+
+    public BolumTuru bolumTuru;
 
     [Header("OyunSonundaErisilecekler")]
     GameObject[] araba;

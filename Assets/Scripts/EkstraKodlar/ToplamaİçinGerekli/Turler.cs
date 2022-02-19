@@ -9,20 +9,3 @@ public enum BolumTuru
     KonserAlani,
     Davetliler
 }
-
-
-public enum Kalite
-{
-   Any = 0, 
-   Iyi,
-   Kotu
-}
-
-public enum NesneNumarasi
-{
-    Any = 0,
-    Nesne0,
-    Nesne1,
-    Nesne2,
-    Nesne3
-}

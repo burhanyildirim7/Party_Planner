@@ -5,10 +5,6 @@ using UnityEngine.UI;
 
 public class Toplatici : MonoBehaviour
 {
-    [SerializeField] BolumTuru bolumTuru;
-    [SerializeField] Kalite kalite;
-    [SerializeField] NesneNumarasi nesneNumarasi;
-
     [Header("FiyatlaIlgiliDuzenleme")]
     [SerializeField] int fiyat;
     [SerializeField] Text fiyatYazdirici;
@@ -19,6 +15,7 @@ public class Toplatici : MonoBehaviour
     KarakterPara karakterPara;
 
     [Header("MeyveResimleriniIcinGerekli")]
+    private string bolumIsmi;
     [SerializeField] GameObject[] barResimleri;
     [SerializeField] GameObject[] muzikGrubuResimleri;
     [SerializeField] GameObject[] davetlilerResimleri;
@@ -40,6 +37,8 @@ public class Toplatici : MonoBehaviour
         renderer = GetComponent<Renderer>();
         karakterPara = GameObject.FindWithTag("Player").GetComponent<KarakterPara>();
         arabayadoldurucu = GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>();
+        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
+
 
         fiyatYazdirici.text = fiyat.ToString() + " $";
 
@@ -52,44 +51,34 @@ public class Toplatici : MonoBehaviour
     //Kapida olusacak olan resimi belirler
     private void ResimiBelirleKapi()
     {
-        if(GameController.bolumTuru.ToString() == "Bar")
+        Debug.Log(bolumIsmi);
+        if(bolumIsmi == "Bar")
         {
-            if (kalite.ToString() == "SandalyeKirmizi")
-            {
-                barResimleri[0].SetActive(true);
-            }
-            else if (kalite.ToString() == "SandalyeMavi")
-            {
-                barResimleri[1].SetActive(true);
-            }
-            else if (kalite.ToString() == "IcecekKirmizi")
-            {
-                barResimleri[2].SetActive(true);
-            }
-            else if (kalite.ToString() == "IcecekMavi")
-            {
-                barResimleri[3].SetActive(true);
-            }
+            BarResimBelirle();
         }
-        else if (GameController.bolumTuru.ToString() == "MuzikGurubu")
+        else if (bolumIsmi == "KonserAlani")
         {
-            if (kalite.ToString() == "HoparlorKirmizi")
-            {
-                muzikGrubuResimleri[0].SetActive(true);
-            }
-            else if (kalite.ToString() == "HoparlorMavi")
-            {
-                muzikGrubuResimleri[1].SetActive(true);
-            }
-            else if (kalite.ToString() == "MasaSari")
-            {
-                muzikGrubuResimleri[2].SetActive(true);
-            }
-            else if (kalite.ToString() == "MasaYesil")
-            {
-                muzikGrubuResimleri[3].SetActive(true);
-            }
+            KonserAlaniResimBelirle();
         }
+        else if (bolumIsmi == "Davetliler")
+        {
+            DavetliResimBelirle();
+        }
+    }
+
+    private void BarResimBelirle()
+    {
+
+    }
+
+    private void KonserAlaniResimBelirle()
+    {
+
+    }
+
+    private void DavetliResimBelirle()
+    {
+
     }
 
     
@@ -129,7 +118,7 @@ public class Toplatici : MonoBehaviour
     private void ResimPasiflestir()
     {
         mesh.enabled = false;
-        if (bolumTuru.ToString() == "Bar")
+       /* if (bolumTuru.ToString() == "Bar")
         {
             for (int i = 0; i < barResimleri.Length; i++)
             {
@@ -150,7 +139,7 @@ public class Toplatici : MonoBehaviour
             {
                 davetlilerResimleri[i].SetActive(false);
             }
-        }
+        }*/
     }
 
     IEnumerator meyveCikarmaAyari()
@@ -165,7 +154,7 @@ public class Toplatici : MonoBehaviour
     //
     private void MeyveCikar()
     {
-        if(GameController.bolumTuru.ToString() == "Bar")
+      /*  if(GameController.bolumTuru.ToString() == "Bar")
         {
             arabayadoldurucu.MeyveYerlestirmeAyarlayici(GameController.bolumTuru.ToString(), kalite.ToString());
         }
@@ -176,7 +165,7 @@ public class Toplatici : MonoBehaviour
         else if (GameController.bolumTuru.ToString() == "Davetliler")
         {
             arabayadoldurucu.MeyveYerlestirmeAyarlayici(GameController.bolumTuru.ToString(), kalite.ToString());
-        }
+        }*/
     }
 
     //Iki kapidan ayni anda meyve almasini engeller
