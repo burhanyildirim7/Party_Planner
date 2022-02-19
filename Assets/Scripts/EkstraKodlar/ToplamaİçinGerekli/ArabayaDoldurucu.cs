@@ -8,8 +8,11 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Resimler icin gereklidir
     [Header("Doldurulacaklar")]  
     [SerializeField] GameObject[] bar_Objeler;
+    [SerializeField] GameObject[] bar_Objeler_Tek;
     [SerializeField] GameObject[] muzikGrubu_Objeler;
+    [SerializeField] GameObject[] muzikGrubu_Objeler_Tek;
     [SerializeField] GameObject[] davetli_Objeler;
+    [SerializeField] GameObject[] davetli_Objeler_Tek;
 
 
     [Header("ArabaIcin")]
@@ -82,6 +85,15 @@ public class ArabayaDoldurucu : MonoBehaviour
         else if (esyaIsmi == "Iobje2")
         {
             esyaYerlestir(bar_Objeler[3]);
+        }
+
+        if (esyaIsmi == "Kobje1Tek")
+        {
+            esyaYerlestir(bar_Objeler_Tek[0]);
+        }
+        else if (esyaIsmi == "Iobje1Tek")
+        {
+            esyaYerlestir(bar_Objeler_Tek[1]);
         }
         hedefEsya = bar;
     }
