@@ -6,9 +6,14 @@ public class Bina_Bar : MonoBehaviour
 {
 
     [Header("Konumlar")]
-    [SerializeField] private Transform[] sandalyeKonumlari;
-    [SerializeField] private Transform[] icecekKonumlari;
-    [SerializeField] private Transform[] barmenKonumlari;
+    [SerializeField] private Transform[] obje1Konumlari;
+    [SerializeField] private Transform[] obje2Konumlari;
+    [SerializeField] private Transform[] obje3Konumlari;
+    [SerializeField] private Transform[] obje4Konumlari;
+    [SerializeField] private Transform[] obje5Konumlari;
+    [SerializeField] private Transform[] obje1Tek_Konumlari;
+    [SerializeField] private Transform[] obje2Tek_Konumlari;
+
 
     [Header("SiraSayilari")]
     private int sandalyeSirasi = 0;
@@ -54,14 +59,14 @@ public class Bina_Bar : MonoBehaviour
         GameObject obje;
         if (isim == "SandalyeIyi(Clone)")
         {
-            obje = Instantiate(sandalyeler[0], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje = Instantiate(sandalyeler[0], obje1Konumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             obje.transform.localScale = Vector3.one * 4;
 
             sandalyeSirasi++;
         }
         else if (isim == "SandalyeKotu(Clone)")
         {
-            obje = Instantiate(sandalyeler[1], sandalyeKonumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje = Instantiate(sandalyeler[1], obje1Konumlari[sandalyeSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             obje.transform.localScale = Vector3.one * 4;
 
             sandalyeSirasi++;
@@ -73,13 +78,13 @@ public class Bina_Bar : MonoBehaviour
     {
         if (isim == "IcecekIyi(Clone)")
         {
-            Instantiate(icecekler[0], icecekKonumlari[icecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(icecekler[0], obje2Konumlari[icecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
 
             icecekSirasi++;
         }
         else if (isim == "IcecekKotu(Clone)")
         {
-            Instantiate(icecekler[1], icecekKonumlari[icecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(icecekler[1], obje2Konumlari[icecekSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
 
             icecekSirasi++;
         }
@@ -89,11 +94,11 @@ public class Bina_Bar : MonoBehaviour
     {
         if(isim == "BarmenIyi(Clone)")
         {
-            Instantiate(barmenler[0], barmenKonumlari[barmenSirasi].transform.position, Quaternion.identity);
+            Instantiate(barmenler[0], obje3Konumlari[barmenSirasi].transform.position, Quaternion.identity);
         }
         else if (isim == "BarmenKotu(Clone)")
         {
-            Instantiate(barmenler[1], barmenKonumlari[barmenSirasi].transform.position, Quaternion.identity);
+            Instantiate(barmenler[1], obje3Konumlari[barmenSirasi].transform.position, Quaternion.identity);
         }
     }
 }

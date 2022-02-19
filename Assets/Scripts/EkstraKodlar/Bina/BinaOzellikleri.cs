@@ -19,11 +19,8 @@ public class BinaOzellikleri : MonoBehaviour
         bina_KonserAlani = GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>();
 
         //playerprefsler icin gereklidir
-        if (!PlayerPrefs.HasKey("BarOlustur"))
+        if (!PlayerPrefs.HasKey("Bar_ObjeSayisi"))
         {
-            PlayerPrefs.SetInt("BarOlustur", 0);
-            PlayerPrefs.SetInt("KonserAlaniOlustur", 0);
-
             //Bardaki Obje Sayisi
             PlayerPrefs.SetInt("Bar_ObjeSayisi", 0);
 
@@ -42,24 +39,6 @@ public class BinaOzellikleri : MonoBehaviour
         }
     }
 
-    //Onceki levellerde insa edilenleri getir
-    /*private void OlusturOncekiLeveldekileri()
-    {
-        
-        if (PlayerPrefs.GetInt("BarOlustur") == 1)
-        {
-            for (int i = 0; i < PlayerPrefs.GetInt("Bar_ObjeSayisi"); i++)
-            {
-                bina_Bar.ObjeyiYerlestir(PlayerPrefs.GetString("Bar" + i.ToString()));
-
-        if (PlayerPrefs.GetInt("KonserAlaniOlustur") == 1)
-        {
-            for (int i = 0; i < PlayerPrefs.GetInt("KonserAlani_ObjeSayisi"); i++)
-            {
-                bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("KonserAlani" + i.ToString()));
-            }
-        }
-    }*/
 
     private void OlusturOncekiLeveldekileri()
     {
@@ -79,7 +58,7 @@ public class BinaOzellikleri : MonoBehaviour
     //Insa etme kýsýmlarý burdan soradýr
     public void BarKayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
     {
-        PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru);
+        PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru); //Burasi sebebiyle ayný leveli iki defa oynadiginda son oynadigindaki objeler diger level icin kalici olur
         
         leveldekiObjeSayisi++;
         PlayerPrefs.SetInt("Bar_ObjeSayisi", leveldekiObjeSayisi);
