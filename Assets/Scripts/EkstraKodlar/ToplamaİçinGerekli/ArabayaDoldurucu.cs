@@ -69,19 +69,19 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Kobje1")
         {
-            MeyveYerlestir(bar_Objeler[0]);
+            esyaYerlestir(bar_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            MeyveYerlestir(bar_Objeler[1]);
+            esyaYerlestir(bar_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            MeyveYerlestir(bar_Objeler[2]);
+            esyaYerlestir(bar_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            MeyveYerlestir(bar_Objeler[3]);
+            esyaYerlestir(bar_Objeler[3]);
         }
         hedefEsya = bar;
     }
@@ -90,19 +90,19 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Kobje1")
         {
-            MeyveYerlestir(muzikGrubu_Objeler[0]);
+            esyaYerlestir(muzikGrubu_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            MeyveYerlestir(muzikGrubu_Objeler[1]);
+            esyaYerlestir(muzikGrubu_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            MeyveYerlestir(muzikGrubu_Objeler[2]);
+            esyaYerlestir(muzikGrubu_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            MeyveYerlestir(muzikGrubu_Objeler[3]);
+            esyaYerlestir(muzikGrubu_Objeler[3]);
         }
         hedefEsya = konserAlani;
     }
@@ -111,28 +111,28 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Kobje1")
         {
-            MeyveYerlestir(davetli_Objeler[0]);
+            esyaYerlestir(davetli_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            MeyveYerlestir(davetli_Objeler[1]);
+            esyaYerlestir(davetli_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            MeyveYerlestir(davetli_Objeler[2]);
+            esyaYerlestir(davetli_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            MeyveYerlestir(davetli_Objeler[3]);
+            esyaYerlestir(davetli_Objeler[3]);
         }
     }
 
 
     //Meyvenin yerlestirilmesi icin gereklidir
     //Araba olusturma kismi burasidir
-    void MeyveYerlestir(GameObject meyve)
+    void esyaYerlestir(GameObject esya)
     {
-        GameObject gelenMeyve = Instantiate(meyve, tumArabalar[tumArabalar.Count - 1].transform.position + Vector3.up * .3f + Vector3.right * Random.Range(-.1f, .1f), Quaternion.identity);
+        GameObject gelenMeyve = Instantiate(esya, tumArabalar[tumArabalar.Count - 1].transform.position + Vector3.up * .3f + Vector3.right * Random.Range(-.1f, .1f), Quaternion.identity);
         gelenMeyve.transform.parent = tumArabalar[tumArabalar.Count - 1].transform;
         tumEsyalar.Add(gelenMeyve);
 

@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class EsyaGonder : MonoBehaviour
 {
+    private string bolumIsmi;
 
     void Start()
     {
-       
+        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
     }
 
     public void EsyayiGonder(GameObject hedef)
     {
-        hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+        if(bolumIsmi == "Bar")
+        {
+            hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+        }
+        else if (bolumIsmi == "KonserAlani")
+        {
+            hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+        }
+        else if (bolumIsmi == "Davetliler")
+        {
+          //  hedef.GetComponent<Bina_Davetliler>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+        }
+        
         gameObject.SetActive(false);
     }
 
