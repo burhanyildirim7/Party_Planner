@@ -32,7 +32,7 @@ public class Toplatici : MonoBehaviour
     MeshRenderer mesh;
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
-    WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.5f); //Kapi rengini guncelleme suresi 
+    WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.45f); //Kapi rengini guncelleme suresi 
 
     private void Start()
     {
@@ -206,7 +206,9 @@ public class Toplatici : MonoBehaviour
         }
     }
 
-    
+
+
+
     //Kapinin rengini player in parasina gore günceller
     IEnumerator KapiRenginiGuncelle()
     {
@@ -225,6 +227,10 @@ public class Toplatici : MonoBehaviour
     }
 
     
+
+
+
+
 
     //Kapiya temas anini ayarlar
     private void OnTriggerEnter(Collider other)
@@ -263,6 +269,13 @@ public class Toplatici : MonoBehaviour
             arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
         }
     }
+
+
+
+
+
+
+
 
 
     //kapiya temastan sonra resimi pasiflestirir

@@ -7,7 +7,7 @@ public class Arabalar : MonoBehaviour
 {
     [Header("TakipIcinGerekli")]
     private Transform Karakter;
-    private Vector3 hedef = Vector3.forward * .4f;
+    private Vector3 hedef;
     bool oyunBittiMi = false;
 
     [Header("IcerdenGerekli")]
@@ -19,6 +19,7 @@ public class Arabalar : MonoBehaviour
 
     void Start()
     {
+        hedef = Vector3.forward * .4f;
         Karakter = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.speed = 8;

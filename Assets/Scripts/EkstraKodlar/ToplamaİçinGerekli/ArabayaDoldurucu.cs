@@ -51,7 +51,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         konserAlani = GameObject.FindWithTag("KonserAlani");
     }
 
-    //Hangi meyve olacagi ve nereye konulacagi icin gereklidir
+    //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
     public void MeyveYerlestirmeAyarlayici(string esyaIsmi)
     {
         if (bolumIsmi == "Bar")
@@ -149,7 +149,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     }
 
 
-    //Meyvenin yerlestirilmesi icin gereklidir
+    //Esyalarin yerlestirilmesi icin gereklidir
     //Araba olusturma kismi burasidir
     void esyaYerlestir(GameObject esya)
     {
@@ -254,6 +254,8 @@ public class ArabayaDoldurucu : MonoBehaviour
             }
         }
     }
+
+
 
 
     //Oyun sonu icin gereklidir

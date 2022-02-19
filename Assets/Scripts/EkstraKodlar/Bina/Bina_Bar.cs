@@ -35,15 +35,9 @@ public class Bina_Bar : MonoBehaviour
 
     public void EsyaCikarBar(GameObject esya)
     {
-        CarpismaKontrol(esya);
-    }
-
-
-    private void CarpismaKontrol(GameObject other)
-    {
-        other.gameObject.SetActive(false);
-        binaOzellikleri.BarKayitEt("Bar" , other.gameObject.name);
-        ObjeyiYerlestir(other.gameObject.name);
+        esya.gameObject.SetActive(false);
+        binaOzellikleri.BarKayitEt("Bar", esya.gameObject.name);
+        ObjeyiYerlestir(esya.gameObject.name);
     }
 
     public void ObjeyiYerlestir(string isim)
