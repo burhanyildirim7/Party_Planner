@@ -6,16 +6,32 @@ public class Bina_KonserAlani : MonoBehaviour
 {
 
     [Header("Konumlar")]
-    [SerializeField] private Transform[] hoparlorKonumlari;
-    [SerializeField] private Transform[] sarkiciKonumlari;
+    [SerializeField] private Transform[] obje1Konumlari;
+    [SerializeField] private Transform[] obje2Konumlari;
+    [SerializeField] private Transform[] obje3Konumlari;
+    [SerializeField] private Transform[] obje4Konumlari;
+    [SerializeField] private Transform[] obje5Konumlari;
+    [SerializeField] private Transform[] obje1Tek_Konumlari;
+    [SerializeField] private Transform[] obje2Tek_Konumlari;
+
 
     [Header("SiraSayilari")]
-    private int hoparlorSirasi = 0;
-    private int sarkiciSirasi = 0;
+    private int obje1Sirasi = 0;
+    private int obje2Sirasi = 0;
+    private int obje3Sirasi = 0;
+    private int obje4Sirasi = 0;
+    private int obje5Sirasi = 0;
+    private int obje1_TekSirasi = 0;
+    private int obje2_TekSirasi = 0;
 
     [Header("OlusacakObjeler")]
-    [SerializeField] GameObject[] hoparlorler;
-    [SerializeField] GameObject[] sarkicilar;
+    [SerializeField] GameObject[] obje1;
+    [SerializeField] GameObject[] obje2;
+    [SerializeField] GameObject[] obje3;
+    [SerializeField] GameObject[] obje4;
+    [SerializeField] GameObject[] obje5;
+    [SerializeField] GameObject[] obje1_Tek;
+    [SerializeField] GameObject[] obje2_Tek;
 
     private BinaOzellikleri binaOzellikleri;
 
@@ -27,58 +43,137 @@ public class Bina_KonserAlani : MonoBehaviour
 
     public void EsyaCikarBar(GameObject esya)
     {
-
-        CarpismaKontrol(esya);
-    }
-
-
-    private void CarpismaKontrol(GameObject other)
-    {
-        other.gameObject.SetActive(false);
-        binaOzellikleri.KonserAlaniKayitEt("KonserAlani", other.gameObject.name);
-        ObjeyiYerlestir(other.gameObject.name);
+        esya.gameObject.SetActive(false);
+        binaOzellikleri.BarKayitEt("Bar", esya.gameObject.name);
+        ObjeyiYerlestir(esya.gameObject.name);
     }
 
     public void ObjeyiYerlestir(string isim)
     {
-        SandalyeYerlestir(isim);
-        IceceklerYerlestir(isim);
+        Obje1Yerlestir(isim);
+        Obje2Yerlestir(isim);
+        Obje3Yerlestir(isim);
+        Obje4Yerlestir(isim);
+        Obje5Yerlestir(isim);
+        Obje1TekYerlestir(isim);
     }
 
-    //Sandalye yerlestirme için gereklidir
-    private void SandalyeYerlestir(string isim)
+
+
+
+
+    private void Obje1Yerlestir(string isim)
     {
         GameObject obje;
-        if (isim == "HoparlorKirmizi(Clone)")
+        if (isim == "Obje1Iyi(Clone)")
         {
-            obje = Instantiate(hoparlorler[0], hoparlorKonumlari[hoparlorSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            obje.transform.localScale = Vector3.one * 1;
+            obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale = Vector3.one * 4;
 
-            hoparlorSirasi++;
+            obje1Sirasi++;
         }
-        else if (isim == "HoparlorMavi(Clone)")
+        else if (isim == "Obje1Kotu(Clone)")
         {
-            obje = Instantiate(hoparlorler[1], hoparlorKonumlari[hoparlorSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            obje.transform.localScale = Vector3.one * 1;
+            obje = Instantiate(obje1[1], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale = Vector3.one * 4;
 
-            hoparlorSirasi++;
+            obje1Sirasi++;
         }
     }
 
-    //icecek yerlestirme icin gereklidir
-    private void IceceklerYerlestir(string isim)
+    private void Obje2Yerlestir(string isim)
     {
-        if (isim == "KirmiziIcecek(Clone)")
+        if (isim == "Obje2Iyi(Clone)")
         {
-            Instantiate(sarkicilar[0], sarkiciKonumlari[sarkiciSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(obje2[0], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
 
-            sarkiciSirasi++;
+            obje2Sirasi++;
         }
-        else if (isim == "MaviIcecek(Clone)")
+        else if (isim == "Obje2Kotu(Clone)")
         {
-            Instantiate(sarkicilar[1], sarkiciKonumlari[sarkiciSirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            Instantiate(obje2[1], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
 
-            sarkiciSirasi++;
+            obje2Sirasi++;
+        }
+    }
+
+    private void Obje3Yerlestir(string isim)
+    {
+        if (isim == "Obje3Iyi(Clone)")
+        {
+            Instantiate(obje3[0], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+
+            obje3Sirasi++;
+        }
+        else if (isim == "Obje3Kotu(Clone)")
+        {
+            Instantiate(obje3[1], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+
+            obje3Sirasi++;
+        }
+    }
+
+    private void Obje4Yerlestir(string isim)
+    {
+        if (isim == "Obje4Iyi(Clone)")
+        {
+            Instantiate(obje4[0], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+
+            obje4Sirasi++;
+        }
+        else if (isim == "Obje4Kotu(Clone)")
+        {
+            Instantiate(obje4[1], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+
+            obje4Sirasi++;
+        }
+    }
+
+    private void Obje5Yerlestir(string isim)
+    {
+        if (isim == "Obje5Iyi(Clone)")
+        {
+            Instantiate(obje5[0], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+
+            obje5Sirasi++;
+        }
+        else if (isim == "Obje5Kotu(Clone)")
+        {
+            Instantiate(obje5[1], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+
+            obje5Sirasi++;
+        }
+    }
+
+    private void Obje1TekYerlestir(string isim)
+    {
+        if (isim == "Obje1TekIyi(Clone)")
+        {
+            Instantiate(obje1_Tek[0], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+
+            obje1_TekSirasi++;
+        }
+        else if (isim == "Obje1TekKotu(Clone)")
+        {
+            Instantiate(obje1_Tek[1], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+
+            obje1_TekSirasi++;
+        }
+    }
+
+    private void Obje2TekYerlestir(string isim)
+    {
+        if (isim == "Obje2TekIyi(Clone)")
+        {
+            Instantiate(obje2_Tek[0], obje2Tek_Konumlari[obje1_TekSirasi].transform.position, Quaternion.identity);
+
+            obje2_TekSirasi++;
+        }
+        else if (isim == "Obje2TekKotu(Clone)")
+        {
+            Instantiate(obje2_Tek[1], obje2Tek_Konumlari[obje2_TekSirasi].transform.position, Quaternion.identity);
+
+            obje2_TekSirasi++;
         }
     }
 }
