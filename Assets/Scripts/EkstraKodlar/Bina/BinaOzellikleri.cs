@@ -31,14 +31,6 @@ public class BinaOzellikleri : MonoBehaviour
         OlusturOncekiLeveldekileri();
     }
 
-    void Update()   //Burasinin silinmesi gerekecek
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlayerPrefs.SetInt("BarOlustur", 1);
-        }
-    }
-
 
     private void OlusturOncekiLeveldekileri()
     {
