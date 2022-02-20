@@ -44,7 +44,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
-        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
+        bolumIsmi = LevelController.bolumunIsmi;
 
 
         bar = GameObject.FindWithTag("Bar");
@@ -52,9 +52,9 @@ public class ArabayaDoldurucu : MonoBehaviour
     }
 
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
-    public void MeyveYerlestirmeAyarlayici(string esyaIsmi)
+    public void EsyaYerlestirmeAyarlayici(string esyaIsmi)
     {
-        if (bolumIsmi == "Bar")
+        if (bolumIsmi == "PunchAlani")
         {
             BarEsyaCikar(esyaIsmi);
         }
@@ -260,7 +260,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     //Oyun sonu icin gereklidir
     //Meyvelerin yukari firlatilmasini duzenler
-    public void MeyveOyunSonuAyarlayici()
+    public void EsyaOyunSonuAyarlayici()
     {
         StartCoroutine(EsyalariGonder());
     }

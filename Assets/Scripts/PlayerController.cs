@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("finish")) 
         {
+            anim.SetBool("KosmaP", false);
             // finishe collider eklenecek levellerde...
             // FINISH NOKTASINA GELINCE YAPILACAKLAR... Totalscore artırma, x işlemleri, efektler v.s. v.s.
             GameController.instance.isContinue = false;
@@ -72,7 +73,8 @@ public class PlayerController : MonoBehaviour
             // normal de bu kodu x ler hesaplandıktan sonra çağıracağız. Ve bu kod çağrıldığında da kazanılan puanlar animasyonlu şekilde artacak..  
 
             gameController.GetComponent<GameController>().OyunSonu();
-            anim.SetBool("KosmaP", false);
+            GetComponent<AnimationController>().KosuPasif();
+            
             other.gameObject.SetActive(false);
             oyunBitti = true;
         }

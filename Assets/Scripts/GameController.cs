@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
 
-    public BolumTuru bolumTuru;
-
     [Header("OyunSonundaErisilecekler")]
     GameObject[] araba;
     GameObject kamera;
@@ -17,7 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] ParticleSystem[] efektler;
 
     [Header("ParaBelirtmekIcin")]
-    public static int dolar;
+    public static int para;
     [SerializeField] Text paraYazi;
 
     WaitForSeconds beklemeSuresi = new WaitForSeconds(.6f);
@@ -54,10 +52,17 @@ public class GameController : MonoBehaviour
     }
 
 
-    public void SetMoney(int eklenecekScore)
+    public void SetMoney(int eklenecekPara)
     {
-        dolar += eklenecekScore;
-        paraYazi.text = dolar.ToString() + " $";
+        para += eklenecekPara;
+        paraYazi.text = para.ToString() + " $";
+
+        if(para <= 0)
+        {
+            isContinue = false;
+            GameObject.FindWithTag("Player").GetComponent<AnimationController>().KosuPasif();
+            UIController.instance.ActivateLooseScreen();
+        }
     }
 
     public void SetScore(int sayi) //parti icin verilecek yildiz sayisini belirlemede kullanilacaktir
@@ -71,7 +76,7 @@ public class GameController : MonoBehaviour
     {
         araba = GameObject.FindGameObjectsWithTag("Araba");
         kamera.GetComponent<CameraMovement>().KameraOyunSonuKontrolAyarlari();
-        arabalar.GetComponent<ArabayaDoldurucu>().MeyveOyunSonuAyarlayici();
+        arabalar.GetComponent<ArabayaDoldurucu>().EsyaOyunSonuAyarlayici();
 
         for (int i = 0; i < araba.Length; i++)
         {

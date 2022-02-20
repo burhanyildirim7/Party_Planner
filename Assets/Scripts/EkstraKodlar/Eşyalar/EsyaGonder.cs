@@ -8,13 +8,13 @@ public class EsyaGonder : MonoBehaviour
 
     void Start()
     {
-        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
+        bolumIsmi = LevelController.bolumunIsmi;
     }
 
     public void EsyayiGonder(GameObject hedef)
     {
 
-        if(bolumIsmi == "Bar")
+        if(bolumIsmi == "PunchAlani")
         {
             hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
         }

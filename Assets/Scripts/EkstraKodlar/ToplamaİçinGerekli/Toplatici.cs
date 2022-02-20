@@ -40,7 +40,7 @@ public class Toplatici : MonoBehaviour
         renderer = GetComponent<Renderer>();
         karakterPara = GameObject.FindWithTag("Player").GetComponent<KarakterPara>();
         arabayadoldurucu = GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>();
-        bolumIsmi = GameObject.FindWithTag("GameController").GetComponent<GameController>().bolumTuru.ToString();
+        bolumIsmi = LevelController.bolumunIsmi;
 
 
         fiyatYazdirici.text = fiyat.ToString() + " $";
@@ -54,21 +54,21 @@ public class Toplatici : MonoBehaviour
     //Kapida olusacak olan resimi belirler
     private void ResimiBelirleKapi()
     {
-        if(bolumIsmi == "Bar")
+        if(LevelController.bolumunIsmi == "PunchAlani")
         {
-            BarResimBelirle();
+            PunchAlaniResimBelirle();
         }
-        else if (bolumIsmi == "KonserAlani")
+        else if (LevelController.bolumunIsmi == "KonserAlani")
         {
             KonserAlaniResimBelirle();
         }
-        else if (bolumIsmi == "Davetliler")
+        else if (LevelController.bolumunIsmi == "Davetliler")
         {
             DavetliResimBelirle();
         }
     }
 
-    private void BarResimBelirle()
+    private void PunchAlaniResimBelirle()
     {
         if(gameObject.tag == "Kobje1")
         {
@@ -214,7 +214,7 @@ public class Toplatici : MonoBehaviour
     {
         while((player.transform.position.z - transform.position.z) <= 10)
         {
-            if(GameController.dolar >= fiyat)
+            if(GameController.para >= fiyat)
             {
                 renderer.material = renk[0];   
             }
@@ -258,15 +258,15 @@ public class Toplatici : MonoBehaviour
     {
         if(bolumIsmi == "Bar")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
         else if (bolumIsmi == "KonserAlani")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
         else if (bolumIsmi == "Davetliler")
         {
-            arabayadoldurucu.MeyveYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
     }
 
