@@ -62,6 +62,8 @@ public class LevelController : MonoBehaviour
         UIController.instance.SetLevelText(totalLevelNo);
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
+
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
         if (PlayerPrefs.GetInt("level") == 0)
         {
             bolumunIsmi = "PunchAlani";

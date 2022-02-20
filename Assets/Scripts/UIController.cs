@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
 	public void TapToStartButtonClick()
 	{
 		GameObject.FindWithTag("Player").GetComponent<AnimationController>().KosuAktif();
+		
 
 
 		GameController.instance.isContinue = true;
@@ -62,6 +63,9 @@ public class UIController : MonoBehaviour
 	// RESTART TUSUNA BASILDISINDA  --- LOOSE EKRANINDA
 	public void RestartButtonClick()
 	{
+		//araba sayýsý ve esya sayisini sifirla
+		//kapilardaki meshleri tekrar ayarla
+
 		GamePanel.SetActive(false);
 		LoosePanel.SetActive(false);
 		TapToStartPanel.SetActive(true);
@@ -73,6 +77,9 @@ public class UIController : MonoBehaviour
 	// NEXT LEVEL TUSUNA BASILDIGINDA... WIN EKRANINDAKI BUTON
 	public void NextLevelButtonClick()
 	{
+		//araba sayýsý ve esya sayisini sifirla
+
+
 		SetTapToStartScoreText();
 		TapToStartPanel.SetActive(true);
 		WinPanel.SetActive(false);

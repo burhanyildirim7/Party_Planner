@@ -49,6 +49,9 @@ public class ArabayaDoldurucu : MonoBehaviour
 
         bar = GameObject.FindWithTag("Bar");
         konserAlani = GameObject.FindWithTag("KonserAlani");
+
+        ArabaOlustur();
+        ArabayaHedefBelirle();
     }
 
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir

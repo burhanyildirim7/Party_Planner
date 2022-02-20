@@ -16,11 +16,11 @@ public class EsyaGonder : MonoBehaviour
 
         if(bolumIsmi == "PunchAlani")
         {
-            hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+            hedef.GetComponent<Bina_Bar>().EsyaCikarBar(gameObject); 
         }
         else if (bolumIsmi == "KonserAlani")
         {
-            hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject);  //Burasinin otomatik olmasi gerekir
+            hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject); 
         }
         else if (bolumIsmi == "Davetliler")
         {

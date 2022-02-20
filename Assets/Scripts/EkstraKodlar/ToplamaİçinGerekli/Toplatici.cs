@@ -54,7 +54,19 @@ public class Toplatici : MonoBehaviour
     //Kapida olusacak olan resimi belirler
     private void ResimiBelirleKapi()
     {
-        if(LevelController.bolumunIsmi == "PunchAlani")
+        mesh.enabled = true;
+        mesh.material = renk[1];
+
+        for (int i = 0; i < 2; i++)
+        {
+            if(transform.root.transform.GetChild(i) == null)
+            {
+                transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
+            }
+        }
+
+
+        if (LevelController.bolumunIsmi == "PunchAlani")
         {
             PunchAlaniResimBelirle();
         }
@@ -256,7 +268,7 @@ public class Toplatici : MonoBehaviour
 
     private void esyaCikar()
     {
-        if(bolumIsmi == "Bar")
+        if(bolumIsmi == "PunchAlani")
         {
             arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
@@ -284,7 +296,8 @@ public class Toplatici : MonoBehaviour
         fiyatYazdirici.text = "";
         mesh.enabled = false;
 
-        if (bolumIsmi == "Bar")
+      
+        if (bolumIsmi == "PunchAlani")
         {
             for (int i = 0; i < barResimleri.Length; i++)
             {
@@ -312,7 +325,7 @@ public class Toplatici : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
-            transform.root.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
+            transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
