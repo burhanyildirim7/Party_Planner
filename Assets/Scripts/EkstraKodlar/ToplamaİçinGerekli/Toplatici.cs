@@ -16,8 +16,8 @@ public class Toplatici : MonoBehaviour
 
     [Header("Resimler›cinGerekli")]
     private string bolumIsmi;
-    [SerializeField] GameObject[] barResimleri;
-    [SerializeField] GameObject[] t_barResimleri;
+    [SerializeField] GameObject[] punchResimleri;
+    [SerializeField] GameObject[] t_punchResimleri;
     [SerializeField] GameObject[] konserAlaniResimleri;
     [SerializeField] GameObject[] t_konserAlaniResimleri;
     [SerializeField] GameObject[] davetlilerResimleri;
@@ -84,45 +84,61 @@ public class Toplatici : MonoBehaviour
     {
         if (gameObject.tag == "Kobje1")
         {
-            barResimleri[0].SetActive(true);
+            punchResimleri[0].SetActive(true);
         }
         else if (gameObject.tag == "Iobje1")
         {
-            barResimleri[1].SetActive(true);
+            punchResimleri[1].SetActive(true);
         }
         if (gameObject.tag == "Kobje2")
         {
-            barResimleri[2].SetActive(true);
+            punchResimleri[2].SetActive(true);
         }
         else if (gameObject.tag == "Iobje2")
         {
-            barResimleri[3].SetActive(true);
+            punchResimleri[3].SetActive(true);
         }
         if (gameObject.tag == "Kobje3")
         {
-            barResimleri[4].SetActive(true);
+            punchResimleri[4].SetActive(true);
         }
         else if (gameObject.tag == "Iobje3")
         {
-            barResimleri[5].SetActive(true);
+            punchResimleri[5].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje4")
+        {
+            punchResimleri[6].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje4")
+        {
+            punchResimleri[7].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje5")
+        {
+            punchResimleri[8].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje5")
+        {
+            punchResimleri[9].SetActive(true);
         }
 
 
         if (gameObject.tag == "Kobje1Tek")
         {
-            t_barResimleri[0].SetActive(true);
+            t_punchResimleri[0].SetActive(true);
         }
         else if (gameObject.tag == "Iobje1Tek")
         {
-            t_barResimleri[1].SetActive(true);
+            t_punchResimleri[1].SetActive(true);
         }
         if (gameObject.tag == "Kobje2Tek")
         {
-            t_barResimleri[2].SetActive(true);
+            t_punchResimleri[2].SetActive(true);
         }
         else if (gameObject.tag == "Iobje2Tek")
         {
-            t_barResimleri[3].SetActive(true);
+            t_punchResimleri[3].SetActive(true);
         }
     }
 
@@ -151,6 +167,22 @@ public class Toplatici : MonoBehaviour
         else if (gameObject.tag == "Iobje3")
         {
             konserAlaniResimleri[5].SetActive(true);
+        }
+        if (gameObject.tag == "Kobje4")
+        {
+            konserAlaniResimleri[6].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje4")
+        {
+            konserAlaniResimleri[7].SetActive(true);
+        }
+        if (gameObject.tag == "Kobje5")
+        {
+            konserAlaniResimleri[8].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje5")
+        {
+            konserAlaniResimleri[9].SetActive(true);
         }
 
 
@@ -197,6 +229,22 @@ public class Toplatici : MonoBehaviour
         else if (gameObject.tag == "Iobje3")
         {
             davetlilerResimleri[5].SetActive(true);
+        }
+        if (gameObject.tag == "Kobje4")
+        {
+            davetlilerResimleri[6].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje4")
+        {
+            davetlilerResimleri[7].SetActive(true);
+        }
+        if (gameObject.tag == "Kobje5")
+        {
+            davetlilerResimleri[8].SetActive(true);
+        }
+        else if (gameObject.tag == "Iobje5")
+        {
+            davetlilerResimleri[9].SetActive(true);
         }
 
 
@@ -299,9 +347,9 @@ public class Toplatici : MonoBehaviour
 
         if (bolumIsmi == "PunchAlani")
         {
-            for (int i = 0; i < barResimleri.Length; i++)
+            for (int i = 0; i < punchResimleri.Length; i++)
             {
-                barResimleri[i].SetActive(false);
+                punchResimleri[i].SetActive(false);
             }
         }
         else if (bolumIsmi == "KonserAlani")
