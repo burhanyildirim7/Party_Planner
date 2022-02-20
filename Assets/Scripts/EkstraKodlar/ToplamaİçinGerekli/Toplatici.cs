@@ -66,15 +66,15 @@ public class Toplatici : MonoBehaviour
         }
 
 
-        if (LevelController.bolumunIsmi == "PunchAlani")
+        if (LevelController.bolumunIsmi == "Bolum1")
         {
             PunchAlaniResimBelirle();
         }
-        else if (LevelController.bolumunIsmi == "KonserAlani")
+        else if (LevelController.bolumunIsmi == "Bolum2")
         {
             KonserAlaniResimBelirle();
         }
-        else if (LevelController.bolumunIsmi == "Davetliler")
+        else if (LevelController.bolumunIsmi == "Bolum3")
         {
             DavetliResimBelirle();
         }
@@ -316,15 +316,15 @@ public class Toplatici : MonoBehaviour
 
     private void esyaCikar()
     {
-        if (bolumIsmi == "PunchAlani")
+        if (bolumIsmi == "Bolum1")
         {
             arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
-        else if (bolumIsmi == "KonserAlani")
+        else if (bolumIsmi == "Bolum2")
         {
             arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
-        else if (bolumIsmi == "Davetliler")
+        else if (bolumIsmi == "Bolum3")
         {
             arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }

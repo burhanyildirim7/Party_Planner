@@ -44,7 +44,7 @@ public class Bina_KonserAlani : MonoBehaviour
     public void EsyaCikarBar(GameObject esya)
     {
         esya.gameObject.SetActive(false);
-        binaOzellikleri.BarKayitEt("Bar", esya.gameObject.name);
+        binaOzellikleri.Bolum2KayitEt("Bolum2", esya.gameObject.name);
         ObjeyiYerlestir(esya.gameObject.name);
     }
 
@@ -56,6 +56,7 @@ public class Bina_KonserAlani : MonoBehaviour
         Obje4Yerlestir(isim);
         Obje5Yerlestir(isim);
         Obje1TekYerlestir(isim);
+        Obje2TekYerlestir(isim);
     }
 
 

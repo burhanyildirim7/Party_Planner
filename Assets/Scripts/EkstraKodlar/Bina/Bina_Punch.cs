@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bina_Bar : MonoBehaviour
+public class Bina_Punch : MonoBehaviour
 {
 
     [Header("Konumlar")]
@@ -44,11 +44,11 @@ public class Bina_Bar : MonoBehaviour
     public void EsyaCikarBar(GameObject esya)
     {
         esya.gameObject.SetActive(false);
-        binaOzellikleri.BarKayitEt("Bar", esya.gameObject.name);
+        binaOzellikleri.Bolum1KayitEt("Bolum1KayitEt", esya.gameObject.name);
         ObjeyiYerlestir(esya.gameObject.name);
     }
 
-    public void ObjeyiYerlestir(string isim)
+    public void ObjeyiYerlestir(string isim) // Disardan buraya erisilerek insa sistemi yapilir
     {
         Obje1Yerlestir(isim);
         Obje2Yerlestir(isim);
@@ -56,6 +56,7 @@ public class Bina_Bar : MonoBehaviour
         Obje4Yerlestir(isim);
         Obje5Yerlestir(isim);
         Obje1TekYerlestir(isim);
+        Obje2TekYerlestir(isim);
     }
 
 

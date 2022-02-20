@@ -26,6 +26,7 @@ public class LevelController : MonoBehaviour
         {
             totalLevelNo = 1;
             levelNo = 1;
+            PlayerPrefs.SetInt("level", totalLevelNo);
         }
         UIController.instance.SetLevelText(totalLevelNo);
         LevelStartingEvents();
@@ -63,45 +64,53 @@ public class LevelController : MonoBehaviour
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
 
-       
+        Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
 
-        if (PlayerPrefs.GetInt("level") == 0)
+        if (PlayerPrefs.GetInt("level") == 1)
         {
-            bolumunIsmi = "PunchAlani";
+            bolumunIsmi = "Bolum1";
         }
 
-        if (PlayerPrefs.GetInt("level") > 0)
+        if (PlayerPrefs.GetInt("level") > 1)
         {
-            if (PlayerPrefs.GetInt("level") % 3 == 0)
+            if (PlayerPrefs.GetInt("level") % 3 == 1)
             {
                 if (Random.Range(0, 2) == 0)
                 {
-                    bolumunIsmi = "PunchAlani";
+                    bolumunIsmi = "Bolum1";
                 }
                 else
                 {
-                    bolumunIsmi = "KonserAlani";
+                    bolumunIsmi = "Bolum2";
                 }
-            }
-            else if (PlayerPrefs.GetInt("level") % 3 == 1)
-            {
-                if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "KonserAlani")
-                {
-                    bolumunIsmi = "PunchAlani";
-                }
-                else if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "PunchAlani")
-                {
-                    bolumunIsmi = "KonserAlani";
-                }
+                PlayerPrefs.SetInt("OrtancaBolumKararlastirildi", 0);      //Ortanca bölümün rastgele gelmesi için ayarlanmiþtir
             }
             else if (PlayerPrefs.GetInt("level") % 3 == 2)
             {
-                bolumunIsmi = "Davetliler";
+                if(PlayerPrefs.GetInt("OrtancaBolumKararlastirildi") == 0)
+                {
+                    if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "Bolum2")
+                    {
+                        bolumunIsmi = "Bolum1";
+                    }
+                    else if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "Bolum1")
+                    {
+                        bolumunIsmi = "Bolum2";
+                    }
+                    PlayerPrefs.SetInt("OrtancaBolumKararlastirildi", 1);
+                }
+            }
+            else if (PlayerPrefs.GetInt("level") % 3 == 0)
+            {
+                bolumunIsmi = "Bolum3";
             }
         }
 
+        PlayerPrefs.SetString("OncekiLevelBolumIsmi", bolumunIsmi);
+        GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;
         GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
         GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();
+        Debug.Log("Bölümün ismi: " + bolumunIsmi);
 
     }
 

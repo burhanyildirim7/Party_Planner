@@ -16,7 +16,6 @@ TagManager:
   - Para
   - Araba
   - Zemin
-  - Bar
   - Esya
   - BuildingController
   - KonserAlani
@@ -34,6 +33,9 @@ TagManager:
   - Iobje1Tek
   - Kobje2Tek
   - Iobje2Tek
+  - Punch
+  - Bar
+  - DavetliAlani
   layers:
   - Default
   - TransparentFX

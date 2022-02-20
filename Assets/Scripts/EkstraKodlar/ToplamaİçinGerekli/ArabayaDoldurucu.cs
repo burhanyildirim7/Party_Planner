@@ -28,8 +28,9 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("BolumSonuIcinKonumlar")]
     private GameObject hedefEsya = null;            //Gidilecek hedefi belirler
-    private GameObject bar;
+    private GameObject punchAlani;
     private GameObject konserAlani;
+    private GameObject davetliAlani;
 
     [Header("Listeler")]
     List<GameObject> tumEsyalar = new List<GameObject>();
@@ -45,20 +46,19 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            Destroy(transform.GetChild(0).transform.gameObject);
+            Destroy(tumArabalar[i]); 
         }
         tumEsyalar.Clear();
         tumArabalar.Clear();
         arabaSetSayisi = 0;
 
-        karakter = GameObject.FindWithTag("Player");
+        karakter = GameObject.FindWithTag("KarakterPaketi");
         bolumIsmi = LevelController.bolumunIsmi;
 
-        transform.position = karakter.transform.position - Vector3.forward * .45f;
 
-
-        bar = GameObject.FindWithTag("Bar");
+        punchAlani = GameObject.FindWithTag("Punch");
         konserAlani = GameObject.FindWithTag("KonserAlani");
+        davetliAlani = GameObject.FindWithTag("DavetliAlani");
 
         ArabaOlustur();
         ArabayaHedefBelirle();
@@ -67,17 +67,17 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
     public void EsyaYerlestirmeAyarlayici(string esyaIsmi)
     {
-        if (bolumIsmi == "PunchAlani")
+        if (bolumIsmi == "Bolum1")
         {
             PunchEsyaCikar(esyaIsmi);
         }
-        else if (bolumIsmi == "KonserAlani")
+        else if (bolumIsmi == "Bolum2")
         {
             KonserAlaniEsyaCikar(esyaIsmi);
         }
-        else if (bolumIsmi == "Davetliler")
+        else if (bolumIsmi == "Bolum3")
         {
-            
+            DavetliAlaniEsyaCikar(esyaIsmi);
         }
     }
 
@@ -108,7 +108,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             esyaYerlestir(punch_Objeler_Tek[1]);
         }
-        hedefEsya = bar;
+        hedefEsya = punchAlani;
     }
 
     private void KonserAlaniEsyaCikar(string esyaIsmi)
@@ -141,7 +141,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         hedefEsya = konserAlani;
     }
 
-    private void DavetlilerEsyaCikar(string esyaIsmi)
+    private void DavetliAlaniEsyaCikar(string esyaIsmi)
     {
         if (esyaIsmi == "Kobje1")
         {
@@ -159,6 +159,8 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             esyaYerlestir(davetli_Objeler[3]);
         }
+
+        hedefEsya = davetliAlani;
     }
 
 

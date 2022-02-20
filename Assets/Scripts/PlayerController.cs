@@ -75,7 +75,6 @@ public class PlayerController : MonoBehaviour
             gameController.GetComponent<GameController>().OyunSonu();
             GetComponent<AnimationController>().KosuPasif();
             
-            other.gameObject.SetActive(false);
             oyunBitti = true;
         }
     }
