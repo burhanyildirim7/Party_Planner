@@ -10,8 +10,7 @@ public class LevelController : MonoBehaviour
     public List<GameObject> levels = new List<GameObject>();
     private GameObject currentLevelObj;
 
-    public static string bolumunIsmi;
-    public int denemeSayisi;
+    public static string bolumunIsmi;  //Onceki level ismini çekerken gereklidir
 
 
     private void Awake()
@@ -22,7 +21,6 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         totalLevelNo = PlayerPrefs.GetInt("level");
         if (totalLevelNo == 0)
         {
@@ -44,35 +42,7 @@ public class LevelController : MonoBehaviour
         PlayerPrefs.SetInt("level", totalLevelNo);
         UIController.instance.SetLevelText(totalLevelNo);
 
-        /* if (PlayerPrefs.GetInt("level") > 3)
-         {
-             if (PlayerPrefs.GetInt("level") % 3 == 0)
-             {
-                 if (Random.Range(0, 2) == 0)
-                 {
-                     bolumunIsmi = "PunchAlani";
-                 }
-                 else
-                 {
-                     bolumunIsmi = "KonserAlani";
-                 }
-             }
-             else if (PlayerPrefs.GetInt("level") % 3 == 1)
-             {
-                 if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "KonserAlani")
-                 {
-                     bolumunIsmi = "PunchAlani";
-                 }
-                 else
-                 {
-                     bolumunIsmi = "KonserAlani";
-                 }
-             }
-             else if (PlayerPrefs.GetInt("level") % 3 == 2)
-             {
-                 bolumunIsmi = "Davetliler";
-             }
-         }*/
+
     }
 
     /// <summary>
@@ -92,15 +62,14 @@ public class LevelController : MonoBehaviour
         UIController.instance.SetLevelText(totalLevelNo);
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
-
         if (PlayerPrefs.GetInt("level") == 0)
         {
             bolumunIsmi = "PunchAlani";
         }
 
-        if (denemeSayisi > 3)
+        if (PlayerPrefs.GetInt("level") > 0)
         {
-            if (denemeSayisi % 3 == 0)
+            if (PlayerPrefs.GetInt("level") % 3 == 0)
             {
                 if (Random.Range(0, 2) == 0)
                 {
@@ -111,22 +80,23 @@ public class LevelController : MonoBehaviour
                     bolumunIsmi = "KonserAlani";
                 }
             }
-            else if (denemeSayisi % 3 == 1)
+            else if (PlayerPrefs.GetInt("level") % 3 == 1)
             {
                 if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "KonserAlani")
                 {
                     bolumunIsmi = "PunchAlani";
                 }
-                else
+                else if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "PunchAlani")
                 {
                     bolumunIsmi = "KonserAlani";
                 }
             }
-            else if (denemeSayisi % 3 == 2)
+            else if (PlayerPrefs.GetInt("level") % 3 == 2)
             {
                 bolumunIsmi = "Davetliler";
             }
         }
+
     }
 
     /// <summary>
