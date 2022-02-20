@@ -59,7 +59,7 @@ public class Toplatici : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
-            if(transform.root.transform.GetChild(i) == null)
+            if (transform.root.transform.GetChild(i) == null)
             {
                 transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
             }
@@ -82,11 +82,11 @@ public class Toplatici : MonoBehaviour
 
     private void PunchAlaniResimBelirle()
     {
-        if(gameObject.tag == "Kobje1")
+        if (gameObject.tag == "Kobje1")
         {
             barResimleri[0].SetActive(true);
         }
-        else if(gameObject.tag == "Iobje1")
+        else if (gameObject.tag == "Iobje1")
         {
             barResimleri[1].SetActive(true);
         }
@@ -224,11 +224,11 @@ public class Toplatici : MonoBehaviour
     //Kapinin rengini player in parasina gore günceller
     IEnumerator KapiRenginiGuncelle()
     {
-        while((player.transform.position.z - transform.position.z) <= 10)
+        while ((player.transform.position.z - transform.position.z) <= 10)
         {
-            if(GameController.para >= fiyat)
+            if (GameController.para >= fiyat)
             {
-                renderer.material = renk[0];   
+                renderer.material = renk[0];
             }
             else
             {
@@ -238,7 +238,7 @@ public class Toplatici : MonoBehaviour
         }
     }
 
-    
+
 
 
 
@@ -268,7 +268,7 @@ public class Toplatici : MonoBehaviour
 
     private void esyaCikar()
     {
-        if(bolumIsmi == "PunchAlani")
+        if (bolumIsmi == "PunchAlani")
         {
             arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
         }
@@ -296,7 +296,7 @@ public class Toplatici : MonoBehaviour
         fiyatYazdirici.text = "";
         mesh.enabled = false;
 
-      
+
         if (bolumIsmi == "PunchAlani")
         {
             for (int i = 0; i < barResimleri.Length; i++)
@@ -323,7 +323,7 @@ public class Toplatici : MonoBehaviour
     //Iki kapidan ayni anda meyve almasini engeller
     private void DigerKapidanMeyveAlmayiPasiflestir()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < transform.parent.childCount - 1; i++)
         {
             transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = false;
         }

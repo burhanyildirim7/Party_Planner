@@ -7,10 +7,10 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     //Resimler icin gereklidir
     [Header("Doldurulacaklar")]  
-    [SerializeField] GameObject[] bar_Objeler;
-    [SerializeField] GameObject[] bar_Objeler_Tek;
-    [SerializeField] GameObject[] KonserAlani_Objeler;
-    [SerializeField] GameObject[] KonserAlani_Objeler_Tek;
+    [SerializeField] GameObject[] punch_Objeler;
+    [SerializeField] GameObject[] punch_Objeler_Tek;
+    [SerializeField] GameObject[] konserAlani_Objeler;
+    [SerializeField] GameObject[] konserAlani_Objeler_Tek;
     [SerializeField] GameObject[] davetli_Objeler;
     [SerializeField] GameObject[] davetli_Objeler_Tek;
 
@@ -42,7 +42,6 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     void Start()
     {
-        tumArabalar.Add(GameObject.FindWithTag("Araba"));
         karakter = GameObject.FindWithTag("Player");
         bolumIsmi = LevelController.bolumunIsmi;
 
@@ -59,7 +58,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (bolumIsmi == "PunchAlani")
         {
-            BarEsyaCikar(esyaIsmi);
+            PunchEsyaCikar(esyaIsmi);
         }
         else if (bolumIsmi == "KonserAlani")
         {
@@ -71,32 +70,32 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
     }
 
-    private void BarEsyaCikar(string esyaIsmi)
+    private void PunchEsyaCikar(string esyaIsmi)
     {
         if (esyaIsmi == "Kobje1")
         {
-            esyaYerlestir(bar_Objeler[0]);
+            esyaYerlestir(punch_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            esyaYerlestir(bar_Objeler[1]);
+            esyaYerlestir(punch_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            esyaYerlestir(bar_Objeler[2]);
+            esyaYerlestir(punch_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            esyaYerlestir(bar_Objeler[3]);
+            esyaYerlestir(punch_Objeler[3]);
         }
 
         if (esyaIsmi == "Kobje1Tek")
         {
-            esyaYerlestir(bar_Objeler_Tek[0]);
+            esyaYerlestir(punch_Objeler_Tek[0]);
         }
         else if (esyaIsmi == "Iobje1Tek")
         {
-            esyaYerlestir(bar_Objeler_Tek[1]);
+            esyaYerlestir(punch_Objeler_Tek[1]);
         }
         hedefEsya = bar;
     }
@@ -105,28 +104,28 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Kobje1")
         {
-            esyaYerlestir(KonserAlani_Objeler[0]);
+            esyaYerlestir(konserAlani_Objeler[0]);
         }
         else if (esyaIsmi == "Iobje1")
         {
-            esyaYerlestir(KonserAlani_Objeler[1]);
+            esyaYerlestir(konserAlani_Objeler[1]);
         }
         else if (esyaIsmi == "Kobje2")
         {
-            esyaYerlestir(KonserAlani_Objeler[2]);
+            esyaYerlestir(konserAlani_Objeler[2]);
         }
         else if (esyaIsmi == "Iobje2")
         {
-            esyaYerlestir(KonserAlani_Objeler[3]);
+            esyaYerlestir(konserAlani_Objeler[3]);
         }
 
         if (esyaIsmi == "Kobje1Tek")
         {
-            esyaYerlestir(KonserAlani_Objeler_Tek[0]);
+            esyaYerlestir(konserAlani_Objeler_Tek[0]);
         }
         else if (esyaIsmi == "Iobje1Tek")
         {
-            esyaYerlestir(KonserAlani_Objeler_Tek[1]);
+            esyaYerlestir(konserAlani_Objeler_Tek[1]);
         }
         hedefEsya = konserAlani;
     }
@@ -191,6 +190,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             arabaSayisiTekMi = true;
         }
+       
 
         if (arabaSayisiTekMi)         //Araba sayisinin tek olmasi durumu
         {
