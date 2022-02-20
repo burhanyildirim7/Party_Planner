@@ -63,7 +63,8 @@ public class LevelController : MonoBehaviour
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
 
-        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
+       
+
         if (PlayerPrefs.GetInt("level") == 0)
         {
             bolumunIsmi = "PunchAlani";
@@ -98,6 +99,9 @@ public class LevelController : MonoBehaviour
                 bolumunIsmi = "Davetliler";
             }
         }
+
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
+        GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();
 
     }
 

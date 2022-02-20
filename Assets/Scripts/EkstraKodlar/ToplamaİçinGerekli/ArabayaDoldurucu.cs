@@ -40,10 +40,21 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     private WaitForSeconds beklemeSuresi = new WaitForSeconds(.06f);  //Meyvelerin firlatili ile ilgilidir
 
-    void Start()
+
+    public void TekrarBaslat()   //Level controllerden erisiliyor
     {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(0).transform.gameObject);
+        }
+        tumEsyalar.Clear();
+        tumArabalar.Clear();
+        arabaSetSayisi = 0;
+
         karakter = GameObject.FindWithTag("Player");
         bolumIsmi = LevelController.bolumunIsmi;
+
+        transform.position = karakter.transform.position - Vector3.forward * .45f;
 
 
         bar = GameObject.FindWithTag("Bar");
