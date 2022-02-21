@@ -35,6 +35,8 @@ public class Bina_Punch : MonoBehaviour
 
     private BinaOzellikleri binaOzellikleri;
 
+    List<GameObject> olusanEsyalar = new List<GameObject>();
+
 
     void Start()
     {
@@ -44,9 +46,19 @@ public class Bina_Punch : MonoBehaviour
     public void EsyaCikarBar(GameObject esya)
     {
         esya.gameObject.SetActive(false);
-        binaOzellikleri.Bolum1KayitEt("Bolum1KayitEt", esya.gameObject.name);
+        binaOzellikleri.Bolum1KayitEt("Bolum1", esya.gameObject.name);
         ObjeyiYerlestir(esya.gameObject.name);
     }
+
+    public void Sifirla()
+    {
+        for (int i = 0; i < olusanEsyalar.Count; i++)
+        {
+            Destroy(olusanEsyalar[i]);
+        }
+        olusanEsyalar.Clear();
+    }
+
 
     public void ObjeyiYerlestir(string isim) // Disardan buraya erisilerek insa sistemi yapilir
     {
@@ -58,8 +70,6 @@ public class Bina_Punch : MonoBehaviour
         Obje1TekYerlestir(isim);
         Obje2TekYerlestir(isim);
     }
-
-
 
 
 

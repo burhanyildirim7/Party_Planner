@@ -35,6 +35,7 @@ public class Bina_KonserAlani : MonoBehaviour
 
     private BinaOzellikleri binaOzellikleri;
 
+    List<GameObject> olusanEsyalar = new List<GameObject>();
 
     void Start()
     {
@@ -47,6 +48,17 @@ public class Bina_KonserAlani : MonoBehaviour
         binaOzellikleri.Bolum2KayitEt("Bolum2", esya.gameObject.name);
         ObjeyiYerlestir(esya.gameObject.name);
     }
+
+
+    public void Sifirla()
+    {
+        for (int i = 0; i < olusanEsyalar.Count; i++)
+        {
+            Destroy(olusanEsyalar[i]);
+        }
+        olusanEsyalar.Clear();
+    }
+
 
     public void ObjeyiYerlestir(string isim)
     {

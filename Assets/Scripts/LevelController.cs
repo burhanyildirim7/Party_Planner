@@ -106,6 +106,7 @@ public class LevelController : MonoBehaviour
             }
         }
 
+        GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().InsaEt();
         PlayerPrefs.SetString("OncekiLevelBolumIsmi", bolumunIsmi);
         GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;
         GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
@@ -119,6 +120,14 @@ public class LevelController : MonoBehaviour
     /// </summary>
     public void NextLevelEvents()
     {
+        GameObject.FindWithTag("Punch").GetComponent<Bina_Punch>().Sifirla();
+        GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>().Sifirla();
+        GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>().Sifirla();
+
+        if (PlayerPrefs.GetInt("level") % 3 == 0)
+        {
+            GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().Sifirla();
+        }
         Elephant.LevelCompleted(totalLevelNo);
         Destroy(currentLevelObj);
         IncreaseLevelNo();
