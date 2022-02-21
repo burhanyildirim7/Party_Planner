@@ -60,13 +60,13 @@ public class Toplatici : MonoBehaviour
         mesh.material = renk[1];
 
 
-        for (int i = 0; i < 2; i++)
+        /*for (int i = 0; i < 2; i++)
         {
             if (transform.parent.transform.GetChild(i) != null)
             {
                 transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
             }
-        }
+        }*/
 
         if (LevelController.bolumunIsmi == "Bolum1")
         {

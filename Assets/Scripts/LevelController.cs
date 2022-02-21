@@ -92,7 +92,6 @@ public class LevelController : MonoBehaviour
         GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;    //Karakterin pozisyonunu  sifirlamak icindir
         GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();   //Kameranýn karakteri takip etmesi icindir
         GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();         //Arabadaki listelerin sifirlanmasi icindir
-
     }
 
     /// <summary>
@@ -121,8 +120,8 @@ public class LevelController : MonoBehaviour
     public void RestartLevelEvents()
     {
         Destroy(currentLevelObj);
-       
 
+       
         Elephant.LevelFailed(totalLevelNo);
         PlayerController.instance.StartingEvents();
         LevelStartingEvents();

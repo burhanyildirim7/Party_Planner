@@ -383,8 +383,10 @@ public class ArabayaDoldurucu : MonoBehaviour
                 }
                 
                 arabaOlusmaEfekt.Play();
-
-                tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.GetChild(0).transform.gameObject.SetActive(false);
+                if(((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
+                {
+                    tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.GetChild(0).transform.gameObject.SetActive(false);
+                }
                 yokEdilenArabaSayisi++;
             }
 
