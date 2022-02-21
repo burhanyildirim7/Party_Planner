@@ -345,21 +345,21 @@ public class Toplatici : MonoBehaviour
         mesh.enabled = false;
 
 
-        if (bolumIsmi == "PunchAlani")
+        if (bolumIsmi == "Bolum1")
         {
             for (int i = 0; i < punchResimleri.Length; i++)
             {
                 punchResimleri[i].SetActive(false);
             }
         }
-        else if (bolumIsmi == "KonserAlani")
+        else if (bolumIsmi == "Bolum2")
         {
             for (int i = 0; i < konserAlaniResimleri.Length; i++)
             {
                 konserAlaniResimleri[i].SetActive(false);
             }
         }
-        else if (bolumIsmi == "Davetliler")
+        else if (bolumIsmi == "Bolum3")
         {
             for (int i = 0; i < davetlilerResimleri.Length; i++)
             {

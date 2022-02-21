@@ -91,6 +91,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje1Iyi(Clone)")
         {
             obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje1Sirasi++;
@@ -98,6 +99,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje1Kotu(Clone)")
         {
             obje = Instantiate(obje1[1], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje1Sirasi++;
@@ -110,6 +112,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje2Iyi(Clone)")
         {
             obje = Instantiate(obje2[0], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje2Sirasi++;
@@ -117,6 +120,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje2Kotu(Clone)")
         {
             obje = Instantiate(obje2[1], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje2Sirasi++;
@@ -129,6 +133,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje3Iyi(Clone)")
         {
             obje = Instantiate(obje3[0], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje3Sirasi++;
@@ -136,6 +141,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje3Kotu(Clone)")
         {
             obje = Instantiate(obje3[1], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje3Sirasi++;
@@ -148,6 +154,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje4Iyi(Clone)")
         {
             obje = Instantiate(obje4[0], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje4Sirasi++;
@@ -155,6 +162,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje4Kotu(Clone)")
         {
             obje = Instantiate(obje4[1], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje4Sirasi++;
@@ -167,6 +175,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje5Iyi(Clone)")
         {
             obje = Instantiate(obje5[0], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje5Sirasi++;
@@ -174,6 +183,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje5Kotu(Clone)")
         {
             obje = Instantiate(obje5[1], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje5Sirasi++;
@@ -186,6 +196,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje1TekIyi(Clone)")
         {
             obje = Instantiate(obje1_Tek[0], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje1_TekSirasi++;
@@ -193,6 +204,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje1TekKotu(Clone)")
         {
             obje = Instantiate(obje1_Tek[1], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje1_TekSirasi++;
@@ -205,6 +217,7 @@ public class Bina_KonserAlani : MonoBehaviour
         if (isim == "Obje2TekIyi(Clone)")
         {
             obje = Instantiate(obje2_Tek[0], obje2Tek_Konumlari[obje1_TekSirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje2_TekSirasi++;
@@ -212,6 +225,7 @@ public class Bina_KonserAlani : MonoBehaviour
         else if (isim == "Obje2TekKotu(Clone)")
         {
             obje = Instantiate(obje2_Tek[1], obje2Tek_Konumlari[obje2_TekSirasi].transform.position, Quaternion.identity);
+            obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
             obje2_TekSirasi++;

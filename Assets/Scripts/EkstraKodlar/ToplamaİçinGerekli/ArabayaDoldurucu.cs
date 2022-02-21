@@ -83,21 +83,45 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     private void PunchEsyaCikar(string esyaIsmi)
     {
-        if (esyaIsmi == "Kobje1")
+        if (esyaIsmi == "Iobje1")
         {
             esyaYerlestir(punch_Objeler[0]);
         }
-        else if (esyaIsmi == "Iobje1")
+        else if (esyaIsmi == "Kobje1")
         {
             esyaYerlestir(punch_Objeler[1]);
         }
-        else if (esyaIsmi == "Kobje2")
+        else if (esyaIsmi == "Iobje2")
         {
             esyaYerlestir(punch_Objeler[2]);
         }
-        else if (esyaIsmi == "Iobje2")
+        else if (esyaIsmi == "Kobje2")
         {
             esyaYerlestir(punch_Objeler[3]);
+        }
+        else if (esyaIsmi == "Iobje3")
+        {
+            esyaYerlestir(punch_Objeler[4]);
+        }
+        else if (esyaIsmi == "Kobje3")
+        {
+            esyaYerlestir(punch_Objeler[5]);
+        }
+        else if (esyaIsmi == "Iobje4")
+        {
+            esyaYerlestir(punch_Objeler[6]);
+        }
+        else if (esyaIsmi == "Kobje4")
+        {
+            esyaYerlestir(punch_Objeler[7]);
+        }
+        else if (esyaIsmi == "Iobje5")
+        {
+            esyaYerlestir(punch_Objeler[8]);
+        }
+        else if (esyaIsmi == "Kobje5")
+        {
+            esyaYerlestir(punch_Objeler[9]);
         }
 
         if (esyaIsmi == "Kobje1Tek")
@@ -113,22 +137,47 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     private void KonserAlaniEsyaCikar(string esyaIsmi)
     {
-        if (esyaIsmi == "Kobje1")
+        if (esyaIsmi == "Iobje1")
         {
             esyaYerlestir(konserAlani_Objeler[0]);
         }
-        else if (esyaIsmi == "Iobje1")
+        else if (esyaIsmi == "Kobje1")
         {
             esyaYerlestir(konserAlani_Objeler[1]);
         }
-        else if (esyaIsmi == "Kobje2")
+        else if (esyaIsmi == "Iobje2")
         {
             esyaYerlestir(konserAlani_Objeler[2]);
         }
-        else if (esyaIsmi == "Iobje2")
+        else if (esyaIsmi == "Kobje2")
         {
             esyaYerlestir(konserAlani_Objeler[3]);
         }
+        else if (esyaIsmi == "Iobje3")
+        {
+            esyaYerlestir(konserAlani_Objeler[4]);
+        }
+        else if (esyaIsmi == "Kobje3")
+        {
+            esyaYerlestir(konserAlani_Objeler[5]);
+        }
+        else if (esyaIsmi == "Iobje4")
+        {
+            esyaYerlestir(konserAlani_Objeler[6]);
+        }
+        else if (esyaIsmi == "Kobje4")
+        {
+            esyaYerlestir(konserAlani_Objeler[7]);
+        }
+        else if (esyaIsmi == "Iobje5")
+        {
+            esyaYerlestir(konserAlani_Objeler[8]);
+        }
+        else if (esyaIsmi == "Kobje5")
+        {
+            esyaYerlestir(konserAlani_Objeler[9]);
+        }
+
 
         if (esyaIsmi == "Kobje1Tek")
         {
@@ -143,21 +192,55 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     private void DavetliAlaniEsyaCikar(string esyaIsmi)
     {
-        if (esyaIsmi == "Kobje1")
+        if (esyaIsmi == "Iobje1")
         {
             esyaYerlestir(davetli_Objeler[0]);
         }
-        else if (esyaIsmi == "Iobje1")
+        else if (esyaIsmi == "Kobje1")
         {
             esyaYerlestir(davetli_Objeler[1]);
         }
-        else if (esyaIsmi == "Kobje2")
+        else if (esyaIsmi == "Iobje2")
         {
             esyaYerlestir(davetli_Objeler[2]);
         }
-        else if (esyaIsmi == "Iobje2")
+        else if (esyaIsmi == "Kobje2")
         {
             esyaYerlestir(davetli_Objeler[3]);
+        }
+        else if (esyaIsmi == "Iobje3")
+        {
+            esyaYerlestir(davetli_Objeler[4]);
+        }
+        else if (esyaIsmi == "Kobje3")
+        {
+            esyaYerlestir(davetli_Objeler[5]);
+        }
+        else if (esyaIsmi == "Iobje4")
+        {
+            esyaYerlestir(davetli_Objeler[6]);
+        }
+        else if (esyaIsmi == "Kobje4")
+        {
+            esyaYerlestir(davetli_Objeler[7]);
+        }
+        else if (esyaIsmi == "Iobje5")
+        {
+            esyaYerlestir(davetli_Objeler[8]);
+        }
+        else if (esyaIsmi == "Kobje5")
+        {
+            esyaYerlestir(davetli_Objeler[9]);
+        }
+
+
+        if (esyaIsmi == "Kobje1Tek")
+        {
+            esyaYerlestir(davetli_Objeler_Tek[0]);
+        }
+        else if (esyaIsmi == "Iobje1Tek")
+        {
+            esyaYerlestir(davetli_Objeler_Tek[1]);
         }
 
         hedefEsya = davetliAlani;
@@ -294,7 +377,11 @@ public class ArabayaDoldurucu : MonoBehaviour
 
             if (((tumEsyalar.Count - 1) - firlatilanEsyaSayisi) % 3 == 0)
            {
-                arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
+                if(((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
+                {
+                    arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
+                }
+                
                 arabaOlusmaEfekt.Play();
 
                 tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.GetChild(0).transform.gameObject.SetActive(false);

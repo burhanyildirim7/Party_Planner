@@ -56,7 +56,6 @@ public class BinaOzellikleri : MonoBehaviour
     //Insa etme kýsýmlarý burdan soradýr
     public void Bolum1KayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
     {
-        Debug.Log(levelIsmi);
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru); //Burasi sebebiyle ayný leveli iki defa oynadiginda son oynadigindaki objeler diger level icin kalici olur
         
         leveldekiObjeSayisi++;
