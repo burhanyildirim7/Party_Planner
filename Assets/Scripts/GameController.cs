@@ -33,6 +33,12 @@ public class GameController : MonoBehaviour
         if (instance == null) instance = this;
     }
 
+    public void ParayiSifirla()
+    {
+        para = 0;
+        paraYazi.text = para.ToString() + " $";
+    }
+
     void Start()
     {
         isContinue = false;
@@ -54,14 +60,16 @@ public class GameController : MonoBehaviour
 
     public void SetMoney(int eklenecekPara)
     {
-        para += eklenecekPara;
-        paraYazi.text = para.ToString() + " $";
-
-        if(para <= 0)
+        if(para + eklenecekPara < 0)
         {
             isContinue = false;
             GameObject.FindWithTag("Player").GetComponent<AnimationController>().KosuPasif();
             UIController.instance.ActivateLooseScreen();
+        }
+        else
+        {
+            para += eklenecekPara;
+            paraYazi.text = para.ToString() + " $";
         }
     }
 

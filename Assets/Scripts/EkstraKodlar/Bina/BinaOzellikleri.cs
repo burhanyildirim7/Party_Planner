@@ -13,31 +13,29 @@ public class BinaOzellikleri : MonoBehaviour
     private int leveldekiObjeSayisi = 0;
 
 
-    void Start()
+    public void InsaEt()
     {
-        //Binalari bulmak icin gereklidir
         bina_Punch = GameObject.FindWithTag("Punch").GetComponent<Bina_Punch>();
         bina_KonserAlani = GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>();
         bina_Davetliler = GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>();
-
         OlusturOncekiLeveldekileri();
     }
 
-     void InsaEt()
+    public void Sifirla() //Parti tamamlandýktan sonra 
     {
-
-    }
-
-     void Sifirla()
-    {
-        PlayerPrefs.SetInt("Punch_ObjeSayisi", leveldekiObjeSayisi);
-        PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
-        PlayerPrefs.SetInt("DavetliAlani_ObjeSayisi", leveldekiObjeSayisi);
+        for (int i = 0; i < 20; i++)
+        {
+            PlayerPrefs.SetString("Bolum1" + i.ToString(), "");
+            PlayerPrefs.SetString("Bolum2" + i.ToString(), "");
+            PlayerPrefs.SetString("Bolum3" + i.ToString(), "");
+        }
+        PlayerPrefs.SetInt("Punch_ObjeSayisi", 0);
+        PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", 0);
+        PlayerPrefs.SetInt("DavetliAlani_ObjeSayisi", 0);
     }
 
     private void OlusturOncekiLeveldekileri()
     {
-        Debug.Log("A");
         for (int i = 0; i < PlayerPrefs.GetInt("Punch_ObjeSayisi"); i++)
         {
             bina_Punch.ObjeyiYerlestir(PlayerPrefs.GetString("Bolum1" + i.ToString()));

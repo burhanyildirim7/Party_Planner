@@ -64,7 +64,7 @@ public class LevelController : MonoBehaviour
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
 
-        Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
+       // Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
 
         if (PlayerPrefs.GetInt("level") == 1)
         {
@@ -75,30 +75,11 @@ public class LevelController : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("level") % 3 == 1)
             {
-                if (Random.Range(0, 2) == 0)
-                {
-                    bolumunIsmi = "Bolum1";
-                }
-                else
-                {
-                    bolumunIsmi = "Bolum2";
-                }
-                PlayerPrefs.SetInt("OrtancaBolumKararlastirildi", 0);      //Ortanca bölümün rastgele gelmesi için ayarlanmiþtir
+                bolumunIsmi = "Bolum1";
             }
             else if (PlayerPrefs.GetInt("level") % 3 == 2)
             {
-                if(PlayerPrefs.GetInt("OrtancaBolumKararlastirildi") == 0)
-                {
-                    if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "Bolum2")
-                    {
-                        bolumunIsmi = "Bolum1";
-                    }
-                    else if (PlayerPrefs.GetString("OncekiLevelBolumIsmi") == "Bolum1")
-                    {
-                        bolumunIsmi = "Bolum2";
-                    }
-                    PlayerPrefs.SetInt("OrtancaBolumKararlastirildi", 1);
-                }
+                bolumunIsmi = "Bolum2";
             }
             else if (PlayerPrefs.GetInt("level") % 3 == 0)
             {
@@ -106,12 +87,11 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        PlayerPrefs.SetString("OncekiLevelBolumIsmi", bolumunIsmi);
-        GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;
-        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
-        GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();
-        Debug.Log("Bölümün ismi: " + bolumunIsmi);
-
+        GameObject.FindWithTag("GameController").GetComponent<GameController>().ParayiSifirla();
+        GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().InsaEt();  //Onceki levellerde olusmus objeleri tekrar olusturmak icindir
+        GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;    //Karakterin pozisyonunu  sifirlamak icindir
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();   //Kameranýn karakteri takip etmesi icindir
+        GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();         //Arabadaki listelerin sifirlanmasi icindir
     }
 
     /// <summary>
@@ -119,6 +99,14 @@ public class LevelController : MonoBehaviour
     /// </summary>
     public void NextLevelEvents()
     {
+        GameObject.FindWithTag("Punch").GetComponent<Bina_Punch>().Sifirla();
+        GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>().Sifirla();
+        GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>().Sifirla();
+
+        if (PlayerPrefs.GetInt("level") % 3 == 0)
+        {
+            GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().Sifirla();
+        }
         Elephant.LevelCompleted(totalLevelNo);
         Destroy(currentLevelObj);
         IncreaseLevelNo();
@@ -131,7 +119,11 @@ public class LevelController : MonoBehaviour
     /// </summary>
     public void RestartLevelEvents()
     {
+        Destroy(currentLevelObj);
+
+       
         Elephant.LevelFailed(totalLevelNo);
         PlayerController.instance.StartingEvents();
+        LevelStartingEvents();
     }
 }

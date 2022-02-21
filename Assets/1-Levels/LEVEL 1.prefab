@@ -861,7 +861,7 @@ GameObject:
   - component: {fileID: 5769640921972426907}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2766,7 +2766,7 @@ GameObject:
   - component: {fileID: 5769640922202555243}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4897,7 +4897,7 @@ GameObject:
   - component: {fileID: 5769640922459238973}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Iobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5301,7 +5301,7 @@ GameObject:
   - component: {fileID: 5769640922494172138}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6166,7 +6166,7 @@ GameObject:
   - component: {fileID: 5769640922592160605}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Iobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6971,7 +6971,7 @@ GameObject:
   - component: {fileID: 5769640922681795787}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Iobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10625,7 +10625,7 @@ GameObject:
   - component: {fileID: 5769640923024270682}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12148,7 +12148,7 @@ GameObject:
   - component: {fileID: 5769640923225055630}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13009,7 +13009,7 @@ GameObject:
   - component: {fileID: 5769640923327519760}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Iobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13671,7 +13671,7 @@ GameObject:
   - component: {fileID: 5769640923447621980}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15222,7 +15222,7 @@ GameObject:
   - component: {fileID: 5769640923634156911}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16647,7 +16647,7 @@ GameObject:
   - component: {fileID: 5769640923799292282}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Iobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16864,7 +16864,7 @@ GameObject:
   - component: {fileID: 5769640923805703179}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17189,7 +17189,7 @@ GameObject:
   - component: {fileID: 5769640923814941844}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19043,7 +19043,7 @@ GameObject:
   - component: {fileID: 5769640924026036015}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Iobje5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20117,7 +20117,7 @@ GameObject:
   - component: {fileID: 6865426964886432118}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Iobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20783,7 +20783,7 @@ GameObject:
   - component: {fileID: 6970312554621155127}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

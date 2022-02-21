@@ -40,7 +40,11 @@ public class Arabalar : MonoBehaviour
     {
         while (!oyunBittiMi)
         {
-            agent.SetDestination(Karakter.position - hedef);
+            if (agent != null)
+            {
+                agent.SetDestination(Karakter.position - hedef);
+            }
+          
             yield return beklemeSuresi1;
         }
     }
