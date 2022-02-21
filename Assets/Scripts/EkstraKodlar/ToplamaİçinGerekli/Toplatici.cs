@@ -84,27 +84,27 @@ public class Toplatici : MonoBehaviour
 
     private void PunchAlaniResimBelirle()
     {
-        if (gameObject.tag == "Kobje1")
+        if (gameObject.tag == "Iobje1")
         {
             punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1")
+        else if (gameObject.tag == "Kobje1")
         {
             punchResimleri[1].SetActive(true);
         }
-        if (gameObject.tag == "Kobje2")
+        else if (gameObject.tag == "Iobje2")
         {
             punchResimleri[2].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje2")
+        else if (gameObject.tag == "Kobje2")
         {
             punchResimleri[3].SetActive(true);
         }
-        if (gameObject.tag == "Kobje3")
+        else if (gameObject.tag == "Iobje3")
         {
             punchResimleri[4].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje3")
+        else if (gameObject.tag == "Kobje3")
         {
             punchResimleri[5].SetActive(true);
         }
@@ -112,7 +112,7 @@ public class Toplatici : MonoBehaviour
         {
             punchResimleri[6].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje4")
+        else if (gameObject.tag == "Kobje4")
         {
             punchResimleri[7].SetActive(true);
         }
@@ -120,25 +120,25 @@ public class Toplatici : MonoBehaviour
         {
             punchResimleri[8].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje5")
+        else if (gameObject.tag == "Kobje5")
         {
             punchResimleri[9].SetActive(true);
         }
 
 
-        if (gameObject.tag == "Kobje1Tek")
+        if (gameObject.tag == "Iobje1Tek")
         {
             t_punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1Tek")
+        else if (gameObject.tag == "Kobje1Tek")
         {
             t_punchResimleri[1].SetActive(true);
         }
-        if (gameObject.tag == "Kobje2Tek")
+        if (gameObject.tag == "Iobje2Tek")
         {
             t_punchResimleri[2].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje2Tek")
+        else if (gameObject.tag == "Kobje2Tek")
         {
             t_punchResimleri[3].SetActive(true);
         }
@@ -146,125 +146,125 @@ public class Toplatici : MonoBehaviour
 
     private void KonserAlaniResimBelirle()
     {
-        if (gameObject.tag == "Kobje1")
+        if (gameObject.tag == "Iobje1")
         {
-            konserAlaniResimleri[0].SetActive(true);
+            punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1")
+        else if (gameObject.tag == "Kobje1")
         {
-            konserAlaniResimleri[1].SetActive(true);
-        }
-        if (gameObject.tag == "Kobje2")
-        {
-            konserAlaniResimleri[2].SetActive(true);
+            punchResimleri[1].SetActive(true);
         }
         else if (gameObject.tag == "Iobje2")
         {
-            konserAlaniResimleri[3].SetActive(true);
+            punchResimleri[2].SetActive(true);
         }
-        if (gameObject.tag == "Kobje3")
+        else if (gameObject.tag == "Kobje2")
         {
-            konserAlaniResimleri[4].SetActive(true);
+            punchResimleri[3].SetActive(true);
         }
         else if (gameObject.tag == "Iobje3")
         {
-            konserAlaniResimleri[5].SetActive(true);
+            punchResimleri[4].SetActive(true);
         }
-        if (gameObject.tag == "Kobje4")
+        else if (gameObject.tag == "Kobje3")
         {
-            konserAlaniResimleri[6].SetActive(true);
+            punchResimleri[5].SetActive(true);
         }
         else if (gameObject.tag == "Iobje4")
         {
-            konserAlaniResimleri[7].SetActive(true);
+            punchResimleri[6].SetActive(true);
         }
-        if (gameObject.tag == "Kobje5")
+        else if (gameObject.tag == "Kobje4")
         {
-            konserAlaniResimleri[8].SetActive(true);
+            punchResimleri[7].SetActive(true);
         }
         else if (gameObject.tag == "Iobje5")
         {
-            konserAlaniResimleri[9].SetActive(true);
+            punchResimleri[8].SetActive(true);
+        }
+        else if (gameObject.tag == "Kobje5")
+        {
+            punchResimleri[9].SetActive(true);
         }
 
 
-        if (gameObject.tag == "Kobje1Tek")
+        if (gameObject.tag == "Iobje1Tek")
         {
-            t_konserAlaniResimleri[0].SetActive(true);
+            t_punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1Tek")
+        else if (gameObject.tag == "Kobje1Tek")
         {
-            t_konserAlaniResimleri[1].SetActive(true);
+            t_punchResimleri[1].SetActive(true);
         }
-        if (gameObject.tag == "Kobje2Tek")
+        if (gameObject.tag == "Iobje2Tek")
         {
-            t_konserAlaniResimleri[2].SetActive(true);
+            t_punchResimleri[2].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje2Tek")
+        else if (gameObject.tag == "Kobje2Tek")
         {
-            t_konserAlaniResimleri[3].SetActive(true);
+            t_punchResimleri[3].SetActive(true);
         }
     }
 
     private void DavetliResimBelirle()
     {
-        if (gameObject.tag == "Kobje1")
+        if (gameObject.tag == "Iobje1")
         {
-            davetlilerResimleri[0].SetActive(true);
+            punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1")
+        else if (gameObject.tag == "Kobje1")
         {
-            davetlilerResimleri[1].SetActive(true);
-        }
-        if (gameObject.tag == "Kobje2")
-        {
-            davetlilerResimleri[2].SetActive(true);
+            punchResimleri[1].SetActive(true);
         }
         else if (gameObject.tag == "Iobje2")
         {
-            davetlilerResimleri[3].SetActive(true);
+            punchResimleri[2].SetActive(true);
         }
-        if (gameObject.tag == "Kobje3")
+        else if (gameObject.tag == "Kobje2")
         {
-            davetlilerResimleri[4].SetActive(true);
+            punchResimleri[3].SetActive(true);
         }
         else if (gameObject.tag == "Iobje3")
         {
-            davetlilerResimleri[5].SetActive(true);
+            punchResimleri[4].SetActive(true);
         }
-        if (gameObject.tag == "Kobje4")
+        else if (gameObject.tag == "Kobje3")
         {
-            davetlilerResimleri[6].SetActive(true);
+            punchResimleri[5].SetActive(true);
         }
         else if (gameObject.tag == "Iobje4")
         {
-            davetlilerResimleri[7].SetActive(true);
+            punchResimleri[6].SetActive(true);
         }
-        if (gameObject.tag == "Kobje5")
+        else if (gameObject.tag == "Kobje4")
         {
-            davetlilerResimleri[8].SetActive(true);
+            punchResimleri[7].SetActive(true);
         }
         else if (gameObject.tag == "Iobje5")
         {
-            davetlilerResimleri[9].SetActive(true);
+            punchResimleri[8].SetActive(true);
+        }
+        else if (gameObject.tag == "Kobje5")
+        {
+            punchResimleri[9].SetActive(true);
         }
 
 
-        if (gameObject.tag == "Kobje1Tek")
+        if (gameObject.tag == "Iobje1Tek")
         {
-            t_davetlilerResimleri[0].SetActive(true);
+            t_punchResimleri[0].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje1Tek")
+        else if (gameObject.tag == "Kobje1Tek")
         {
-            t_davetlilerResimleri[1].SetActive(true);
+            t_punchResimleri[1].SetActive(true);
         }
-        if (gameObject.tag == "Kobje2Tek")
+        if (gameObject.tag == "Iobje2Tek")
         {
-            t_davetlilerResimleri[2].SetActive(true);
+            t_punchResimleri[2].SetActive(true);
         }
-        else if (gameObject.tag == "Iobje2Tek")
+        else if (gameObject.tag == "Kobje2Tek")
         {
-            t_davetlilerResimleri[3].SetActive(true);
+            t_punchResimleri[3].SetActive(true);
         }
     }
 

@@ -14,6 +14,13 @@ public class Bina_Davetliler : MonoBehaviour
     [SerializeField] private Transform[] obje1Tek_Konumlari;
     [SerializeField] private Transform[] obje2Tek_Konumlari;
 
+    [Header("CokluCikacakObjeler›cinKonum")]
+    [SerializeField] GameObject[] obje1CokluKonum;
+    [SerializeField] GameObject[] obje2CokluKonum;
+    [SerializeField] GameObject[] obje3CokluKonum;
+    [SerializeField] GameObject[] obje4CokluKonum;
+    [SerializeField] GameObject[] obje5CokluKonum;
+
 
     [Header("SiraSayilari")]
     private int obje1Sirasi = 0;

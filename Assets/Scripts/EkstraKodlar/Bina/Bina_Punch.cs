@@ -14,6 +14,15 @@ public class Bina_Punch : MonoBehaviour
     [SerializeField] private Transform[] obje1Tek_Konumlari;
     [SerializeField] private Transform[] obje2Tek_Konumlari;
 
+    [Header("CokluCikacakObjelerİcinKonum")]
+    [SerializeField] GameObject[] obje1CokluKonum;
+    [SerializeField] GameObject[] obje2CokluKonum;
+    [SerializeField] GameObject[] obje3CokluKonum;
+    [SerializeField] GameObject[] obje4CokluKonum;
+    [SerializeField] GameObject[] obje5CokluKonum;
+
+
+
 
     [Header("SiraSayilari")]
     private int obje1Sirasi = 0;
@@ -32,6 +41,8 @@ public class Bina_Punch : MonoBehaviour
     [SerializeField] GameObject[] obje5;
     [SerializeField] GameObject[] obje1_Tek;
     [SerializeField] GameObject[] obje2_Tek;
+
+    
 
     private BinaOzellikleri binaOzellikleri;
 
@@ -94,7 +105,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
@@ -102,7 +113,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
     }
 
@@ -115,7 +126,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
@@ -123,7 +134,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
     }
 
@@ -136,7 +147,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje3Sirasi++;
+            SayiArtir(obje3Sirasi);
         }
         else if (isim == "Obje3Kotu(Clone)")
         {
@@ -144,7 +155,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje3Sirasi++;
+            SayiArtir(obje3Sirasi);
         }
     }
 
@@ -157,7 +168,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
@@ -165,7 +176,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
     }
 
@@ -178,7 +189,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
@@ -186,7 +197,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
     }
 
@@ -199,7 +210,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
         else if (isim == "Obje1TekKotu(Clone)")
         {
@@ -207,7 +218,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
     }
 
@@ -220,7 +231,7 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
         }
         else if (isim == "Obje2TekKotu(Clone)")
         {
@@ -228,7 +239,17 @@ public class Bina_Punch : MonoBehaviour
             obje.transform.localScale *= 4;
             olusanEsyalar.Add(obje);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
+        }
+    }
+
+    private void SayiArtir(int sayi)
+    {
+        sayi++;
+
+        if(sayi  >= 4)
+        {
+            sayi = 0;
         }
     }
 }
