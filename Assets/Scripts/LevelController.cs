@@ -87,10 +87,11 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().InsaEt();
-        GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;
-        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();
-        GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();
+        GameObject.FindWithTag("GameController").GetComponent<GameController>().ParayiSifirla();
+        GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().InsaEt();  //Onceki levellerde olusmus objeleri tekrar olusturmak icindir
+        GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;    //Karakterin pozisyonunu  sifirlamak icindir
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();   //Kameranýn karakteri takip etmesi icindir
+        GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();         //Arabadaki listelerin sifirlanmasi icindir
 
     }
 
@@ -119,7 +120,11 @@ public class LevelController : MonoBehaviour
     /// </summary>
     public void RestartLevelEvents()
     {
+        Destroy(currentLevelObj);
+       
+
         Elephant.LevelFailed(totalLevelNo);
         PlayerController.instance.StartingEvents();
+        LevelStartingEvents();
     }
 }

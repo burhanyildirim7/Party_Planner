@@ -31,6 +31,7 @@ public class Toplatici : MonoBehaviour
     Renderer renderer;
     MeshRenderer mesh;
 
+
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.45f); //Kapi rengini guncelleme suresi 
 
@@ -51,20 +52,21 @@ public class Toplatici : MonoBehaviour
         StartCoroutine(KapiRenginiGuncelle());
     }
 
-    //Kapida olusacak olan resimi belirler
-    private void ResimiBelirleKapi()
+    //Kapida olusacak olan resimi belirler  
+    //Level controller de restart level den ulasiliyor
+    public void ResimiBelirleKapi()
     {
         mesh.enabled = true;
         mesh.material = renk[1];
 
+
         for (int i = 0; i < 2; i++)
         {
-            if (transform.root.transform.GetChild(i) == null)
+            if (transform.parent.transform.GetChild(i) != null)
             {
                 transform.parent.transform.GetChild(i).GetComponent<BoxCollider>().enabled = true;
             }
         }
-
 
         if (LevelController.bolumunIsmi == "Bolum1")
         {
