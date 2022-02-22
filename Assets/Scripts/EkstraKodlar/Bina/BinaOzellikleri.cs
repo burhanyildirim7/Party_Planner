@@ -7,7 +7,7 @@ public class BinaOzellikleri : MonoBehaviour
     [Header("BinaBul")]
     private Bina_Punch bina_Punch;
     private Bina_KonserAlani bina_KonserAlani;
-    private Bina_Davetliler bina_Davetliler;
+  //  private Bina_Davetliler bina_Davetliler;   Buradaki veriler kayit edilmedigi icin erisilmesine gerek yoktur
 
     [Header("ObjeOlustur")]
     private int leveldekiObjeSayisi = 0;
@@ -17,7 +17,7 @@ public class BinaOzellikleri : MonoBehaviour
     {
         bina_Punch = GameObject.FindWithTag("Punch").GetComponent<Bina_Punch>();
         bina_KonserAlani = GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>();
-        bina_Davetliler = GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>();
+     //   bina_Davetliler = GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>();
         OlusturOncekiLeveldekileri();
     }
 
@@ -27,11 +27,9 @@ public class BinaOzellikleri : MonoBehaviour
         {
             PlayerPrefs.SetString("Bolum1" + i.ToString(), "");
             PlayerPrefs.SetString("Bolum2" + i.ToString(), "");
-            PlayerPrefs.SetString("Bolum3" + i.ToString(), "");
         }
         PlayerPrefs.SetInt("Punch_ObjeSayisi", 0);
         PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", 0);
-        PlayerPrefs.SetInt("DavetliAlani_ObjeSayisi", 0);
     }
 
     private void OlusturOncekiLeveldekileri()
@@ -45,11 +43,8 @@ public class BinaOzellikleri : MonoBehaviour
         {
             bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("Bolum2" + i.ToString()));
         }
-
-        for (int i = 0; i < PlayerPrefs.GetInt("DavetliAlani_ObjeSayisi"); i++)
-        {
-            bina_Davetliler.ObjeyiYerlestir(PlayerPrefs.GetString("Bolum3" + i.ToString()));
-        }
+      
+         //Davetlilerin olmamsýnýn sebebi kayit edilmesinin ihtiyacinin olmamasýndandir
     }
 
 
@@ -69,13 +64,5 @@ public class BinaOzellikleri : MonoBehaviour
 
         leveldekiObjeSayisi++;
         PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
-    }
-
-    public void Bolum3KayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
-    {
-        PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi, objeTuru);
-
-        leveldekiObjeSayisi++;
-        PlayerPrefs.SetInt("DavetliAlani_ObjeSayisi", leveldekiObjeSayisi);
     }
 }

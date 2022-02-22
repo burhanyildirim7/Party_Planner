@@ -104,6 +104,13 @@ public class Bina_Punch : MonoBehaviour
             obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             olusanEsyalar.Add(obje);
 
+          /*  for (int i = 0; i < 3; i++)           Burasi objeyi coklu olusturmaya baslanirken kullanilabilir
+            {
+                obje = Instantiate(obje1[0], obje1CokluKonum[i].transform.position, Quaternion.Euler(-Vector3.right * 90));
+                olusanEsyalar.Add(obje);
+            }*/
+            
+
             SayiArtir(obje1Sirasi);
         }
         else if (isim == "Obje1Kotu(Clone)")

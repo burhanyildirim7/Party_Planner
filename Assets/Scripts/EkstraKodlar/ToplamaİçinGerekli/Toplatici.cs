@@ -30,6 +30,7 @@ public class Toplatici : MonoBehaviour
     [SerializeField] private Material[] renk;
     Renderer renderer;
     MeshRenderer mesh;
+    BoxCollider collider;
 
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
@@ -42,6 +43,8 @@ public class Toplatici : MonoBehaviour
         karakterPara = GameObject.FindWithTag("Player").GetComponent<KarakterPara>();
         arabayadoldurucu = GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>();
         bolumIsmi = LevelController.bolumunIsmi;
+
+        collider = GetComponent<BoxCollider>();
 
 
         fiyatYazdirici.text = fiyat.ToString() + " $";
@@ -293,6 +296,7 @@ public class Toplatici : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            collider.enabled = false;
             karakterPara.meyveSatinAl(fiyat);
 
             ResimPasiflestir();

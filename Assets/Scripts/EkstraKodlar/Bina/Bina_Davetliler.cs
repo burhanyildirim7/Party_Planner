@@ -50,11 +50,9 @@ public class Bina_Davetliler : MonoBehaviour
         binaOzellikleri = GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>();
     }
 
-    public void EsyaCikarBar(GameObject esya)
+    public void EsyaCikarBar(GameObject insan)
     {
-        esya.gameObject.SetActive(false);
-        binaOzellikleri.Bolum3KayitEt("Bolum3", esya.gameObject.name);
-        ObjeyiYerlestir(esya.gameObject.name);
+        ObjeyiYerlestir(insan);
     }
 
 
@@ -77,148 +75,127 @@ public class Bina_Davetliler : MonoBehaviour
     }
 
 
-    public void ObjeyiYerlestir(string isim)
+    public void ObjeyiYerlestir(GameObject insan)
     {
-        Obje1Yerlestir(isim);
-        Obje2Yerlestir(isim);
-        Obje3Yerlestir(isim);
-        Obje4Yerlestir(isim);
-        Obje5Yerlestir(isim);
-        Obje1TekYerlestir(isim);
-        Obje2TekYerlestir(isim);
+        Obje1Yerlestir(insan);
+        Obje2Yerlestir(insan);
+        Obje3Yerlestir(insan);
+        Obje4Yerlestir(insan);
+        Obje5Yerlestir(insan);
+        Obje1TekYerlestir(insan);
+        Obje2TekYerlestir(insan);
     }
 
 
 
 
-    private void Obje1Yerlestir(string isim)
+    private void Obje1Yerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje1Iyi(Clone)")
+        if (insan.name == "Obje1Iyi(Clone)")
         {
-            obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
 
             obje1Sirasi++;
         }
-        else if (isim == "Obje1Kotu(Clone)")
+        else if (insan.name == "Obje1Kotu(Clone)")
         {
-            obje = Instantiate(obje1[1], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
 
             obje1Sirasi++;
         }
     }
 
-    private void Obje2Yerlestir(string isim)
+    private void Obje2Yerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje2Iyi(Clone)")
+        if (insan.name == "Obje2Iyi(Clone)")
         {
-            obje = Instantiate(obje2[0], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
 
             obje2Sirasi++;
         }
-        else if (isim == "Obje2Kotu(Clone)")
+        else if (insan.name == "Obje2Kotu(Clone)")
         {
-            obje = Instantiate(obje2[1], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
 
             obje2Sirasi++;
         }
     }
 
-    private void Obje3Yerlestir(string isim)
+    private void Obje3Yerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje3Iyi(Clone)")
+        if (insan.name == "Obje3Iyi(Clone)")
         {
-            obje = Instantiate(obje3[0], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
 
             obje3Sirasi++;
         }
-        else if (isim == "Obje3Kotu(Clone)")
+        else if (insan.name == "Obje3Kotu(Clone)")
         {
-            obje = Instantiate(obje3[1], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
 
-            obje3Sirasi++;
+            obje3Sirasi++; ;
         }
     }
 
-    private void Obje4Yerlestir(string isim)
+    private void Obje4Yerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje4Iyi(Clone)")
+        if (insan.name == "Obje4Iyi(Clone)")
         {
-            obje = Instantiate(obje4[0], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
 
             obje4Sirasi++;
         }
-        else if (isim == "Obje4Kotu(Clone)")
+        else if (insan.name == "Obje4Kotu(Clone)")
         {
-            obje = Instantiate(obje4[1], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
 
             obje4Sirasi++;
         }
     }
 
-    private void Obje5Yerlestir(string isim)
+    private void Obje5Yerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje5Iyi(Clone)")
+        if (insan.name == "Obje5Iyi(Clone)")
         {
-            obje = Instantiate(obje5[0], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
 
             obje5Sirasi++;
         }
-        else if (isim == "Obje5Kotu(Clone)")
+        else if (insan.name == "Obje5Kotu(Clone)")
         {
-            obje = Instantiate(obje5[1], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
 
             obje5Sirasi++;
         }
     }
 
-    private void Obje1TekYerlestir(string isim)
+    private void Obje1TekYerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje1TekIyi(Clone)")
+        if (insan.name == "Obje1TekIyi(Clone)")
         {
-            obje = Instantiate(obje1_Tek[0], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
 
             obje1_TekSirasi++;
         }
-        else if (isim == "Obje1TekKotu(Clone)")
+        else if (insan.name == "Obje1TekKotu(Clone)")
         {
-            obje = Instantiate(obje1_Tek[1], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
 
             obje1_TekSirasi++;
         }
     }
 
-    private void Obje2TekYerlestir(string isim)
+    private void Obje2TekYerlestir(GameObject insan)
     {
-        GameObject obje;
-        if (isim == "Obje2TekIyi(Clone)")
+        if (insan.name == "Obje2TekIyi(Clone)")
         {
-            obje = Instantiate(obje2_Tek[0], obje2Tek_Konumlari[obje1_TekSirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
 
             obje2_TekSirasi++;
         }
-        else if (isim == "Obje2TekKotu(Clone)")
+        else if (insan.name == "Obje2TekKotu(Clone)")
         {
-            obje = Instantiate(obje2_Tek[1], obje2Tek_Konumlari[obje2_TekSirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
+            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
 
             obje2_TekSirasi++;
         }
