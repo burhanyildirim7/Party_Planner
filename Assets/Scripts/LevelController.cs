@@ -93,7 +93,7 @@ public class LevelController : MonoBehaviour
         GameObject.FindWithTag("GameController").GetComponent<GameController>().ParayiSifirla();
         GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().InsaEt();  //Onceki levellerde olusmus objeleri tekrar olusturmak icindir
         GameObject.FindWithTag("KarakterPaketi").transform.position = Vector3.zero;    //Karakterin pozisyonunu  sifirlamak icindir
-        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasýKontrol();   //Kameranýn karakteri takip etmesi icindir
+        GameObject.FindWithTag("MainCamera").GetComponent<CameraMovement>().KameraOyunBasiKontrol();   //Kameranýn karakteri takip etmesi icindir
         GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>().TekrarBaslat();         //Arabadaki listelerin sifirlanmasi icindir
     }
 

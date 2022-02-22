@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
         StartCoroutine(OyunSonuKameraKontrol());
     }
 
-    public void KameraOyunBasýKontrol()
+    public void KameraOyunBasiKontrol()
     {
         oyunBittiMi = false;
     }
