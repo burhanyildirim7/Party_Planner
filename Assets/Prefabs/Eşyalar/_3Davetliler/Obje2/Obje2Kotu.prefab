@@ -1261,7 +1261,7 @@ GameObject:
   - component: {fileID: 5636199082380221451}
   - component: {fileID: -3008520732230396773}
   m_Layer: 0
-  m_Name: Obje2Kotu 1
+  m_Name: Obje2Kotu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

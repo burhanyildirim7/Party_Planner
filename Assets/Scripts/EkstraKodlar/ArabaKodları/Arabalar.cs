@@ -19,12 +19,10 @@ public class Arabalar : MonoBehaviour
 
     void Start()
     {
-        hedef = Vector3.forward * .4f;
         Karakter = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.speed = 8;
 
-        StartCoroutine(TakipEt());
         StartCoroutine(ArabaninHiziniDegistir());
     }
 
@@ -54,6 +52,7 @@ public class Arabalar : MonoBehaviour
     public void HedefDegistir(Vector3 yeniHedef)
     {
         hedef = yeniHedef;
+        StartCoroutine(TakipEt());
     }
 
     //Oyun bitiminde arabalari durdurur

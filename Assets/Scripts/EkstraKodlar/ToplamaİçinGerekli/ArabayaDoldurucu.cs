@@ -63,7 +63,6 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (LevelController.bolumunIsmi != "Bolum3")
         {
             ArabaOlustur();
-            ArabayaHedefBelirle();
         }
     }
 
@@ -271,7 +270,6 @@ public class ArabayaDoldurucu : MonoBehaviour
             esyaSayisi = 0;
 
             ArabaOlustur();
-            ArabayaHedefBelirle();
         }
     }
 
@@ -283,6 +281,9 @@ public class ArabayaDoldurucu : MonoBehaviour
 
         arabaOlusmaEfekt.transform.position = yeniAraba.transform.position + Vector3.forward * .5f;
         arabaOlusmaEfekt.Play();
+
+        ArabayaHedefBelirle();
+
     }
 
     private void ArabayaHedefBelirle()  //Buraya her seferinde gelebiliyor
@@ -301,29 +302,30 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             for (int i = arabaSetSayisi * 6; i < tumArabalar.Count; i++)
             {
+
                 if (i % 6 == 0)
                 {
                     tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.6f + arabaSetSayisi * .75f));
                 }
                 else if (i % 6 == 1)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * (.3f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * 2 *(.3f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 2)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) + Vector3.right * (.3f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) + Vector3.right * 2 * (.3f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 3)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) - Vector3.right * (.6f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.6f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 4)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) + Vector3.right * (.6f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) + Vector3.right * 2 * (.6f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 5)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.1f + arabaSetSayisi * .75f) - Vector3.right * (.9f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.1f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.9f + arabaSetSayisi * .09f));
                     arabaSetSayisi++;
                 }
             }
@@ -334,27 +336,27 @@ public class ArabayaDoldurucu : MonoBehaviour
             {
                 if (i % 6 == 0)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.6f + arabaSetSayisi * .75f) + Vector3.right * (.15f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.6f + arabaSetSayisi * .75f) + Vector3.right * 2 * (.15f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 1)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.6f + arabaSetSayisi * .75f) - Vector3.right * (.15f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.6f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.15f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 2)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) + Vector3.right * (.45f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) + Vector3.right * 2 * (.45f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 3)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * (.45f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.45f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 4)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) + Vector3.right * (.9f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) + Vector3.right * 2 * (.9f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 5)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) - Vector3.right * (.9f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.2f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.9f + arabaSetSayisi * .09f));
                     arabaSetSayisi++;
                 }
             }
@@ -411,8 +413,8 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             for (int i = 0; i < tumEsyalar.Count; i++)
             {
-                Debug.Log(i);
                 tumEsyalar[i].GetComponent<Insan>().InsaniGonder(hedefEsya);
+                yield return beklemeSuresi;
             }
         }
     }

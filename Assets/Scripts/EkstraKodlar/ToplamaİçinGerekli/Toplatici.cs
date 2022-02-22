@@ -282,7 +282,7 @@ public class Toplatici : MonoBehaviour
                 renderer.material = renk[1];
             }
             yield return beklemeSuresi2;
-        }
+        } 
     }
 
 

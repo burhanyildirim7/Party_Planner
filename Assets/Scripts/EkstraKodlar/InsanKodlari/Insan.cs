@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class Insan : MonoBehaviour
 {
-    NavMeshAgent agent;
-    GameObject player;
+    [Header("KarakterTakibiIcinGereklidir")]
+    private  NavMeshAgent agent;
+    private  GameObject player;
+  
 
+    [Header("AnimasyonKontroluIcinGereklidir")]
+    private Animator anim;
     bool sonKonumaYaklasildiMi = false;
 
 
@@ -16,6 +20,7 @@ public class Insan : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
 
         StartCoroutine(HedefBelirle());
@@ -36,9 +41,31 @@ public class Insan : MonoBehaviour
         }
     }
 
+
+    //Oyunun son durumundaki dans icin gereklidir
     public void SonKonumuBelirle(Vector3 sonHedef) //Bina Davetlilerden geliyor
     {
-        agent.SetDestination(sonHedef);
+        StartCoroutine(SonUzaklikAyari(sonHedef));
+
+    }
+    
+
+    IEnumerator SonUzaklikAyari(Vector3 sonHedef)
+    {
+        while(!sonKonumaYaklasildiMi)
+        {
+            if(Vector3.Distance(transform.position, sonHedef) >= 2f)
+            {
+                agent.SetDestination(sonHedef);
+            }
+            else
+            {
+                sonKonumaYaklasildiMi = true;
+            }
+            
+
+            yield return beklemeSuresi;
+        }
     }
 
 }
