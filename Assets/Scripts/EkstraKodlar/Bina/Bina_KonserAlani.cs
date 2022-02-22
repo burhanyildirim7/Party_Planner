@@ -100,14 +100,14 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             olusanEsyalar.Add(obje);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
             obje = Instantiate(obje1[1], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
             olusanEsyalar.Add(obje);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
     }
 
@@ -119,14 +119,14 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje2[0], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
             olusanEsyalar.Add(obje);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
             obje = Instantiate(obje2[1], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
             olusanEsyalar.Add(obje);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
     }
 
@@ -135,17 +135,17 @@ public class Bina_KonserAlani : MonoBehaviour
         GameObject obje;
         if (isim == "Obje3Iyi(Clone)")
         {
-            obje = Instantiate(obje3[0], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje = Instantiate(obje3[0], obje2Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje3Sirasi++;
+            SayiArtir(obje3Sirasi);
         }
         else if (isim == "Obje3Kotu(Clone)")
         {
-            obje = Instantiate(obje3[1], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje = Instantiate(obje3[1], obje2Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje3Sirasi++;
+            SayiArtir(obje3Sirasi);
         }
     }
 
@@ -157,14 +157,14 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje4[0], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
             obje = Instantiate(obje4[1], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
     }
 
@@ -176,14 +176,14 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje5[0], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
             obje = Instantiate(obje5[1], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
     }
 
@@ -195,14 +195,14 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje1_Tek[0], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
         else if (isim == "Obje1TekKotu(Clone)")
         {
             obje = Instantiate(obje1_Tek[1], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
     }
 
@@ -214,14 +214,25 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = Instantiate(obje2_Tek[0], obje2Tek_Konumlari[obje1_TekSirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
         }
         else if (isim == "Obje2TekKotu(Clone)")
         {
             obje = Instantiate(obje2_Tek[1], obje2Tek_Konumlari[obje2_TekSirasi].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
+        }
+    }
+
+
+    private void SayiArtir(int sayi)
+    {
+        sayi++;
+
+        if (sayi >= 4)
+        {
+            sayi = 0;
         }
     }
 }

@@ -11,9 +11,6 @@ public class GameController : MonoBehaviour
     GameObject kamera;
     GameObject arabalar;
 
-    [Header("OyunSonuEfektler")]
-    [SerializeField] ParticleSystem[] efektler;
-
     [Header("ParaBelirtmekIcin")]
     public static int para;
     [SerializeField] Text paraYazi;
@@ -85,23 +82,13 @@ public class GameController : MonoBehaviour
         araba = GameObject.FindGameObjectsWithTag("Araba");
         kamera.GetComponent<CameraMovement>().KameraOyunSonuKontrolAyarlari();
         arabalar.GetComponent<ArabayaDoldurucu>().EsyaOyunSonuAyarlayici();
+        GameObject.FindWithTag("finish").GetComponent<BolumSonuEfekt>().EfektleriBaslat();
 
         for (int i = 0; i < araba.Length; i++)
         {
             araba[i].GetComponent<Arabalar>().ArabalariDurdur();
         }
-
-        StartCoroutine(OyunSonuEfektleriAyarla());
     }
 
-    IEnumerator OyunSonuEfektleriAyarla()
-    {
-        yield return new WaitForSeconds(3);
-        for (int i = 0; i < efektler.Length / 2; i++)
-        {
-            efektler[i * 2].Play();
-            efektler[i * 2 + 1].Play();
-            yield return beklemeSuresi;
-        }
-    }
+    
 }

@@ -96,14 +96,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
         else if (insan.name == "Obje1Kotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje1Sirasi++;
+            SayiArtir(obje1Sirasi);
         }
     }
 
@@ -114,14 +114,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
         else if (insan.name == "Obje2Kotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje2Sirasi++;
+            SayiArtir(obje2Sirasi);
         }
     }
 
@@ -132,14 +132,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje3Sirasi++;
+            SayiArtir(obje3Sirasi);
         }
         else if (insan.name == "Obje3Kotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje3Sirasi++; ;
+            SayiArtir(obje3Sirasi);
         }
     }
 
@@ -150,14 +150,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
         else if (insan.name == "Obje4Kotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje4Sirasi++;
+            SayiArtir(obje4Sirasi);
         }
     }
 
@@ -168,14 +168,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
         else if (insan.name == "Obje5Kotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje5Sirasi++;
+            SayiArtir(obje5Sirasi);
         }
     }
 
@@ -186,14 +186,14 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
         else if (insan.name == "Obje1TekKotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje1_TekSirasi++;
+            SayiArtir(obje1_TekSirasi);
         }
     }
 
@@ -204,14 +204,24 @@ public class Bina_Davetliler : MonoBehaviour
             insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
         }
         else if (insan.name == "Obje2TekKotu(Clone)")
         {
             insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
-            obje2_TekSirasi++;
+            SayiArtir(obje2_TekSirasi);
+        }
+    }
+
+    private void SayiArtir(int sayi)
+    {
+        sayi++;
+
+        if (sayi >= 4)
+        {
+            sayi = 0;
         }
     }
 }
