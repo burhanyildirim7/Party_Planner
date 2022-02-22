@@ -32,6 +32,8 @@ public class Toplatici : MonoBehaviour
     MeshRenderer mesh;
     BoxCollider collider;
 
+    
+
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.45f); //Kapi rengini guncelleme suresi 
@@ -296,12 +298,15 @@ public class Toplatici : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            collider.enabled = false;
             karakterPara.meyveSatinAl(fiyat);
+            if(GameController.para - fiyat >= 0)
+            {
+                collider.enabled = false;
 
-            ResimPasiflestir();
-            StartCoroutine(esyaCikarmaAyari());
-            DigerKapidanMeyveAlmayiPasiflestir();
+                ResimPasiflestir();
+                StartCoroutine(esyaCikarmaAyari());
+                DigerKapidanMeyveAlmayiPasiflestir();
+            }
         }
     }
 

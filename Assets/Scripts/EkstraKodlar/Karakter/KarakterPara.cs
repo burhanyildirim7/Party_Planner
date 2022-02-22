@@ -25,7 +25,7 @@ public class KarakterPara : MonoBehaviour
     {
         if(other.CompareTag("Para"))
         {
-            gameController.SetMoney(1000); //Daha sonrasinda degistirilebilir
+            gameController.SetMoney(100); //Daha sonrasinda degistirilebilir
 
 
             paraToplamaEfekt.transform.position = other.transform.position + Vector3.up * .5f;

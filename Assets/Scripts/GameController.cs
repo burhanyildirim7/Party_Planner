@@ -57,16 +57,14 @@ public class GameController : MonoBehaviour
 
     public void SetMoney(int eklenecekPara)
     {
-        if(para + eklenecekPara < 0)
-        {
-            isContinue = false;
-            GameObject.FindWithTag("Player").GetComponent<AnimationController>().KosuPasif();
-            UIController.instance.ActivateLooseScreen();
-        }
-        else
+        if ((para + eklenecekPara) >= 0)
         {
             para += eklenecekPara;
             paraYazi.text = para.ToString() + " $";
+        }
+        else
+        {
+            //para yetmiyor efekti oynat
         }
     }
 
@@ -90,5 +88,5 @@ public class GameController : MonoBehaviour
         }
     }
 
-    
+
 }

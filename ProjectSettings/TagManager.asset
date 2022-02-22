@@ -36,6 +36,9 @@ TagManager:
   - Punch
   - Bar
   - DavetliAlani
+  - Bolum1KameraHedef
+  - Bolum2KameraHedef
+  - Bolum3KameraHedef
   layers:
   - Default
   - TransparentFX

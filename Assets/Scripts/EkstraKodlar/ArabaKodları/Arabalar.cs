@@ -30,7 +30,7 @@ public class Arabalar : MonoBehaviour
     IEnumerator ArabaninHiziniDegistir()
     {
         yield return beklemeSuresi2;
-        agent.speed = 3.4f;
+        agent.speed = 6f;
     }
    
 

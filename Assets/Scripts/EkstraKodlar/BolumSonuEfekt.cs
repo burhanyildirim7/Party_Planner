@@ -12,7 +12,10 @@ public class BolumSonuEfekt : MonoBehaviour
 
     public void EfektleriBaslat()
     {
-        StartCoroutine(OyunSonuEfektleriAyarla());
+        if(LevelController.bolumunIsmi == "Bolum3")
+        {
+            StartCoroutine(OyunSonuEfektleriAyarla());
+        }
     }
 
 
