@@ -24,10 +24,11 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        totalLevelNo = PlayerPrefs.GetInt("level");
+        totalLevelNo = PlayerPrefs.GetInt("level");   //UI CONTROLLER  NextLevelButtonClick  DE 3 levelde bir sifirlaniyor
         if (totalLevelNo == 0)
         {
             totalLevelNo = 1;
+            tempLevelNo = 0;
             levelNo = 1;
             PlayerPrefs.SetInt("level", totalLevelNo);
         }
@@ -112,6 +113,7 @@ public class LevelController : MonoBehaviour
 
         if (PlayerPrefs.GetInt("level") % 3 == 0)
         {
+            PlayerPrefs.SetInt("level", 0);
             GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().Sifirla();
         }
         Elephant.LevelCompleted(totalLevelNo);

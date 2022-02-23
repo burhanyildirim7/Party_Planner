@@ -129,7 +129,12 @@ public class UIController : MonoBehaviour
 		//araba sayýsý ve esya sayisini sifirla
 		if(LevelController.bolumunIsmi == "Bolum3")
         {
+			PlayerPrefs.SetInt("level", 0);
 			ScoreSifirla();
+            for (int i = 0; i < ScoreYorumYazisi.Length; i++)
+            {
+				ScoreYorumYazisi[i].SetActive(false);
+			}
         }
 
 		ScoreKayitEt();

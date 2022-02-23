@@ -22,7 +22,11 @@ public class EsyaGonder : MonoBehaviour
         {
             hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject); 
         }
-        
+        else if (bolumIsmi == "Bolum3")
+        {
+            hedef.GetComponent<Bina_Davetliler>().EsyaCikarBar(gameObject);
+        }
+
         gameObject.SetActive(false);
     }
 

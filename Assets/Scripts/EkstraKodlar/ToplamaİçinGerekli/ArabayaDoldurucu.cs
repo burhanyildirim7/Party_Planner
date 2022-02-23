@@ -71,10 +71,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         konserAlani = GameObject.FindWithTag("KonserAlani");
         davetliAlani = GameObject.FindWithTag("DavetliAlani");
 
-        if (LevelController.bolumunIsmi != "Bolum3")
-        {
-            ArabaOlustur();
-        }
+        ArabaOlustur();
     }
 
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
@@ -250,7 +247,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     private void DavetliAlaniEsyaCikar(string esyaIsmi,  string esyaLayeri)
     {
-        if (esyaIsmi == "Iobje1")
+        if (esyaIsmi == "Iobje1") 
         {
             uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[0]);
@@ -268,32 +265,32 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             InsanYerlesitir(davetli_Objeler[3]);
         }
-        else if (esyaIsmi == "Iobje3")
+        else if (esyaIsmi == "Iobje3") //Esya
         {
             uIController.ScoreArtir(score);
-            InsanYerlesitir(davetli_Objeler[4]);
+            esyaYerlestir(davetli_Objeler[4]);
         }
-        else if (esyaIsmi == "Kobje3")
+        else if (esyaIsmi == "Kobje3")//Esya
         {
-            InsanYerlesitir(davetli_Objeler[5]);
+            esyaYerlestir(davetli_Objeler[5]);
         }
-        else if (esyaIsmi == "Iobje4")
-        {
-            uIController.ScoreArtir(score);
-            InsanYerlesitir(davetli_Objeler[6]);
-        }
-        else if (esyaIsmi == "Kobje4")
-        {
-            InsanYerlesitir(davetli_Objeler[7]);
-        }
-        else if (esyaIsmi == "Iobje5")
+        else if (esyaIsmi == "Iobje4")//Esya
         {
             uIController.ScoreArtir(score);
-            InsanYerlesitir(davetli_Objeler[8]);
+            esyaYerlestir(davetli_Objeler[6]);
         }
-        else if (esyaIsmi == "Kobje5")
+        else if (esyaIsmi == "Kobje4")//Esya
         {
-            InsanYerlesitir(davetli_Objeler[9]);
+            esyaYerlestir(davetli_Objeler[7]);
+        }
+        else if (esyaIsmi == "Iobje5")//Esya
+        {
+            uIController.ScoreArtir(score);
+            esyaYerlestir(davetli_Objeler[8]);
+        }
+        else if (esyaIsmi == "Kobje5") //Esya
+        {
+            esyaYerlestir(davetli_Objeler[9]);
         }
 
 
@@ -537,9 +534,5 @@ public class ArabayaDoldurucu : MonoBehaviour
 
             yield return beklemeSuresi;
         }
-
-
     }
-
-
 }

@@ -56,6 +56,7 @@ public class Bina_Davetliler : MonoBehaviour
 
     public void EsyaCikarBar(GameObject insan)
     {
+        insan.gameObject.SetActive(false);
         ObjeyiYerlestir(insan);
     }
 
@@ -99,61 +100,97 @@ public class Bina_Davetliler : MonoBehaviour
 
     private void Obje1Yerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje1Iyi(Clone)")
         {
-            obje1[0].SetActive(true);
+            obje = obje1[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje1Kotu(Clone)")
         {
-            obje1[1].SetActive(true);
+            obje = obje1[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje2Yerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje2Iyi(Clone)")
         {
-            obje2[0].SetActive(true);
+            obje = obje2[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje2Kotu(Clone)")
         {
-            obje2[1].SetActive(true);
+            obje = obje2[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje3Yerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje3Iyi(Clone)")
         {
-            obje3[0].SetActive(true);
+            Debug.Log("A");
+            obje = obje3[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje3Kotu(Clone)")
         {
-            obje3[1].SetActive(true);
+            obje = obje3[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje4Yerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje4Iyi(Clone)")
         {
-            obje4[0].SetActive(true);
+            obje = obje4[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje4Kotu(Clone)")
         {
-            obje4[1].SetActive(true);
+            obje = obje4[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje5Yerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje5Iyi(Clone)")
         {
-            obje5[0].SetActive(true);
+            obje = obje5[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje5Kotu(Clone)")
         {
-            obje5[1].SetActive(true);
+            obje = obje5[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
@@ -161,73 +198,115 @@ public class Bina_Davetliler : MonoBehaviour
 
     private void Obje1TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje1TekIyi(Clone)")
         {
-            obje1_Tek[0].SetActive(true);
+            obje = obje1_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje1TekKotu(Clone)")
         {
-            obje1_Tek[1].SetActive(true);
+            obje = obje1_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje2TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje2TekIyi(Clone)")
         {
-            obje2_Tek[0].SetActive(true);
+            obje = obje2_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje2TekKotu(Clone)")
         {
-            obje2_Tek[1].SetActive(true);
+            obje = obje2_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje3TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje3TekIyi(Clone)")
         {
-            obje3_Tek[0].SetActive(true);
+            obje = obje3_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje3TekKotu(Clone)")
         {
-            obje3_Tek[1].SetActive(true);
+            obje = obje3_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje4TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje4TekIyi(Clone)")
         {
-            obje4_Tek[0].SetActive(true);
+            obje = obje4_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje4TekKotu(Clone)")
         {
-            obje4_Tek[1].SetActive(true);
+            obje = obje4_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje5TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje5TekIyi(Clone)")
         {
-            obje5_Tek[0].SetActive(true);
+            obje = obje5_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje5TekKotu(Clone)")
         {
-            obje5_Tek[1].SetActive(true);
+            obje = obje5_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
     private void Obje6TekYerlestir(GameObject insan)
     {
+        GameObject obje;
         if (insan.name == "Obje6TekIyi(Clone)")
         {
-            obje5_Tek[0].SetActive(true);
+            obje = obje6_Tek[0];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
         else if (insan.name == "Obje6TekKotu(Clone)")
         {
-            obje5_Tek[1].SetActive(true);
+            obje = obje6_Tek[1];
+            olusanEsyalar.Add(obje);
+
+            obje.SetActive(true);
         }
     }
 
