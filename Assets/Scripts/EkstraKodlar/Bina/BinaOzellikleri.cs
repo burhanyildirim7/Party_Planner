@@ -7,18 +7,18 @@ public class BinaOzellikleri : MonoBehaviour
     [Header("BinaBul")]
     private Bina_Punch bina_Punch;
     private Bina_KonserAlani bina_KonserAlani;
-  //  private Bina_Davetliler bina_Davetliler;   Buradaki veriler kayit edilmedigi icin erisilmesine gerek yoktur
+    //  private Bina_Davetliler bina_Davetliler;   Buradaki veriler kayit edilmedigi icin erisilmesine gerek yoktur
 
     [Header("ObjeOlustur")]
     private int leveldekiObjeSayisi = 0;
 
+    WaitForSeconds beklemeSuresi = new WaitForSeconds(.2f);
 
     public void InsaEt()
     {
         bina_Punch = GameObject.FindWithTag("Punch").GetComponent<Bina_Punch>();
         bina_KonserAlani = GameObject.FindWithTag("KonserAlani").GetComponent<Bina_KonserAlani>();
-     //   bina_Davetliler = GameObject.FindWithTag("DavetliAlani").GetComponent<Bina_Davetliler>();
-        OlusturOncekiLeveldekileri();
+        StartCoroutine(OlusturOncekiLeveldekileri());
     }
 
     public void Sifirla() //Parti tamamlandýktan sonra 
@@ -32,19 +32,22 @@ public class BinaOzellikleri : MonoBehaviour
         PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", 0);
     }
 
-    private void OlusturOncekiLeveldekileri()
+    IEnumerator OlusturOncekiLeveldekileri()
     {
+
         for (int i = 0; i < PlayerPrefs.GetInt("Punch_ObjeSayisi"); i++)
         {
             bina_Punch.ObjeyiYerlestir(PlayerPrefs.GetString("Bolum1" + i.ToString()));
+            yield return beklemeSuresi;
         }
 
         for (int i = 0; i < PlayerPrefs.GetInt("KonserAlani_ObjeSayisi"); i++)
         {
             bina_KonserAlani.ObjeyiYerlestir(PlayerPrefs.GetString("Bolum2" + i.ToString()));
+            yield return beklemeSuresi;
         }
-      
-         //Davetlilerin olmamsýnýn sebebi kayit edilmesinin ihtiyacinin olmamasýndandir
+
+        //Davetlilerin olmamsýnýn sebebi kayit edilmesinin ihtiyacinin olmamasýndandir
     }
 
 
@@ -52,7 +55,7 @@ public class BinaOzellikleri : MonoBehaviour
     public void Bolum1KayitEt(string levelIsmi, string objeTuru)   // Binanin ismi ve obje türü
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru); //Burasi sebebiyle ayný leveli iki defa oynadiginda son oynadigindaki objeler diger level icin kalici olur
-        
+
         leveldekiObjeSayisi++;
         PlayerPrefs.SetInt("Punch_ObjeSayisi", leveldekiObjeSayisi);
     }
