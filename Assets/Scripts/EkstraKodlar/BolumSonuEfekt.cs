@@ -21,7 +21,7 @@ public class BolumSonuEfekt : MonoBehaviour
 
     IEnumerator OyunSonuEfektleriAyarla()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         for (int i = 0; i < efektler.Length / 2; i++)
         {
             efektler[i * 2].Play();

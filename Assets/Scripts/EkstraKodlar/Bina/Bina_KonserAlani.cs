@@ -64,7 +64,7 @@ public class Bina_KonserAlani : MonoBehaviour
     {
         for (int i = 0; i < olusanEsyalar.Count; i++)
         {
-            Destroy(olusanEsyalar[i]);
+            olusanEsyalar[i].SetActive(false);
         }
         olusanEsyalar.Clear();
 
