@@ -13,6 +13,7 @@ public class LevelController : MonoBehaviour
     public static string bolumunIsmi;  //Onceki level ismini çekerken gereklidir
 
     [SerializeField] GameObject finish;
+    private GameObject currentFinishObj;
 
 
     private void Awake()
@@ -63,11 +64,14 @@ public class LevelController : MonoBehaviour
             levelNo = totalLevelNo;
         }
         UIController.instance.SetLevelText(totalLevelNo);
-        Instantiate(finish, Vector3.forward * 250, Quaternion.identity);
+        if(currentFinishObj == null)
+        {
+            currentFinishObj = Instantiate(finish, Vector3.forward * 245, Quaternion.Euler(Vector3.up * 180));
+        }
         currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
         Elephant.LevelStarted(totalLevelNo);
 
-       // Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
+        // Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
 
         if (PlayerPrefs.GetInt("level") == 1)
         {
@@ -123,8 +127,8 @@ public class LevelController : MonoBehaviour
     public void RestartLevelEvents()
     {
         Destroy(currentLevelObj);
+        Destroy(currentFinishObj);
 
-       
         Elephant.LevelFailed(totalLevelNo);
         PlayerController.instance.StartingEvents();
         LevelStartingEvents();

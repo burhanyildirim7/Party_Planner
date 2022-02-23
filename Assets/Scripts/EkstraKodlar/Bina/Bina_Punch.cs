@@ -42,6 +42,7 @@ public class Bina_Punch : MonoBehaviour
     [SerializeField] GameObject[] obje1_Tek;
     [SerializeField] GameObject[] obje2_Tek;
 
+
     
 
     private BinaOzellikleri binaOzellikleri;
@@ -101,24 +102,13 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje1Iyi(Clone)")
         {
-            obje = Instantiate(obje1[0], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
-            olusanEsyalar.Add(obje);
-
-          /*  for (int i = 0; i < 3; i++)           Burasi objeyi coklu olusturmaya baslanirken kullanilabilir
-            {
-                obje = Instantiate(obje1[0], obje1CokluKonum[i].transform.position, Quaternion.Euler(-Vector3.right * 90));
-                olusanEsyalar.Add(obje);
-            }*/
-            
-
-            SayiArtir(obje1Sirasi);
+            obje = Instantiate(obje1[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);     
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
-            obje = Instantiate(obje1[1], obje1Konumlari[obje1Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90));
+            obje = Instantiate(obje1[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje1Sirasi);
         }
     }
 
@@ -127,17 +117,13 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje2Iyi(Clone)")
         {
-            obje = Instantiate(obje2[0], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            obje = Instantiate(obje2[0], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje2Sirasi);
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
-            obje = Instantiate(obje2[1], obje2Konumlari[obje2Sirasi].transform.position, Quaternion.Euler(-Vector3.right * 90 + Vector3.forward * 180));
+            obje = Instantiate(obje2[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje2Sirasi);
         }
     }
 
@@ -146,17 +132,13 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje3Iyi(Clone)")
         {
-            obje = Instantiate(obje3[0], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje = Instantiate(obje3[0], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje3Sirasi);
         }
         else if (isim == "Obje3Kotu(Clone)")
         {
-            obje = Instantiate(obje3[1], obje3Konumlari[obje3Sirasi].transform.position, Quaternion.identity);
+            obje = Instantiate(obje3[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje3Sirasi);
         }
     }
 
@@ -165,17 +147,15 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje4Iyi(Clone)")
         {
-            obje = Instantiate(obje4[0], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+            obje = obje4[0];
+            obje.SetActive(true);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje4Sirasi);
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
-            obje = Instantiate(obje4[1], obje4Konumlari[obje4Sirasi].transform.position, Quaternion.identity);
+            obje = obje4[1];
+            obje.SetActive(true);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje4Sirasi);
         }
     }
 
@@ -184,17 +164,15 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje5Iyi(Clone)")
         {
-            obje = Instantiate(obje5[0], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje = obje5[0];
+            obje.SetActive(true);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje5Sirasi);
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
-            obje = Instantiate(obje5[1], obje5Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
+            obje = obje5[1];
+            obje.SetActive(true);
             olusanEsyalar.Add(obje);
-
-            SayiArtir(obje5Sirasi);
         }
     }
 

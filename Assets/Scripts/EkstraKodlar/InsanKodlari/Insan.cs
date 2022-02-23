@@ -23,47 +23,25 @@ public class Insan : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
 
-        StartCoroutine(HedefBelirle());
     }
 
     public void InsaniGonder(GameObject hedef)  //Bina_Davetlilere gönderilmistir
     {
-        hedef.GetComponent<Bina_Davetliler>().EsyaCikarBar(gameObject);
-    }
-
-    
-    IEnumerator HedefBelirle()
-    {
-        while (GameController.instance.isContinue == true)
+        if(LevelController.bolumunIsmi == "Bolum2")
         {
-            agent.SetDestination(player.transform.position);
-            yield return beklemeSuresi;
+            hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject);
+        }
+        else
+        {
+            hedef.GetComponent<Bina_Davetliler>().EsyaCikarBar(gameObject);
         }
     }
 
-
-    //Oyunun son durumundaki dans icin gereklidir
-    public void SonKonumuBelirle(Vector3 sonHedef) //Bina Davetlilerden geliyor
+    IEnumerator KarakteriTakipEt()
     {
-        StartCoroutine(SonUzaklikAyari(sonHedef));
-
-    }
-    
-
-    IEnumerator SonUzaklikAyari(Vector3 sonHedef)
-    {
-        while(!sonKonumaYaklasildiMi)
+        while(true)
         {
-            if(Vector3.Distance(transform.position, sonHedef) >= 2f)
-            {
-                agent.SetDestination(sonHedef);
-            }
-            else
-            {
-                sonKonumaYaklasildiMi = true;
-            }
-            
-
+            agent.SetDestination(player.transform.position - Vector3.forward);
             yield return beklemeSuresi;
         }
     }

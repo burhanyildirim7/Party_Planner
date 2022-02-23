@@ -34,11 +34,8 @@ TagManager:
   - Kobje2Tek
   - Iobje2Tek
   - Punch
-  - Bar
   - DavetliAlani
-  - Bolum1KameraHedef
-  - Bolum2KameraHedef
-  - Bolum3KameraHedef
+  - KameraNoktasi
   layers:
   - Default
   - TransparentFX
@@ -46,9 +43,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Tur1
+  - Tur2
+  - Tur3
   - 
   - 
   - 

@@ -15,7 +15,6 @@ public class CameraMovement : MonoBehaviour
 
     [Header("OyunSonuKontrol")]
     bool oyunBittiMi = false;
-    public float kameraYavaslikAyari;
     private GameObject target;
 
 
@@ -41,36 +40,62 @@ public class CameraMovement : MonoBehaviour
 
     public void KameraOyunSonuKontrolAyarlari()
     {
-        /*if (LevelController.bolumunIsmi == "Bolum1")
+        oyunBittiMi = true;
+        if (LevelController.bolumunIsmi == "Bolum1")
         {
-            target = GameObject.FindWithTag("Bolum1KameraHedef");
+            target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(0).transform.gameObject;
+            StartCoroutine(OyunSonuKameraKontrol1());
         }
         else if (LevelController.bolumunIsmi == "Bolum2")
         {
-            target = GameObject.FindWithTag("Bolum2KameraHedef");
+            target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(1).transform.gameObject;
+            StartCoroutine(OyunSonuKameraKontrol2());
         }
         else if (LevelController.bolumunIsmi == "Bolum3")
         {
-            target = GameObject.FindWithTag("Bolum3KameraHedef");
-        }*/
+            target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(2).transform.gameObject;
+            StartCoroutine(OyunSonuKameraKontrol3());
+        }
 
-        oyunBittiMi = true;
-        StartCoroutine(OyunSonuKameraKontrol());
+       
+        
     }
 
     public void KameraOyunBasiKontrol()
     {
+        transform.rotation = Quaternion.Euler(Vector3.right * 17);
         oyunBittiMi = false;
     }
 
     //Oyun sonunda tum meyveleri gorebilmek icin yapilmistir
-    IEnumerator OyunSonuKameraKontrol()
+    IEnumerator OyunSonuKameraKontrol1()
     {
-      //  transform.position = Player.transform.position + -Vector3.forward * 8 * (1 + kameraUzakligi * .2f) + Vector3.up * 3 * (1 + kameraUzakligi * .1f) - Vector3.forward * 10;
-        //Vector3 kameraHedef = new Vector3(0, Player.transform.position.y + aradakiFark.y, Player.transform.position.z + aradakiFark.z);
         while (oyunBittiMi)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position - Vector3.forward * 4, ref velocity, Time.deltaTime * kameraYavaslikAyari * 20);
+            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 30 + Vector3.up * 50), 10 * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+
+    IEnumerator OyunSonuKameraKontrol2()
+    {
+        while (oyunBittiMi)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40), 10 * Time.deltaTime);
+
+            yield return null;
+        }
+    }
+
+    IEnumerator OyunSonuKameraKontrol3()
+    {
+        while (oyunBittiMi)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40 + Vector3.up * -130), 10 * Time.deltaTime);
 
             yield return null;
         }

@@ -197,11 +197,33 @@ public class Toplatici : MonoBehaviour
         }
         if (gameObject.tag == "Iobje2Tek")
         {
-            t_konserAlaniResimleri[2].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_konserAlaniResimleri[2].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_konserAlaniResimleri[4].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_konserAlaniResimleri[6].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje2Tek")
         {
-            t_konserAlaniResimleri[3].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_konserAlaniResimleri[3].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_konserAlaniResimleri[5].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_konserAlaniResimleri[7].SetActive(true);
+            }
         }
     }
 
@@ -298,9 +320,10 @@ public class Toplatici : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            karakterPara.meyveSatinAl(fiyat);
+            
             if(GameController.para - fiyat >= 0)
             {
+                karakterPara.meyveSatinAl(fiyat);
                 collider.enabled = false;
 
                 ResimPasiflestir();
@@ -323,15 +346,15 @@ public class Toplatici : MonoBehaviour
     {
         if (bolumIsmi == "Bolum1")
         {
-            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag, gameObject.layer.ToString());
         }
         else if (bolumIsmi == "Bolum2")
         {
-            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag, gameObject.layer.ToString());
         }
         else if (bolumIsmi == "Bolum3")
         {
-            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag);
+            arabayadoldurucu.EsyaYerlestirmeAyarlayici(gameObject.tag, gameObject.layer.ToString());
         }
     }
 
@@ -356,6 +379,11 @@ public class Toplatici : MonoBehaviour
             {
                 punchResimleri[i].SetActive(false);
             }
+
+            for (int i = 0; i < t_punchResimleri.Length; i++)
+            {
+                t_punchResimleri[i].SetActive(false);
+            }
         }
         else if (bolumIsmi == "Bolum2")
         {
@@ -363,12 +391,22 @@ public class Toplatici : MonoBehaviour
             {
                 konserAlaniResimleri[i].SetActive(false);
             }
+
+            for (int i = 0; i < t_konserAlaniResimleri.Length; i++)
+            {
+                t_konserAlaniResimleri[i].SetActive(false);
+            }
         }
         else if (bolumIsmi == "Bolum3")
         {
             for (int i = 0; i < davetlilerResimleri.Length; i++)
             {
                 davetlilerResimleri[i].SetActive(false);
+            }
+
+            for (int i = 0; i < t_davetlilerResimleri.Length; i++)
+            {
+                t_davetlilerResimleri[i].SetActive(false);
             }
         }
     }

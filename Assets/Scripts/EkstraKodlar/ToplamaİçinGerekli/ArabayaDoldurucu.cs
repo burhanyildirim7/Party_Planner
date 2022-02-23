@@ -34,6 +34,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("Listeler")]
     List<GameObject> tumEsyalar = new List<GameObject>();
+    List<GameObject> tumInsanlar = new List<GameObject>();
     List<GameObject> tumArabalar = new List<GameObject>();
 
     [Header("Efektler")]
@@ -42,7 +43,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     [Header("ScoreIcin")]
     UIController uIController;
 
-    private WaitForSeconds beklemeSuresi = new WaitForSeconds(.06f);  //Meyvelerin firlatili ile ilgilidir
+    private WaitForSeconds beklemeSuresi = new WaitForSeconds(.2f);  //Meyvelerin firlatili ile ilgilidir
 
 
     public void TekrarBaslat()   //Level controllerden erisiliyor
@@ -56,7 +57,9 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         tumEsyalar.Clear();
         tumArabalar.Clear();
+        tumInsanlar.Clear();
         arabaSetSayisi = 0;
+        esyaSayisi = 0;
 
         karakter = GameObject.FindWithTag("KarakterPaketi");
         bolumIsmi = LevelController.bolumunIsmi;
@@ -73,7 +76,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     }
 
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
-    public void EsyaYerlestirmeAyarlayici(string esyaIsmi)
+    public void EsyaYerlestirmeAyarlayici(string esyaIsmi, string esyaLayeri)
     {
         if (bolumIsmi == "Bolum1")
         {
@@ -81,7 +84,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (bolumIsmi == "Bolum2")
         {
-            KonserAlaniEsyaCikar(esyaIsmi);
+            KonserAlaniEsyaCikar(esyaIsmi, esyaLayeri);
         }
         else if (bolumIsmi == "Bolum3")
         {
@@ -149,7 +152,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         hedefEsya = punchAlani;
     }
 
-    private void KonserAlaniEsyaCikar(string esyaIsmi)
+    private void KonserAlaniEsyaCikar(string esyaIsmi, string esyaLayeri)
     {
         if (esyaIsmi == "Iobje1")
         {
@@ -210,11 +213,35 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Kobje2Tek")
         {
             uIController.ScoreArtir(10);
-            esyaYerlestir(konserAlani_Objeler_Tek[2]);
+
+            //insan yerlestir
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(konserAlani_Objeler_Tek[2]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(konserAlani_Objeler_Tek[4]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(konserAlani_Objeler_Tek[6]);
+            }
         }
         else if (esyaIsmi == "Iobje2Tek")
         {
-            esyaYerlestir(konserAlani_Objeler_Tek[3]);
+            if (esyaLayeri == "6")
+            {
+                InsanYerlesitir(konserAlani_Objeler_Tek[3]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(konserAlani_Objeler_Tek[5]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(konserAlani_Objeler_Tek[7]);
+            }
         }
         hedefEsya = konserAlani;
     }
@@ -290,11 +317,6 @@ public class ArabayaDoldurucu : MonoBehaviour
         hedefEsya = davetliAlani;
     }
 
-    private void InsanYerlesitir(GameObject insan)
-    {
-        GameObject gelenInsan = Instantiate(insan, GameObject.FindWithTag("Player").transform.position - Vector3.forward * 5, Quaternion.identity);
-        tumEsyalar.Add(gelenInsan);
-    }
 
 
     //Esyalarin yerlestirilmesi icin gereklidir
@@ -351,7 +373,7 @@ public class ArabayaDoldurucu : MonoBehaviour
                 }
                 else if (i % 6 == 1)
                 {
-                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * 2 *(.3f + arabaSetSayisi * .09f));
+                    tumArabalar[i].GetComponent<Arabalar>().HedefDegistir(Vector3.forward * (.4f + arabaSetSayisi * .75f) - Vector3.right * 2 * (.3f + arabaSetSayisi * .09f));
                 }
                 else if (i % 6 == 2)
                 {
@@ -405,6 +427,12 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
     }
 
+    //Insanlarin olusturulmasi ile ilgilidir
+    private void InsanYerlesitir(GameObject insan)
+    {
+        GameObject gelenInsan = Instantiate(insan, GameObject.FindWithTag("Player").transform.position - Vector3.forward * 5, Quaternion.identity);
+        tumInsanlar.Add(gelenInsan);
+    }
 
 
 
@@ -418,46 +446,50 @@ public class ArabayaDoldurucu : MonoBehaviour
     public IEnumerator EsyalariGonder()
     {
         int firlatilanEsyaSayisi = 0;
+        int firlatilanInsanSayisi = 0;
         int yokEdilenArabaSayisi = 0;
 
-        if (LevelController.bolumunIsmi != "Bolum3")
+        yield return new WaitForSeconds(1);
+
+        while (firlatilanEsyaSayisi < tumEsyalar.Count)
         {
-            while (firlatilanEsyaSayisi < tumEsyalar.Count)
+            tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].GetComponent<EsyaGonder>().EsyayiGonder(hedefEsya);
+            arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].transform.position;
+            arabaOlusmaEfekt.Play();
+
+            if (((tumEsyalar.Count - 1) - firlatilanEsyaSayisi) % 3 == 0)
             {
-
-
-                tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].GetComponent<EsyaGonder>().EsyayiGonder(hedefEsya);
-                arabaOlusmaEfekt.transform.position = tumEsyalar[(tumEsyalar.Count - 1) - firlatilanEsyaSayisi].transform.position;
-                arabaOlusmaEfekt.Play();
-
-                if (((tumEsyalar.Count - 1) - firlatilanEsyaSayisi) % 3 == 0)
+                if (((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
                 {
-                    if (((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
-                    {
-                        arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
-                    }
-
-                    arabaOlusmaEfekt.Play();
-                    if (((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
-                    {
-                        tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.GetChild(0).transform.gameObject.SetActive(false);
-                    }
-                    yokEdilenArabaSayisi++;
+                    arabaOlusmaEfekt.transform.position = tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.position;
                 }
 
-                firlatilanEsyaSayisi++;
-
-
-                yield return beklemeSuresi;
+                arabaOlusmaEfekt.Play();
+                if (((tumArabalar.Count - 1) - yokEdilenArabaSayisi) >= 0)
+                {
+                    tumArabalar[(tumArabalar.Count - 1) - yokEdilenArabaSayisi].transform.GetChild(0).transform.gameObject.SetActive(false);
+                }
+                yokEdilenArabaSayisi++;
             }
+            firlatilanEsyaSayisi++;
+
+            yield return beklemeSuresi;
         }
-        else
+
+
+        while (firlatilanInsanSayisi < tumInsanlar.Count)
         {
-            for (int i = 0; i < tumEsyalar.Count; i++)
-            {
-                tumEsyalar[i].GetComponent<Insan>().InsaniGonder(hedefEsya);
-                yield return beklemeSuresi;
-            }
+            tumInsanlar[(tumInsanlar.Count - 1) - firlatilanInsanSayisi].GetComponent<Insan>().InsaniGonder(hedefEsya);
+            arabaOlusmaEfekt.transform.position = tumInsanlar[(tumInsanlar.Count - 1) - firlatilanInsanSayisi].transform.position;
+            arabaOlusmaEfekt.Play();
+
+            firlatilanInsanSayisi++;
+
+            yield return beklemeSuresi;
         }
+
+
     }
+
+
 }

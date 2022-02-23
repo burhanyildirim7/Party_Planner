@@ -55228,7 +55228,7 @@ GameObject:
   - component: {fileID: 6047151301645317608}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Iobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56747,7 +56747,7 @@ GameObject:
   - component: {fileID: 6047151301695971566}
   m_Layer: 0
   m_Name: SolToplama
-  m_TagString: Kobje1
+  m_TagString: Kobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

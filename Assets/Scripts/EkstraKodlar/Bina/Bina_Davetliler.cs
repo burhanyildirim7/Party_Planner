@@ -93,14 +93,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje1Iyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
+           // insan.transform. position = GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje1Sirasi);
         }
         else if (insan.name == "Obje1Kotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
+            //insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje1Sirasi);
@@ -111,14 +111,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje2Iyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje2Sirasi);
         }
         else if (insan.name == "Obje2Kotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
+            //insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje2Sirasi);
@@ -129,14 +129,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje3Iyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje3Sirasi);
         }
         else if (insan.name == "Obje3Kotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
+            //insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje3Sirasi);
@@ -147,14 +147,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje4Iyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje4Sirasi);
         }
         else if (insan.name == "Obje4Kotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje4Sirasi);
@@ -165,14 +165,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje5Iyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje5Sirasi);
         }
         else if (insan.name == "Obje5Kotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
+          //  insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje5Sirasi);
@@ -183,14 +183,14 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje1TekIyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje1_TekSirasi);
         }
         else if (insan.name == "Obje1TekKotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje1_TekSirasi);
@@ -201,19 +201,20 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje2TekIyi(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje2_TekSirasi);
         }
         else if (insan.name == "Obje2TekKotu(Clone)")
         {
-            insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
+           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
             olusanEsyalar.Add(insan);
 
             SayiArtir(obje2_TekSirasi);
         }
     }
+
 
     private void SayiArtir(int sayi)
     {

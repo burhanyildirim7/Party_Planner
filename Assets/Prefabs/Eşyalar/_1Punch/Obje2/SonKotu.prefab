@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4783253767372310}
   - component: {fileID: -3378614509248325747}
   - component: {fileID: -1235613555235569024}
+  - component: {fileID: 8916932932680669874}
   m_Layer: 0
   m_Name: SonKotu
   m_TagString: Untagged
@@ -315,6 +316,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &8916932932680669874
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839249793111828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26c94b2c4d580f94ead80553c6b35573, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1938371601171374
 GameObject:
   m_ObjectHideFlags: 0

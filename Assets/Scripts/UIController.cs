@@ -52,7 +52,6 @@ public class UIController : MonoBehaviour
 	public void ScoreArtir(int gelenSayi)    //Toplatici icerisinden geliyor
     {
 		Score += gelenSayi;
-		Debug.Log(Score);
 		//yavaslatilmis bir sekilde artirmayi etkinlestir
     }
 

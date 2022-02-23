@@ -32,6 +32,11 @@ public class EsyaGonder : MonoBehaviour
         {
             transform.position = GameObject.FindWithTag("Player").transform.position - Vector3.forward * 20;
         }
+    }
 
+
+    public void YokEt()
+    {
+        Destroy(gameObject);
     }
 }

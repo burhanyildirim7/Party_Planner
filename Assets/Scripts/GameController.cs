@@ -80,7 +80,10 @@ public class GameController : MonoBehaviour
         araba = GameObject.FindGameObjectsWithTag("Araba");
         kamera.GetComponent<CameraMovement>().KameraOyunSonuKontrolAyarlari();
         arabalar.GetComponent<ArabayaDoldurucu>().EsyaOyunSonuAyarlayici();
-        GameObject.FindWithTag("finish").GetComponent<BolumSonuEfekt>().EfektleriBaslat();
+        if(LevelController.bolumunIsmi == "Bolum3")
+        {
+            GameObject.FindWithTag("finish").GetComponent<BolumSonuEfekt>().EfektleriBaslat();
+        }
 
         for (int i = 0; i < araba.Length; i++)
         {
