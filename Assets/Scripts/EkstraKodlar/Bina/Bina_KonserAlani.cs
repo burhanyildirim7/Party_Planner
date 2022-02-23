@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Bina_KonserAlani : MonoBehaviour
 {
-
-    [Header("Konumlar")]
-    [SerializeField] private Transform[] obje1Konumlari;
-    [SerializeField] private Transform[] obje2Konumlari;
-    [SerializeField] private Transform[] obje3Konumlari;
-    [SerializeField] private Transform[] obje4Konumlari;
-    [SerializeField] private Transform[] obje5Konumlari;
-    [SerializeField] private Transform[] obje1Tek_Konumlari;
-    [SerializeField] private Transform[] obje2Tek_Konumlari;
+    [SerializeField] ParticleSystem insanDogusEfekti;
 
 
     [Header("SiraSayilari")]
@@ -59,14 +51,6 @@ public class Bina_KonserAlani : MonoBehaviour
             olusanEsyalar[i].SetActive(false);
         }
         olusanEsyalar.Clear();
-
-
-        obje1Sirasi = 0;
-        obje2Sirasi = 0;
-        obje3Sirasi = 0;
-        obje4Sirasi = 0;
-        obje5Sirasi = 0;
-        obje1_TekSirasi = 0;
     }
 
 
@@ -240,7 +224,7 @@ public class Bina_KonserAlani : MonoBehaviour
         }
     }
 
-    private void Obje2TekYerlestir(string isim)
+    private void Obje2TekYerlestir(string isim) //insan
     {
         GameObject obje;
         if (isim == "Obje2TekIyi(Clone)")
@@ -255,9 +239,10 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
         }
+        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
     }
 
-    private void Obje3TekYerlestir(string isim)
+    private void Obje3TekYerlestir(string isim) //insan
     {
         GameObject obje;
         if (isim == "Obje3TekIyi(Clone)")
@@ -273,9 +258,10 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
         }
+        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
     }
 
-    private void Obje4TekYerlestir(string isim)
+    private void Obje4TekYerlestir(string isim) //insan
     {
         GameObject obje;
         if (isim == "Obje4TekIyi(Clone)")
@@ -290,6 +276,7 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
         }
+        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
     }
 
     private void SayiArtir(int sayi)

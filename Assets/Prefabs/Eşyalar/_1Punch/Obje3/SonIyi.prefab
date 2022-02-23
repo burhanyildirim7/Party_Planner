@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4299291235920952}
   - component: {fileID: -8961678369740997918}
   - component: {fileID: -795652705960962789}
+  - component: {fileID: -8737487745763907789}
   m_Layer: 0
   m_Name: SonIyi
   m_TagString: Untagged
@@ -314,3 +315,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8737487745763907789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914988455468238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee8cec732d913546ac39c3920dce8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suyaDusmeEfekt: {fileID: 198034473772347848, guid: 6fb46d7795a52ff42a59f55547b337c0, type: 3}

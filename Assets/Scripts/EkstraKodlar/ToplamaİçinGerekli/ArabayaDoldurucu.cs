@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ArabayaDoldurucu : MonoBehaviour
 {
-
+   
     //Resimler icin gereklidir
     [Header("Doldurulacaklar")]
     [SerializeField] GameObject[] punch_Objeler;
@@ -17,6 +17,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("ArabaIcin")]
     GameObject karakter;
+    GameObject player;
     [SerializeField] GameObject araba;
     private int arabaSetSayisi = 0;   //Arabalarýn 2 veya daha fazla sekilde arka arkaya olmasi durumunda ise yarar
     private bool arabaSayisiTekMi;    //Araba sayisinin tek olmasi durumunda arabanin tam ortada diger durumda ise biraz yan tarafta olmasini saglar
@@ -39,6 +40,8 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("Efektler")]
     [SerializeField] ParticleSystem arabaOlusmaEfekt;
+    [SerializeField] ParticleSystem iyiKapiEfekt;
+    [SerializeField] ParticleSystem kotuKapiEfekt;
 
     [Header("ScoreIcin")]
     UIController uIController;
@@ -64,6 +67,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         esyaSayisi = 0;
 
         karakter = GameObject.FindWithTag("KarakterPaketi");
+        player = GameObject.FindWithTag("Player");
         bolumIsmi = LevelController.bolumunIsmi;
 
 
@@ -96,56 +100,68 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(punch_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(punch_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(punch_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(punch_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(punch_Objeler[9]);
         }
 
         if (esyaIsmi == "Kobje1Tek")
         {
+            KötüKapiEfektOynat();
             uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler_Tek[0]);
         }
         else if (esyaIsmi == "Iobje1Tek")
         {
+            IyiKapiEfektOynat();
             esyaYerlestir(punch_Objeler_Tek[1]);
         }
         hedefEsya = punchAlani;
@@ -156,46 +172,56 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[9]);
         }
 
@@ -203,16 +229,18 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1Tek")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler_Tek[0]);
         }
         else if (esyaIsmi == "Kobje1Tek")
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler_Tek[1]);
         }
         if (esyaIsmi == "Iobje2Tek")
         {
             uIController.ScoreArtir(score);
-
+            IyiKapiEfektOynat();
             //insan yerlestir
             if (esyaLayeri == "6")
             {
@@ -229,6 +257,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2Tek")
         {
+            KötüKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(konserAlani_Objeler_Tek[3]);
@@ -250,46 +279,56 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1") 
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
         {
+            KötüKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
         {
+            KötüKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3") //Esya
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")//Esya
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")//Esya
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")//Esya
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")//Esya
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5") //Esya
         {
+            KötüKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[9]);
         }
 
@@ -297,6 +336,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1Tek")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[0]);
@@ -312,6 +352,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1Tek")
         {
+            KötüKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[1]);
@@ -328,6 +369,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje2Tek")
         {
             uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[6]);
@@ -344,6 +386,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2Tek")
         {
+            KötüKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[7]);
@@ -361,6 +404,17 @@ public class ArabayaDoldurucu : MonoBehaviour
         hedefEsya = davetliAlani;
     }
 
+    private void IyiKapiEfektOynat()
+    {
+        iyiKapiEfekt.transform.position = player.transform.position + Vector3.forward * 5 + Vector3.up * 2;
+        iyiKapiEfekt.Play();
+    }
+
+    private void KötüKapiEfektOynat()
+    {
+        kotuKapiEfekt.transform.position = player.transform.position + Vector3.forward * 5 + Vector3.up * 2;
+        kotuKapiEfekt.Play();
+    }
 
 
     //Esyalarin yerlestirilmesi icin gereklidir

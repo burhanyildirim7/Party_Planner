@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4783253767372310}
   - component: {fileID: -3378614509248325747}
   - component: {fileID: -1235613555235569024}
+  - component: {fileID: 8080995052974156659}
   m_Layer: 0
   m_Name: SonKotu
   m_TagString: Untagged
@@ -315,6 +316,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8080995052974156659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839249793111828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bee8cec732d913546ac39c3920dce8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  suyaDusmeEfekt: {fileID: 198034473772347848, guid: 6fb46d7795a52ff42a59f55547b337c0, type: 3}
 --- !u!1 &1938371601171374
 GameObject:
   m_ObjectHideFlags: 0

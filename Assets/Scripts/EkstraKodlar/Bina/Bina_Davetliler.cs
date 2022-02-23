@@ -5,21 +5,7 @@ using UnityEngine;
 public class Bina_Davetliler : MonoBehaviour
 {
 
-    [Header("Konumlar")]
-    [SerializeField] private Transform[] obje1Konumlari;
-    [SerializeField] private Transform[] obje2Konumlari;
-    [SerializeField] private Transform[] obje3Konumlari;
-    [SerializeField] private Transform[] obje4Konumlari;
-    [SerializeField] private Transform[] obje5Konumlari;
-    [SerializeField] private Transform[] obje1Tek_Konumlari;
-    [SerializeField] private Transform[] obje2Tek_Konumlari;
-
-    [Header("CokluCikacakObjeler›cinKonum")]
-    [SerializeField] GameObject[] obje1CokluKonum;
-    [SerializeField] GameObject[] obje2CokluKonum;
-    [SerializeField] GameObject[] obje3CokluKonum;
-    [SerializeField] GameObject[] obje4CokluKonum;
-    [SerializeField] GameObject[] obje5CokluKonum;
+  
 
 
     [Header("SiraSayilari")]

@@ -7,19 +7,11 @@ public class Bina_Punch : MonoBehaviour
 
     [Header("Konumlar")]
     [SerializeField] private Transform[] obje1Konumlari;
-    [SerializeField] private Transform[] obje2Konumlari;
-    [SerializeField] private Transform[] obje3Konumlari;
-    [SerializeField] private Transform[] obje4Konumlari;
-    [SerializeField] private Transform[] obje5Konumlari;
-    [SerializeField] private Transform[] obje1Tek_Konumlari;
-    [SerializeField] private Transform[] obje2Tek_Konumlari;
 
-    [Header("CokluCikacakObjeler›cinKonum")]
-    [SerializeField] GameObject[] obje1CokluKonum;
-    [SerializeField] GameObject[] obje2CokluKonum;
-    [SerializeField] GameObject[] obje3CokluKonum;
-    [SerializeField] GameObject[] obje4CokluKonum;
-    [SerializeField] GameObject[] obje5CokluKonum;
+
+    [Header("Efektler")]
+    [SerializeField] ParticleSystem bardakOlusmaEfekt;
+    [SerializeField] ParticleSystem sandalyeEfekt;
 
 
 
@@ -88,8 +80,6 @@ public class Bina_Punch : MonoBehaviour
         Obje3Yerlestir(isim);
         Obje4Yerlestir(isim);
         Obje5Yerlestir(isim);
-        Obje1TekYerlestir(isim);
-        Obje2TekYerlestir(isim);
     }
 
 
@@ -149,6 +139,7 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = obje4[0];
             obje.SetActive(true);
+            bardakOlusmaEfekt.Play();
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje4Kotu(Clone)")
@@ -166,6 +157,7 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = obje5[0];
             obje.SetActive(true);
+            sandalyeEfekt.Play();
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje5Kotu(Clone)")
@@ -176,43 +168,7 @@ public class Bina_Punch : MonoBehaviour
         }
     }
 
-    private void Obje1TekYerlestir(string isim)
-    {
-        GameObject obje;
-        if (isim == "Obje1TekIyi(Clone)")
-        {
-            obje = Instantiate(obje1_Tek[0], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
 
-            SayiArtir(obje1_TekSirasi);
-        }
-        else if (isim == "Obje1TekKotu(Clone)")
-        {
-            obje = Instantiate(obje1_Tek[1], obje1Tek_Konumlari[obje5Sirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
-
-            SayiArtir(obje1_TekSirasi);
-        }
-    }
-
-    private void Obje2TekYerlestir(string isim)
-    {
-        GameObject obje;
-        if (isim == "Obje2TekIyi(Clone)")
-        {
-            obje = Instantiate(obje2_Tek[0], obje2Tek_Konumlari[obje1_TekSirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
-
-            SayiArtir(obje2_TekSirasi);
-        }
-        else if (isim == "Obje2TekKotu(Clone)")
-        {
-            obje = Instantiate(obje2_Tek[1], obje2Tek_Konumlari[obje2_TekSirasi].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);
-
-            SayiArtir(obje2_TekSirasi);
-        }
-    }
 
     private void SayiArtir(int sayi)
     {
