@@ -23,6 +23,8 @@ public class Insan : MonoBehaviour
         anim = GetComponent<Animator>();
         player = GameObject.FindWithTag("Player");
 
+        StartCoroutine(KarakteriTakipEt());
+
     }
 
     public void InsaniGonder(GameObject hedef)  //Bina_Davetlilere gönderilmistir
@@ -31,7 +33,7 @@ public class Insan : MonoBehaviour
         {
             hedef.GetComponent<Bina_KonserAlani>().EsyaCikarBar(gameObject);
         }
-        else
+        else if (LevelController.bolumunIsmi == "Bolum3")
         {
             hedef.GetComponent<Bina_Davetliler>().EsyaCikarBar(gameObject);
         }

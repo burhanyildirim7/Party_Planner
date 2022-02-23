@@ -217,7 +217,7 @@ public class ArabayaDoldurucu : MonoBehaviour
             //insan yerlestir
             if (esyaLayeri == "6")
             {
-                esyaYerlestir(konserAlani_Objeler_Tek[2]);
+                InsanYerlesitir(konserAlani_Objeler_Tek[2]);
             }
             else if (esyaLayeri == "7")
             {
@@ -327,7 +327,6 @@ public class ArabayaDoldurucu : MonoBehaviour
         gelenEsya.transform.parent = tumArabalar[tumArabalar.Count - 1].transform;
         tumEsyalar.Add(gelenEsya);
 
-
         esyaSayisi++;
         if (esyaSayisi >= arabaKapasitesi)
         {
@@ -427,12 +426,16 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
     }
 
+
+
     //Insanlarin olusturulmasi ile ilgilidir
     private void InsanYerlesitir(GameObject insan)
     {
         GameObject gelenInsan = Instantiate(insan, GameObject.FindWithTag("Player").transform.position - Vector3.forward * 5, Quaternion.identity);
         tumInsanlar.Add(gelenInsan);
     }
+
+
 
 
 
