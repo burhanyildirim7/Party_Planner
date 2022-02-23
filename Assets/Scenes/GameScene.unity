@@ -595,6 +595,10 @@ MonoBehaviour:
   totalElmasText: {fileID: 0}
   ScoreTextAnim: {fileID: 2326140859153717883}
   scoreDoldurucu: {fileID: 988445160876860490}
+  ScoreYorumYazisi:
+  - {fileID: 1610670638}
+  - {fileID: 1495202505}
+  - {fileID: 444020129}
 --- !u!4 &955729543
 Transform:
   m_ObjectHideFlags: 0
@@ -1526,7 +1530,7 @@ MonoBehaviour:
   levels:
   - {fileID: 4841983008988871986, guid: 6b55037d678717c42bf280f5e12d65d5, type: 3}
   - {fileID: 2025500508756560317, guid: e4457646063e0e645b94ef42c06be756, type: 3}
-  - {fileID: 4841983008988871986, guid: 6b55037d678717c42bf280f5e12d65d5, type: 3}
+  - {fileID: 3652697828023029658, guid: 16c6e90cf8886e3469622ffe1a7e22b1, type: 3}
   finish: {fileID: 2842836832458844297, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
 --- !u!1 &2080463388
 GameObject:
@@ -17357,21 +17361,12 @@ MonoBehaviour:
   - {fileID: 8439372715013866871, guid: f7fc7d82170265f42b749c7c5dd30f83, type: 3}
   - {fileID: 8439372715013866871, guid: aa57550c3b935724f97e8c02715b6d0f, type: 3}
   - {fileID: 8439372715013866871, guid: 21bde02515ae9234bafc2562a624f0d6, type: 3}
-  davetli_Objeler:
-  - {fileID: 8439372715013866871, guid: 69b6abe6136c538428f30f2ee93a9158, type: 3}
-  - {fileID: 8439372715013866871, guid: 454fe73004e93e2469c4b88b28c4a00e, type: 3}
-  - {fileID: 5636199082234101601, guid: 12a573b67fe353449a4276a29b3ba680, type: 3}
-  - {fileID: 5636199082234101601, guid: 9b2aec02449436f4eaf100ab97ee74bf, type: 3}
-  - {fileID: 5976314874024494618, guid: bb46e818b0c36ce4ba117b84dd1e028d, type: 3}
-  - {fileID: 5976314874024494618, guid: 155b0000648454941977eeb23e4e5cef, type: 3}
-  - {fileID: 7982840897836149147, guid: 4cba64989ded985478fa318b0a50aac1, type: 3}
-  - {fileID: 7982840897836149147, guid: 8a34f99bc6fb64843b9c1bb88fcfc695, type: 3}
-  - {fileID: 3932152374859407763, guid: d5d30de80f5e45f44a84d90d541d9282, type: 3}
-  - {fileID: 3932152374859407763, guid: 32a588754dc259a448adb09cb217d1c7, type: 3}
+  davetli_Objeler: []
   davetli_Objeler_Tek: []
   araba: {fileID: 6881951458042588019, guid: b565920f5b7017943bf3cee544a61256, type: 3}
   arabaKapasitesi: 5
   arabaOlusmaEfekt: {fileID: 2394445631678924146}
+  score: 15
 --- !u!1 &3030560348151821106
 GameObject:
   m_ObjectHideFlags: 0

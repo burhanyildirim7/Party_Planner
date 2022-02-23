@@ -10,6 +10,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 aradakiFark;
     public float kameraUzakligi;
     Vector3 velocity = Vector3.zero;
+    private bool digerKamerayaGeceilsinMi = false; //Bolum 3 icin gereklidir
 
     
 
@@ -55,6 +56,7 @@ public class CameraMovement : MonoBehaviour
         {
             target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(2).transform.gameObject;
             StartCoroutine(OyunSonuKameraKontrol3());
+            StartCoroutine(OyunSonuKameraKontrol4());
         }
 
        
@@ -92,8 +94,7 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator OyunSonuKameraKontrol3()
     {
-        bool digerKamerayaGecsinMi = false;
-        while (oyunBittiMi && !digerKamerayaGecsinMi)
+        while (oyunBittiMi && !digerKamerayaGeceilsinMi)
         {
             transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40 + Vector3.up * -40), 10 * Time.deltaTime);
@@ -102,14 +103,21 @@ public class CameraMovement : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2.5f);
-        digerKamerayaGecsinMi = true;
+        digerKamerayaGeceilsinMi = true;
+
+    }
+
+    IEnumerator OyunSonuKameraKontrol4()
+    {
+        yield return new WaitForSeconds(2.5f);
+        digerKamerayaGeceilsinMi = true;
         target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(3).transform.gameObject;
 
 
-        while (oyunBittiMi && !digerKamerayaGecsinMi)
+        while (oyunBittiMi)
         {
             transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40 + Vector3.up * -40), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40), 10 * Time.deltaTime);
 
             yield return null;
         }

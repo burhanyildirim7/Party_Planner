@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
 	private int oncekiLevelScore;
 	private int Score;
 	[SerializeField] Slider scoreDoldurucu;
+	[SerializeField] GameObject[] ScoreYorumYazisi;
 
 	// singleton yapisi burada kuruluyor.
 	private void Awake()
@@ -49,10 +50,10 @@ public class UIController : MonoBehaviour
 	}
 
 
-	public void ScoreArtir(int gelenSayi)    //Toplatici icerisinden geliyor
+	public void ScoreArtir(int gelenSayi)    //ArabayaDoldurucu icerisinden geliyor
     {
+	
 		Score += gelenSayi;
-		//yavaslatilmis bir sekilde artirmayi etkinlestir
     }
 
 	private void ScoreKayitEt() //NextLevelden geliyor
@@ -67,7 +68,7 @@ public class UIController : MonoBehaviour
         {
 			oncekiLevelScore += 1;
 			scoreDoldurucu.value = oncekiLevelScore;
-			yield return new WaitForSeconds(.01f);
+			yield return new WaitForSeconds(.02f);
         }
     }
 
@@ -170,12 +171,29 @@ public class UIController : MonoBehaviour
 	public void ActivateWinScreen()
 	{
 		// GamePanel.SetActive(false);
+
 		StartCoroutine(WinScreenDelay());
 	}
 
 	IEnumerator WinScreenDelay()
 	{
 		//WinPanel.SetActive(true);
+
+		if(LevelController.bolumunIsmi == "Bolum3")
+        {
+			if(Score < 150)
+            {
+				ScoreYorumYazisi[0].SetActive(true);
+            }
+			else if(Score>= 150 && Score < 225)
+            {
+				ScoreYorumYazisi[1].SetActive(true);
+			}
+			else if (Score >= 225)
+			{
+				ScoreYorumYazisi[2].SetActive(true);
+			}
+		}
 		
 		int sayac = 0;
 		while(sayac < GameController.instance.score)

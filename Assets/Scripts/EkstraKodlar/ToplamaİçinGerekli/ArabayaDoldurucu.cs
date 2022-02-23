@@ -42,6 +42,8 @@ public class ArabayaDoldurucu : MonoBehaviour
 
     [Header("ScoreIcin")]
     UIController uIController;
+    [SerializeField] int score;
+
 
     private WaitForSeconds beklemeSuresi = new WaitForSeconds(.2f);  //Meyvelerin firlatili ile ilgilidir
 
@@ -88,7 +90,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (bolumIsmi == "Bolum3")
         {
-            DavetliAlaniEsyaCikar(esyaIsmi);
+            DavetliAlaniEsyaCikar(esyaIsmi, esyaLayeri);
         }
     }
 
@@ -96,7 +98,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Iobje1")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
@@ -105,7 +107,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje2")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
@@ -114,7 +116,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje3")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")
@@ -123,7 +125,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje4")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")
@@ -132,7 +134,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje5")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5")
@@ -142,7 +144,7 @@ public class ArabayaDoldurucu : MonoBehaviour
 
         if (esyaIsmi == "Kobje1Tek")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler_Tek[0]);
         }
         else if (esyaIsmi == "Iobje1Tek")
@@ -156,7 +158,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     {
         if (esyaIsmi == "Iobje1")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
@@ -165,7 +167,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje2")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
@@ -174,7 +176,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje3")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")
@@ -183,7 +185,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje4")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")
@@ -192,7 +194,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje5")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5")
@@ -201,18 +203,18 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
 
 
-        if (esyaIsmi == "Kobje1Tek")
+        if (esyaIsmi == "Iobje1Tek")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             esyaYerlestir(konserAlani_Objeler_Tek[0]);
         }
-        else if (esyaIsmi == "Iobje1Tek")
+        else if (esyaIsmi == "Kobje1Tek")
         {
             esyaYerlestir(konserAlani_Objeler_Tek[1]);
         }
-        if (esyaIsmi == "Kobje2Tek")
+        if (esyaIsmi == "Iobje2Tek")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
 
             //insan yerlestir
             if (esyaLayeri == "6")
@@ -228,7 +230,7 @@ public class ArabayaDoldurucu : MonoBehaviour
                 InsanYerlesitir(konserAlani_Objeler_Tek[6]);
             }
         }
-        else if (esyaIsmi == "Iobje2Tek")
+        else if (esyaIsmi == "Kobje2Tek")
         {
             if (esyaLayeri == "6")
             {
@@ -246,11 +248,11 @@ public class ArabayaDoldurucu : MonoBehaviour
         hedefEsya = konserAlani;
     }
 
-    private void DavetliAlaniEsyaCikar(string esyaIsmi)
+    private void DavetliAlaniEsyaCikar(string esyaIsmi,  string esyaLayeri)
     {
         if (esyaIsmi == "Iobje1")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[0]);
         }
         else if (esyaIsmi == "Kobje1")
@@ -259,7 +261,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje2")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[2]);
         }
         else if (esyaIsmi == "Kobje2")
@@ -268,7 +270,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje3")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[4]);
         }
         else if (esyaIsmi == "Kobje3")
@@ -277,7 +279,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje4")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[6]);
         }
         else if (esyaIsmi == "Kobje4")
@@ -286,7 +288,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Iobje5")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler[8]);
         }
         else if (esyaIsmi == "Kobje5")
@@ -295,21 +297,21 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
 
 
-        if (esyaIsmi == "Kobje1Tek")
+        if (esyaIsmi == "Iobje1Tek")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler_Tek[0]);
         }
-        else if (esyaIsmi == "Iobje1Tek")
+        else if (esyaIsmi == "Kobje1Tek")
         {
             InsanYerlesitir(davetli_Objeler_Tek[1]);
         }
-        if (esyaIsmi == "Kobje2Tek")
+        if (esyaIsmi == "Iobje2Tek")
         {
-            uIController.ScoreArtir(10);
+            uIController.ScoreArtir(score);
             InsanYerlesitir(davetli_Objeler_Tek[2]);
         }
-        else if (esyaIsmi == "Iobje2Tek")
+        else if (esyaIsmi == "Kobje2Tek")
         {
             InsanYerlesitir(davetli_Objeler_Tek[3]);
         }

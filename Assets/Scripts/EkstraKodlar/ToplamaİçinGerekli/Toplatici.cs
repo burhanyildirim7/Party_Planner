@@ -32,7 +32,7 @@ public class Toplatici : MonoBehaviour
     MeshRenderer mesh;
     BoxCollider collider;
 
-    
+
 
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
@@ -65,7 +65,7 @@ public class Toplatici : MonoBehaviour
         mesh.material = renk[1];
 
 
-      
+
 
         if (LevelController.bolumunIsmi == "Bolum1")
         {
@@ -273,19 +273,63 @@ public class Toplatici : MonoBehaviour
 
         if (gameObject.tag == "Iobje1Tek")
         {
-            t_davetlilerResimleri[0].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_davetlilerResimleri[0].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_davetlilerResimleri[2].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_davetlilerResimleri[4].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje1Tek")
         {
-            t_davetlilerResimleri[1].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_davetlilerResimleri[1].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_davetlilerResimleri[3].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_davetlilerResimleri[5].SetActive(true);
+            }
         }
         if (gameObject.tag == "Iobje2Tek")
         {
-            t_davetlilerResimleri[2].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_davetlilerResimleri[6].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_davetlilerResimleri[8].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_davetlilerResimleri[10].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje2Tek")
         {
-            t_davetlilerResimleri[3].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                t_davetlilerResimleri[7].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                t_davetlilerResimleri[9].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                t_davetlilerResimleri[11].SetActive(true);
+            }
         }
     }
 
@@ -306,7 +350,7 @@ public class Toplatici : MonoBehaviour
                 renderer.material = renk[1];
             }
             yield return beklemeSuresi2;
-        } 
+        }
     }
 
 
@@ -320,8 +364,8 @@ public class Toplatici : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
-            if(GameController.para - fiyat >= 0)
+
+            if (GameController.para - fiyat >= 0)
             {
                 karakterPara.meyveSatinAl(fiyat);
                 collider.enabled = false;
