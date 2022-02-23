@@ -17361,8 +17361,30 @@ MonoBehaviour:
   - {fileID: 8439372715013866871, guid: f7fc7d82170265f42b749c7c5dd30f83, type: 3}
   - {fileID: 8439372715013866871, guid: aa57550c3b935724f97e8c02715b6d0f, type: 3}
   - {fileID: 8439372715013866871, guid: 21bde02515ae9234bafc2562a624f0d6, type: 3}
-  davetli_Objeler: []
-  davetli_Objeler_Tek: []
+  davetli_Objeler:
+  - {fileID: 8439372715013866871, guid: 69b6abe6136c538428f30f2ee93a9158, type: 3}
+  - {fileID: 8439372715013866871, guid: 454fe73004e93e2469c4b88b28c4a00e, type: 3}
+  - {fileID: 5636199082234101601, guid: 12a573b67fe353449a4276a29b3ba680, type: 3}
+  - {fileID: 5636199082234101601, guid: 9b2aec02449436f4eaf100ab97ee74bf, type: 3}
+  - {fileID: 4159010434148601685, guid: b47297cbdc3ec954681481cb1642d50e, type: 3}
+  - {fileID: 7676417024703633255, guid: 76a38b559e1732e45a85fd23229bb61f, type: 3}
+  - {fileID: 4159010434148601685, guid: f77f1501137a9344a8921c14ab038494, type: 3}
+  - {fileID: 7676417024703633255, guid: 0219d6cfc665c454bb6d4c1b5c339f18, type: 3}
+  - {fileID: 4159010434148601685, guid: 5c20da7d428883d41a9eac13859bd6ca, type: 3}
+  - {fileID: 7676417024703633255, guid: 02e67cd333450334ca48fe734dada637, type: 3}
+  davetli_Objeler_Tek:
+  - {fileID: 8439372715013866871, guid: 819fd57ff42d1634da828b3ed11db99c, type: 3}
+  - {fileID: 8439372715013866871, guid: 0e6ca66e894813646af24ee04be0677a, type: 3}
+  - {fileID: 8439372715013866871, guid: 00d7f0863e73c99439c415d479aba0e7, type: 3}
+  - {fileID: 8439372715013866871, guid: 297fa33e6cf279a479367b70fdd23edd, type: 3}
+  - {fileID: 8439372715013866871, guid: 1d2ebdbbb04a2d9499c660cb6386de53, type: 3}
+  - {fileID: 8439372715013866871, guid: b66d3567c2cea684794e7d60e28738a8, type: 3}
+  - {fileID: 8439372715013866871, guid: d21a925814e7a00409ad34c3a97eef74, type: 3}
+  - {fileID: 8439372715013866871, guid: a2ed60667d4bbf94f939673a194b9a9d, type: 3}
+  - {fileID: 8439372715013866871, guid: 0ab676e8ec1c1af4684832cb518839ba, type: 3}
+  - {fileID: 8439372715013866871, guid: 1cfc1bc6d310aaa4b9502bff8229813b, type: 3}
+  - {fileID: 8439372715013866871, guid: b1c9962efaf3d6f45876a79633665099, type: 3}
+  - {fileID: 8439372715013866871, guid: 98ce2e9e628582a4288851d8288d7f69, type: 3}
   araba: {fileID: 6881951458042588019, guid: b565920f5b7017943bf3cee544a61256, type: 3}
   arabaKapasitesi: 5
   arabaOlusmaEfekt: {fileID: 2394445631678924146}
@@ -17382,7 +17404,7 @@ GameObject:
   m_TagString: Arabalar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3030560348151821107
 Transform:

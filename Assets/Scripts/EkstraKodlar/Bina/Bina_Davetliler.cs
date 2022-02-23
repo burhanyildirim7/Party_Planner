@@ -39,6 +39,10 @@ public class Bina_Davetliler : MonoBehaviour
     [SerializeField] GameObject[] obje5;
     [SerializeField] GameObject[] obje1_Tek;
     [SerializeField] GameObject[] obje2_Tek;
+    [SerializeField] GameObject[] obje3_Tek;
+    [SerializeField] GameObject[] obje4_Tek;
+    [SerializeField] GameObject[] obje5_Tek;
+    [SerializeField] GameObject[] obje6_Tek;
 
     private BinaOzellikleri binaOzellikleri;
 
@@ -75,15 +79,19 @@ public class Bina_Davetliler : MonoBehaviour
     }
 
 
-    public void ObjeyiYerlestir(GameObject insan)
+    public void ObjeyiYerlestir(GameObject esya)
     {
-        Obje1Yerlestir(insan);
-        Obje2Yerlestir(insan);
-        Obje3Yerlestir(insan);
-        Obje4Yerlestir(insan);
-        Obje5Yerlestir(insan);
-        Obje1TekYerlestir(insan);
-        Obje2TekYerlestir(insan);
+        Obje1Yerlestir(esya);
+        Obje2Yerlestir(esya);
+        Obje3Yerlestir(esya);//esya
+        Obje4Yerlestir(esya);//esya
+        Obje5Yerlestir(esya);//esya
+        Obje1TekYerlestir(esya);
+        Obje2TekYerlestir(esya);
+        Obje3TekYerlestir(esya);
+        Obje4TekYerlestir(esya);
+        Obje5TekYerlestir(esya);
+        Obje6TekYerlestir(esya);
     }
 
 
@@ -93,17 +101,11 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje1Iyi(Clone)")
         {
-           // insan.transform. position = GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje1Sirasi);
+            obje1[0].SetActive(true);
         }
         else if (insan.name == "Obje1Kotu(Clone)")
         {
-            //insan.GetComponent<Insan>().SonKonumuBelirle(obje1Konumlari[obje1Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje1Sirasi);
+            obje1[1].SetActive(true);
         }
     }
 
@@ -111,17 +113,11 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje2Iyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje2Sirasi);
+            obje2[0].SetActive(true);
         }
         else if (insan.name == "Obje2Kotu(Clone)")
         {
-            //insan.GetComponent<Insan>().SonKonumuBelirle(obje2Konumlari[obje2Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje2Sirasi);
+            obje2[1].SetActive(true);
         }
     }
 
@@ -129,17 +125,11 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje3Iyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje3Sirasi);
+            obje3[0].SetActive(true);
         }
         else if (insan.name == "Obje3Kotu(Clone)")
         {
-            //insan.GetComponent<Insan>().SonKonumuBelirle(obje3Konumlari[obje3Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje3Sirasi);
+            obje3[1].SetActive(true);
         }
     }
 
@@ -147,17 +137,11 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje4Iyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje4Sirasi);
+            obje4[0].SetActive(true);
         }
         else if (insan.name == "Obje4Kotu(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje4Konumlari[obje4Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje4Sirasi);
+            obje4[1].SetActive(true);
         }
     }
 
@@ -165,35 +149,25 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje5Iyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje5Sirasi);
+            obje5[0].SetActive(true);
         }
         else if (insan.name == "Obje5Kotu(Clone)")
         {
-          //  insan.GetComponent<Insan>().SonKonumuBelirle(obje5Konumlari[obje5Sirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje5Sirasi);
+            obje5[1].SetActive(true);
         }
     }
+
+
 
     private void Obje1TekYerlestir(GameObject insan)
     {
         if (insan.name == "Obje1TekIyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje1_TekSirasi);
+            obje1_Tek[0].SetActive(true);
         }
         else if (insan.name == "Obje1TekKotu(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje1Tek_Konumlari[obje1_TekSirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje1_TekSirasi);
+            obje1_Tek[1].SetActive(true);
         }
     }
 
@@ -201,19 +175,62 @@ public class Bina_Davetliler : MonoBehaviour
     {
         if (insan.name == "Obje2TekIyi(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje2_TekSirasi);
+            obje2_Tek[0].SetActive(true);
         }
         else if (insan.name == "Obje2TekKotu(Clone)")
         {
-           // insan.GetComponent<Insan>().SonKonumuBelirle(obje2Tek_Konumlari[obje2_TekSirasi].transform.position);
-            olusanEsyalar.Add(insan);
-
-            SayiArtir(obje2_TekSirasi);
+            obje2_Tek[1].SetActive(true);
         }
     }
+
+    private void Obje3TekYerlestir(GameObject insan)
+    {
+        if (insan.name == "Obje3TekIyi(Clone)")
+        {
+            obje3_Tek[0].SetActive(true);
+        }
+        else if (insan.name == "Obje3TekKotu(Clone)")
+        {
+            obje3_Tek[1].SetActive(true);
+        }
+    }
+
+    private void Obje4TekYerlestir(GameObject insan)
+    {
+        if (insan.name == "Obje4TekIyi(Clone)")
+        {
+            obje4_Tek[0].SetActive(true);
+        }
+        else if (insan.name == "Obje4TekKotu(Clone)")
+        {
+            obje4_Tek[1].SetActive(true);
+        }
+    }
+
+    private void Obje5TekYerlestir(GameObject insan)
+    {
+        if (insan.name == "Obje5TekIyi(Clone)")
+        {
+            obje5_Tek[0].SetActive(true);
+        }
+        else if (insan.name == "Obje5TekKotu(Clone)")
+        {
+            obje5_Tek[1].SetActive(true);
+        }
+    }
+
+    private void Obje6TekYerlestir(GameObject insan)
+    {
+        if (insan.name == "Obje6TekIyi(Clone)")
+        {
+            obje5_Tek[0].SetActive(true);
+        }
+        else if (insan.name == "Obje6TekKotu(Clone)")
+        {
+            obje5_Tek[1].SetActive(true);
+        }
+    }
+
 
 
     private void SayiArtir(int sayi)

@@ -32,9 +32,7 @@ public class UIController : MonoBehaviour
 
 		if(!PlayerPrefs.HasKey("Score"))
         {
-			PlayerPrefs.SetInt("Score", 0);
-			oncekiLevelScore = 0;
-			Score = 0;
+			ScoreSifirla();
 
 		}
 		else
@@ -47,6 +45,13 @@ public class UIController : MonoBehaviour
 	private void Start()
 	{
 		StartUI();
+	}
+
+	private void ScoreSifirla()
+    {
+		PlayerPrefs.SetInt("Score", 0);
+		oncekiLevelScore = 0;
+		Score = 0;
 	}
 
 
@@ -122,6 +127,11 @@ public class UIController : MonoBehaviour
 	public void NextLevelButtonClick()
 	{
 		//araba sayýsý ve esya sayisini sifirla
+		if(LevelController.bolumunIsmi == "Bolum3")
+        {
+			ScoreSifirla();
+        }
+
 		ScoreKayitEt();
 		SetTapToStartScoreText();
 		TapToStartPanel.SetActive(true);

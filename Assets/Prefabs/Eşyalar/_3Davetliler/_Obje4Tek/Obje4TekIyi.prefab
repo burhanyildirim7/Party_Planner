@@ -1610,9 +1610,9 @@ GameObject:
   - component: {fileID: 8439372715013511449}
   - component: {fileID: 8439372715102791186}
   - component: {fileID: 8439372715102791197}
-  - component: {fileID: 7931371051339600138}
+  - component: {fileID: -8894390087484107543}
   m_Layer: 0
-  m_Name: Obje1Kotu 1
+  m_Name: Obje4TekIyi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1677,7 +1677,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7931371051339600138
+--- !u!114 &-8894390087484107543
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

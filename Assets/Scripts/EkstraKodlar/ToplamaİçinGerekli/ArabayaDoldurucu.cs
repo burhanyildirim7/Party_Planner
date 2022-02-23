@@ -300,20 +300,65 @@ public class ArabayaDoldurucu : MonoBehaviour
         if (esyaIsmi == "Iobje1Tek")
         {
             uIController.ScoreArtir(score);
-            InsanYerlesitir(davetli_Objeler_Tek[0]);
+            if (esyaLayeri == "6")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[0]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[2]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[4]);
+            }
         }
         else if (esyaIsmi == "Kobje1Tek")
         {
-            InsanYerlesitir(davetli_Objeler_Tek[1]);
+            if (esyaLayeri == "6")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[1]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[3]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[5]);
+            }
         }
         if (esyaIsmi == "Iobje2Tek")
         {
             uIController.ScoreArtir(score);
+            if (esyaLayeri == "6")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[6]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[8]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[10]);
+            }
             InsanYerlesitir(davetli_Objeler_Tek[2]);
         }
         else if (esyaIsmi == "Kobje2Tek")
         {
-            InsanYerlesitir(davetli_Objeler_Tek[3]);
+            if (esyaLayeri == "6")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[7]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[9]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                InsanYerlesitir(davetli_Objeler_Tek[11]);
+            }
         }
 
         hedefEsya = davetliAlani;

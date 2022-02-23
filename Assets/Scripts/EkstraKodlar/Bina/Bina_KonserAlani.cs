@@ -14,13 +14,6 @@ public class Bina_KonserAlani : MonoBehaviour
     [SerializeField] private Transform[] obje1Tek_Konumlari;
     [SerializeField] private Transform[] obje2Tek_Konumlari;
 
-    [Header("CokluCikacakObjeler›cinKonum")]
-    [SerializeField] GameObject[] obje1CokluKonum;
-    [SerializeField] GameObject[] obje2CokluKonum;
-    [SerializeField] GameObject[] obje3CokluKonum;
-    [SerializeField] GameObject[] obje4CokluKonum;
-    [SerializeField] GameObject[] obje5CokluKonum;
-
 
     [Header("SiraSayilari")]
     private int obje1Sirasi = 0;
@@ -40,7 +33,6 @@ public class Bina_KonserAlani : MonoBehaviour
     [SerializeField] GameObject[] obje2_Tek;
     [SerializeField] GameObject[] obje3_Tek;
     [SerializeField] GameObject[] obje4_Tek;
-    [SerializeField] GameObject[] obje5_Tek;
 
 
     private BinaOzellikleri binaOzellikleri;
@@ -223,7 +215,6 @@ public class Bina_KonserAlani : MonoBehaviour
                 obje = obje1_Tek[2];
                 obje.SetActive(true);
                 olusanEsyalar.Add(obje);
-
             }
 
             SayiArtir(obje1_TekSirasi);
