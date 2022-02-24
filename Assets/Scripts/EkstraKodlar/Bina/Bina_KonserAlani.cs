@@ -9,6 +9,10 @@ public class Bina_KonserAlani : MonoBehaviour
     [SerializeField] ParticleSystem esyaOlusturmaEfekti;
 
 
+    [SerializeField] GameObject bateriliKiz;
+    [SerializeField] GameObject discoKiz;
+
+
     [Header("SiraSayilari")]
     private int obje1Sirasi = 0;
     private int obje2Sirasi = 0;
@@ -87,10 +91,12 @@ public class Bina_KonserAlani : MonoBehaviour
         GameObject obje;
         if (isim == "Obje1Iyi(Clone)")
         {
+            
             obje = obje1[0];
             obje.SetActive(true);
             EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
+            bateriliKiz.SetActive(true);
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
@@ -98,7 +104,9 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
+            bateriliKiz.SetActive(true);
         }
+       
     }
 
     private void Obje2Yerlestir(string isim)
@@ -110,6 +118,7 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
+            discoKiz.SetActive(true);
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
@@ -117,7 +126,9 @@ public class Bina_KonserAlani : MonoBehaviour
             obje.SetActive(true);
             EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
+            discoKiz.SetActive(true);
         }
+        
     }
 
     private void Obje3Yerlestir(string isim)
