@@ -83,6 +83,11 @@ public class Bina_Davetliler : MonoBehaviour
 
 
 
+    private void EsyaOlusturEfektiOynat(Vector3 konum)
+    {
+        esyaOlusturmaEfekti.transform.position = konum;
+        esyaOlusturmaEfekti.Play();
+    }
 
     private void Obje1Yerlestir(GameObject insan)
     {
@@ -91,14 +96,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje1[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje1Kotu(Clone)")
         {
             obje = obje1[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -110,14 +115,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje2[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje2Kotu(Clone)")
         {
             obje = obje2[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -129,14 +134,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje3[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje3Kotu(Clone)")
         {
             obje = obje3[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -148,14 +153,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje4[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje4Kotu(Clone)")
         {
             obje = obje4[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -167,14 +172,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje5[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje5Kotu(Clone)")
         {
             obje = obje5[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -188,14 +193,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje1_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje1TekKotu(Clone)")
         {
             obje = obje1_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -207,14 +212,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje2_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje2TekKotu(Clone)")
         {
             obje = obje2_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -226,14 +231,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje3_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje3TekKotu(Clone)")
         {
             obje = obje3_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -245,14 +250,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje4_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje4TekKotu(Clone)")
         {
             obje = obje4_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -264,14 +269,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje5_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje5TekKotu(Clone)")
         {
             obje = obje5_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
@@ -283,14 +288,14 @@ public class Bina_Davetliler : MonoBehaviour
         {
             obje = obje6_Tek[0];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
         else if (insan.name == "Obje6TekKotu(Clone)")
         {
             obje = obje6_Tek[1];
             olusanEsyalar.Add(obje);
-
+            EsyaOlusturEfektiOynat(obje.transform.position);
             obje.SetActive(true);
         }
     }
