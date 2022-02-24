@@ -202,7 +202,37 @@ public class UIController : MonoBehaviour
     {
         //WinPanel.SetActive(true);
 
-        if (LevelController.bolumunIsmi == "Bolum3")
+        if (LevelController.bolumunIsmi == "Bolum1")
+        {
+            if (Score < 60)
+            {
+                ScoreYorumYazisi[0].SetActive(true);
+            }
+            else if (Score >= 60 && Score < 75)
+            {
+                ScoreYorumYazisi[1].SetActive(true);
+            }
+            else if (Score >= 75)
+            {
+                ScoreYorumYazisi[2].SetActive(true);
+            }
+        }
+        else if (LevelController.bolumunIsmi == "Bolum2")
+        {
+            if (Score < 120)
+            {
+                ScoreYorumYazisi[0].SetActive(true);
+            }
+            else if (Score >= 120 && Score < 150)
+            {
+                ScoreYorumYazisi[1].SetActive(true);
+            }
+            else if (Score >= 150)
+            {
+                ScoreYorumYazisi[2].SetActive(true);
+            }
+        }
+        else if (LevelController.bolumunIsmi == "Bolum3")
         {
             if (Score < 150)
             {
