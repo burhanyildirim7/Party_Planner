@@ -6,6 +6,7 @@ public class Bina_KonserAlani : MonoBehaviour
 {
     [SerializeField] ParticleSystem[] insanDogusEfekti;
     [SerializeField] ParticleSystem yildizEfekti;
+    [SerializeField] ParticleSystem esyaOlusturmaEfekti;
 
 
     [Header("SiraSayilari")]
@@ -74,7 +75,11 @@ public class Bina_KonserAlani : MonoBehaviour
 
 
 
-
+    private void EsyaOlusturEfektiOynat(Vector3 konum)
+    {
+        esyaOlusturmaEfekti.transform.position = konum;
+        esyaOlusturmaEfekti.Play();
+    }
 
 
     private void Obje1Yerlestir(string isim)
@@ -84,12 +89,14 @@ public class Bina_KonserAlani : MonoBehaviour
         {
             obje = obje1[0];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
             obje = obje1[1];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
     }

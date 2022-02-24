@@ -22,8 +22,6 @@ public class Bina_Punch : MonoBehaviour
     private int obje3Sirasi = 0;
     private int obje4Sirasi = 0;
     private int obje5Sirasi = 0;
-    private int obje1_TekSirasi = 0;
-    private int obje2_TekSirasi = 0;
 
     [Header("OlusacakObjeler")]
     [SerializeField] GameObject[] obje1;
@@ -31,8 +29,6 @@ public class Bina_Punch : MonoBehaviour
     [SerializeField] GameObject[] obje3;
     [SerializeField] GameObject[] obje4;
     [SerializeField] GameObject[] obje5;
-    [SerializeField] GameObject[] obje1_Tek;
-    [SerializeField] GameObject[] obje2_Tek;
 
 
     
@@ -68,8 +64,6 @@ public class Bina_Punch : MonoBehaviour
         obje3Sirasi = 0;
         obje4Sirasi = 0;
         obje5Sirasi = 0;
-        obje1_TekSirasi = 0;
-        obje2_TekSirasi = 0;
     }
 
 
