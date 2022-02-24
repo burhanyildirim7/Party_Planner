@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bina_Davetliler : MonoBehaviour
 {
-
-  
+    [SerializeField] ParticleSystem insanDogusEfekti;
+    [SerializeField] ParticleSystem esyaOlusturmaEfekti;
 
 
     [Header("SiraSayilari")]
