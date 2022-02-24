@@ -105,7 +105,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(punch_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
@@ -116,7 +116,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(punch_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3")
@@ -127,7 +127,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje3")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(punch_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")
@@ -138,7 +138,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje4")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(punch_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")
@@ -149,13 +149,13 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje5")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(punch_Objeler[9]);
         }
 
         if (esyaIsmi == "Kobje1Tek")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             uIController.ScoreArtir(score);
             esyaYerlestir(punch_Objeler_Tek[0]);
         }
@@ -177,7 +177,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
@@ -188,7 +188,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3")
@@ -199,7 +199,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje3")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")
@@ -210,7 +210,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje4")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")
@@ -221,7 +221,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje5")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler[9]);
         }
 
@@ -234,7 +234,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1Tek")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(konserAlani_Objeler_Tek[1]);
         }
         if (esyaIsmi == "Iobje2Tek")
@@ -257,7 +257,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2Tek")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(konserAlani_Objeler_Tek[3]);
@@ -284,7 +284,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[1]);
         }
         else if (esyaIsmi == "Iobje2")
@@ -295,7 +295,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             InsanYerlesitir(davetli_Objeler[3]);
         }
         else if (esyaIsmi == "Iobje3") //Esya
@@ -306,7 +306,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje3")//Esya
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[5]);
         }
         else if (esyaIsmi == "Iobje4")//Esya
@@ -317,7 +317,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje4")//Esya
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[7]);
         }
         else if (esyaIsmi == "Iobje5")//Esya
@@ -328,7 +328,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje5") //Esya
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             esyaYerlestir(davetli_Objeler[9]);
         }
 
@@ -352,7 +352,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje1Tek")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[1]);
@@ -386,7 +386,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
         else if (esyaIsmi == "Kobje2Tek")
         {
-            KötüKapiEfektOynat();
+            KotuKapiEfektOynat();
             if (esyaLayeri == "6")
             {
                 InsanYerlesitir(davetli_Objeler_Tek[7]);
@@ -410,7 +410,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         iyiKapiEfekt.Play();
     }
 
-    private void KötüKapiEfektOynat()
+    private void KotuKapiEfektOynat()
     {
         kotuKapiEfekt.transform.position = player.transform.position + Vector3.forward * 5 + Vector3.up * 2;
         kotuKapiEfekt.Play();
