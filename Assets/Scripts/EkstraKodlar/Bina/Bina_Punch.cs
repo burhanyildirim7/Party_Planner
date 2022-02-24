@@ -78,7 +78,7 @@ public class Bina_Punch : MonoBehaviour
 
     private void TitresimYap()
     {
-        MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+      //  MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
     }
 
 

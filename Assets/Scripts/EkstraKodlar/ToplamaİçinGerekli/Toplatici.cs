@@ -376,6 +376,7 @@ public class Toplatici : MonoBehaviour
                 StartCoroutine(esyaCikarmaAyari());
                 DigerKapidanMeyveAlmayiPasiflestir();
             }
+           
         }
     }
 

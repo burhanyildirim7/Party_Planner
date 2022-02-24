@@ -84,10 +84,10 @@ public class Bina_KonserAlani : MonoBehaviour
 
     private void EsyaOlusturEfektiOynat(Vector3 konum)
     {
-        if(LevelController.bolumunIsmi == "Bolum2")
+       /* if(LevelController.bolumunIsmi == "Bolum2")
         {
             MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
-        }
+        }*/
         esyaOlusturmaEfekti.transform.position = konum;
         esyaOlusturmaEfekti.Play();
     }
