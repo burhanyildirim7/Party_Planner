@@ -127,7 +127,6 @@ public class Bina_Davetliler : MonoBehaviour
         GameObject obje;
         if (insan.name == "Obje3Iyi(Clone)")
         {
-            Debug.Log("A");
             obje = obje3[0];
             olusanEsyalar.Add(obje);
 

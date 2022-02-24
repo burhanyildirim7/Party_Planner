@@ -58,7 +58,7 @@ public class Bina_KonserAlani : MonoBehaviour
 
     public void ObjeyiYerlestir(string isim)
     {
-        if(!yildizEfekti.isPlaying)
+        if(!yildizEfekti.isPlaying && LevelController.bolumunIsmi == "Bolum2")
         {
             yildizEfekti.Play();
         }
@@ -108,12 +108,14 @@ public class Bina_KonserAlani : MonoBehaviour
         {
             obje = obje2[0];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
             obje = obje2[1];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
     }
@@ -125,12 +127,14 @@ public class Bina_KonserAlani : MonoBehaviour
         {
             obje = obje3[0];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje3Kotu(Clone)")
         {
             obje = obje3[1];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
     }
@@ -144,6 +148,7 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje4[0];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
@@ -151,10 +156,11 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje4[2];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
             }
 
-            SayiArtir(obje4Sirasi);
+            obje4Sirasi++;
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
@@ -162,6 +168,7 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje4[1];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
@@ -169,11 +176,12 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje4[3];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
 
-            SayiArtir(obje4Sirasi);
+            obje4Sirasi++;
         }
     }
 
@@ -184,12 +192,14 @@ public class Bina_KonserAlani : MonoBehaviour
         {
             obje = obje5[0];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
             obje = obje5[1];
             obje.SetActive(true);
+            EsyaOlusturEfektiOynat(obje.transform.position);
             olusanEsyalar.Add(obje);
         }
     }
@@ -203,6 +213,7 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje1_Tek[0];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
@@ -210,10 +221,11 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje1_Tek[2];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
             }
 
-            SayiArtir(obje1_TekSirasi);
+            obje1_TekSirasi++;
         }
         else if (isim == "Obje1TekKotu(Clone)")
         {
@@ -221,6 +233,7 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje1_Tek[1];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
@@ -228,11 +241,12 @@ public class Bina_KonserAlani : MonoBehaviour
             {
                 obje = obje1_Tek[3];
                 obje.SetActive(true);
+                EsyaOlusturEfektiOynat(obje.transform.position);
                 olusanEsyalar.Add(obje);
 
             }
 
-            SayiArtir(obje1_TekSirasi);
+            obje1_TekSirasi++;
         }
     }
 
@@ -294,15 +308,5 @@ public class Bina_KonserAlani : MonoBehaviour
             insanDogusEfekti[2].Play();
         }
         
-    }
-
-    private void SayiArtir(int sayi)
-    {
-        sayi++;
-
-        if (sayi >= 4)
-        {
-            sayi = 0;
-        }
     }
 }
