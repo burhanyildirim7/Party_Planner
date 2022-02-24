@@ -202,6 +202,11 @@ public class UIController : MonoBehaviour
     {
         //WinPanel.SetActive(true);
 
+        for (int i = 0; i < 2; i++)
+        {
+            ScoreYorumYazisi[i].SetActive(false);
+        }
+
         if (LevelController.bolumunIsmi == "Bolum1")
         {
             if (Score < 60)
