@@ -85,6 +85,7 @@ public class Bina_Davetliler : MonoBehaviour
 
     private void EsyaOlusturEfektiOynat(Vector3 konum)
     {
+        MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         esyaOlusturmaEfekti.transform.position = konum;
         esyaOlusturmaEfekti.Play();
     }

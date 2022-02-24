@@ -81,6 +81,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Esyalarin arabaya yereleþtirilmesi ile ilgilidir
     public void EsyaYerlestirmeAyarlayici(string esyaIsmi, string esyaLayeri)
     {
+        MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         if (bolumIsmi == "Bolum1")
         {
             PunchEsyaCikar(esyaIsmi);

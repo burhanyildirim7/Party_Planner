@@ -76,7 +76,10 @@ public class Bina_Punch : MonoBehaviour
         Obje5Yerlestir(isim);
     }
 
-
+    private void TitresimYap()
+    {
+        MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+    }
 
 
 
@@ -87,12 +90,14 @@ public class Bina_Punch : MonoBehaviour
         if (isim == "Obje1Iyi(Clone)")
         {
             obje = Instantiate(obje1[0], obje1Konumlari[0].transform.position, Quaternion.identity);
-            olusanEsyalar.Add(obje);     
+            olusanEsyalar.Add(obje);
+            TitresimYap();
         }
         else if (isim == "Obje1Kotu(Clone)")
         {
             obje = Instantiate(obje1[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
+            TitresimYap();
         }
     }
 
@@ -103,11 +108,13 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = Instantiate(obje2[0], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
+            TitresimYap();
         }
         else if (isim == "Obje2Kotu(Clone)")
         {
             obje = Instantiate(obje2[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
+            TitresimYap();
         }
     }
 
@@ -118,11 +125,13 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = Instantiate(obje3[0], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
+            TitresimYap();
         }
         else if (isim == "Obje3Kotu(Clone)")
         {
             obje = Instantiate(obje3[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
+            TitresimYap();
         }
     }
 
@@ -135,6 +144,7 @@ public class Bina_Punch : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             bardakOlusmaEfekt.Play();
+            TitresimYap();
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
@@ -142,6 +152,7 @@ public class Bina_Punch : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             bardakOlusmaEfekt.Play();
+            TitresimYap();
         }
     }
 
@@ -154,6 +165,7 @@ public class Bina_Punch : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             sandalyeEfekt.Play();
+            TitresimYap();
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
@@ -161,6 +173,7 @@ public class Bina_Punch : MonoBehaviour
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             sandalyeEfekt.Play();
+            TitresimYap();
         }
     }
 

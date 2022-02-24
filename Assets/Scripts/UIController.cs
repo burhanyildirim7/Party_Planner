@@ -8,8 +8,7 @@ public class UIController : MonoBehaviour
     public static UIController instance; // Singleton yapisi icin gerekli ornek
 
     public GameObject TapToStartPanel, LoosePanel, GamePanel, WinPanel, winScreenEffectObject, winScreenCoinImage, startScreenCoinImage, scoreEffect;
-    public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
-    public Animator ScoreTextAnim;
+    public Text gamePlayScoreText, winScreenScoreText, levelNoText;
 
     WaitForSeconds beklemeSuresi = new WaitForSeconds(4f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.05f); //sayac sistemi icin gereklidir
@@ -151,7 +150,6 @@ public class UIController : MonoBehaviour
         WinPanel.SetActive(false);
         GamePanel.SetActive(false);
         LevelController.instance.NextLevelEvents();
-        StartCoroutine(StartScreenCoinEffect());
     }
 
 
@@ -169,7 +167,7 @@ public class UIController : MonoBehaviour
     /// </summary>
     public void SetTapToStartScoreText()
     {
-        tapToStartScoreText.text = PlayerPrefs.GetInt("totalScore").ToString();
+     //   tapToStartScoreText.text = PlayerPrefs.GetInt("totalScore").ToString();
     }
 
     /// <summary>
@@ -185,7 +183,7 @@ public class UIController : MonoBehaviour
     /// </summary>
     public void SetTotalElmasText()
     {
-        totalElmasText.text = PlayerPrefs.GetInt("totalElmas").ToString();
+     //   totalElmasText.text = PlayerPrefs.GetInt("totalElmas").ToString();
     }
 
     /// <summary>
@@ -293,31 +291,7 @@ public class UIController : MonoBehaviour
         Destroy(effectObj);
     }
 
-    IEnumerator StartScreenCoinEffect()
-    {
-        startScreenCoinImage.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
-        startScreenCoinImage.SetActive(true);
-        float sayac = 0;
-        int adet = 0;
-        while (Vector2.Distance(startScreenCoinImage.transform.position, tapToStartScoreText.transform.position) >= 5f)
-        {
-            adet++;
-            sayac += .01f;
-            startScreenCoinImage.transform.position = Vector2.Lerp(startScreenCoinImage.transform.position, tapToStartScoreText.transform.position, sayac);
-            yield return beklemeSuresi3;  //.025f
-            if (adet % 3 == 0)
-            {
-                GameObject coin = Instantiate(winScreenEffectObject, startScreenCoinImage.transform.position, Quaternion.identity, TapToStartPanel.transform);
-                coin.GetComponent<Image>().sprite = winScreenCoinImage.GetComponent<Image>().sprite;
-                coin.transform.rotation = startScreenCoinImage.transform.rotation;
-                StartCoroutine(StartScreenCoinsDissolve(coin));
-            }
-        }
-        Instantiate(scoreEffect, new Vector3(1.34f, 5.43F, -1.15F), Quaternion.identity);
-        ScoreTextAnim.SetTrigger("score");
-        startScreenCoinImage.SetActive(false);
-        startScreenCoinImage.transform.localPosition = new Vector3(0, -446, 0);
-    }
+   
 
     IEnumerator StartScreenCoinsDissolve(GameObject obj)
     {
@@ -361,6 +335,5 @@ public class UIController : MonoBehaviour
         WinPanel.SetActive(false);
         LoosePanel.SetActive(false);
         GamePanel.SetActive(false);
-        tapToStartScoreText.text = PlayerPrefs.GetInt("total").ToString();
     }
 }

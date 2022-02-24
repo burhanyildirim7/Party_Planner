@@ -13,7 +13,6 @@ public class EsyaGonder : MonoBehaviour
 
     public void EsyayiGonder(GameObject hedef)
     {
-     
         if(bolumIsmi == "Bolum1")
         {
             hedef.GetComponent<Bina_Punch>().EsyaCikarBar(gameObject); 

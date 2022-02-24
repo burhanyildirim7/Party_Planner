@@ -27,6 +27,11 @@ public class meyveYokEt : MonoBehaviour
     {
         if(other.CompareTag("Kase"))
         {
+            if (LevelController.bolumunIsmi == "Bolum1")
+            {
+                MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+            }
+
             Instantiate(suyaDusmeEfekt, transform.position + Vector3.up * .25f, Quaternion.Euler(-Vector3.right));
             gameObject.SetActive(false);
         }

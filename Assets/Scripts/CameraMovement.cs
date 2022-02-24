@@ -58,9 +58,6 @@ public class CameraMovement : MonoBehaviour
             StartCoroutine(OyunSonuKameraKontrol3());
             StartCoroutine(OyunSonuKameraKontrol4());
         }
-
-       
-        
     }
 
     public void KameraOyunBasiKontrol()
@@ -83,6 +80,7 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator OyunSonuKameraKontrol2()
     {
+        digerKamerayaGeceilsinMi = false;
         while (oyunBittiMi)
         {
             transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);

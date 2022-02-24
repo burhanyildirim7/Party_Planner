@@ -55,6 +55,9 @@ public class Bina_KonserAlani : MonoBehaviour
         for (int i = 0; i < olusanEsyalar.Count; i++)
         {
             olusanEsyalar[i].SetActive(false);
+            bateriliKiz.SetActive(false);
+            discoKiz.SetActive(false);
+            yildizEfekti.Stop();
         }
         olusanEsyalar.Clear();
     }
@@ -81,6 +84,10 @@ public class Bina_KonserAlani : MonoBehaviour
 
     private void EsyaOlusturEfektiOynat(Vector3 konum)
     {
+        if(LevelController.bolumunIsmi == "Bolum2")
+        {
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
+        }
         esyaOlusturmaEfekti.transform.position = konum;
         esyaOlusturmaEfekti.Play();
     }
@@ -91,7 +98,6 @@ public class Bina_KonserAlani : MonoBehaviour
         GameObject obje;
         if (isim == "Obje1Iyi(Clone)")
         {
-            
             obje = obje1[0];
             obje.SetActive(true);
             EsyaOlusturEfektiOynat(obje.transform.position);

@@ -25,6 +25,7 @@ public class KarakterPara : MonoBehaviour
     {
         if(other.CompareTag("Para"))
         {
+            MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
             gameController.SetMoney(150); //Daha sonrasinda degistirilebilir
 
 
