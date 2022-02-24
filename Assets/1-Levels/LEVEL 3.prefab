@@ -1078,7 +1078,7 @@ GameObject:
   - component: {fileID: 3498398160796286322}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1
+  m_TagString: Kobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 300
   fiyatYazdirici: {fileID: 6313919253162777366}
   punchResimleri:
   - {fileID: 4925780837632872387}
@@ -6733,7 +6733,7 @@ GameObject:
   - component: {fileID: 3425982138748911311}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Kobje2
+  m_TagString: Iobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6816,7 +6816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 250
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982140143048240}
   punchResimleri:
   - {fileID: 3425982139793558599}
@@ -7841,8 +7841,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982138776115403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -107}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139439802799}
@@ -7850,7 +7850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -69, y: -238}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982138776115412
@@ -8097,8 +8097,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982138780699016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -154}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139673440406}
@@ -8106,7 +8106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -48, y: -242}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982138780699029
@@ -14500,8 +14500,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982138921530718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -76}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140632615458}
@@ -14509,7 +14509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -70, y: -264}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982138921530715
@@ -14540,7 +14540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8e38de8a36c2174f9ee8eccf9ffc847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e09625d53f4c3649a11671e4023c9ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15751,8 +15751,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982138939207087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -124}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139886282675}
@@ -15760,7 +15760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -56, y: -214}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982138939207080
@@ -17408,8 +17408,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982138970107759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -71}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982138716348070}
@@ -17417,7 +17417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -56, y: -267}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982138970107752
@@ -23367,8 +23367,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139106410994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -103}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982138909001843}
@@ -23376,7 +23376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -78, y: -257}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139106411007
@@ -23407,7 +23407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8e38de8a36c2174f9ee8eccf9ffc847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecd1504f77c194646a68c186172b1637, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27106,8 +27106,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139191711668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -59}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140545773581}
@@ -27115,7 +27115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -39, y: -261}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139191711665
@@ -31403,7 +31403,7 @@ GameObject:
   - component: {fileID: 3425982139272479700}
   m_Layer: 6
   m_Name: "Sa\u011FToplama"
-  m_TagString: Kobje1Tek
+  m_TagString: Iobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31486,7 +31486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 300
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982140286679582}
   punchResimleri:
   - {fileID: 3425982138978897322}
@@ -32138,8 +32138,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139282426621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -80}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982138737935313}
@@ -32147,7 +32147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -64, y: -264}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139282426622
@@ -36298,8 +36298,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139389077716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -113}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139216237049}
@@ -36307,7 +36307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -42, y: -239}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139389077713
@@ -36338,7 +36338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d3537ca846e8b74183ec293a3874c7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50111c592d8d9af458dafe8bcf916cdd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -40556,8 +40556,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139492717791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -133}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140161000500}
@@ -40565,7 +40565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -35, y: -234}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139492717784
@@ -40596,7 +40596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3d3537ca846e8b74183ec293a3874c7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 990fe147e3902fb478ae910524d472b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -40708,8 +40708,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139493914032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -114}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140359130063}
@@ -40717,7 +40717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -41, y: -191}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139493914045
@@ -41470,7 +41470,7 @@ GameObject:
   - component: {fileID: 3425982139513677271}
   m_Layer: 6
   m_Name: 'SolToplama '
-  m_TagString: Iobje1Tek
+  m_TagString: Kobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41553,7 +41553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 300
   fiyatYazdirici: {fileID: 3425982140470083187}
   punchResimleri:
   - {fileID: 3425982139982832330}
@@ -42679,7 +42679,7 @@ GameObject:
   - component: {fileID: 3425982139541333872}
   m_Layer: 8
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje1Tek
+  m_TagString: Kobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42762,7 +42762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 250
   fiyatYazdirici: {fileID: 3425982140331591576}
   punchResimleri:
   - {fileID: 3425982138947831012}
@@ -46170,8 +46170,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139615802927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -140}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139886282675}
@@ -46179,7 +46179,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -79, y: -255}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139615802920
@@ -49694,7 +49694,7 @@ GameObject:
   - component: {fileID: 3425982139694005560}
   m_Layer: 7
   m_Name: "Sa\u011FToplama"
-  m_TagString: Kobje1Tek
+  m_TagString: Iobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49777,7 +49777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 250
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982138912815463}
   punchResimleri:
   - {fileID: 3425982139280604351}
@@ -52115,8 +52115,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139745745183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -191}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139489666406}
@@ -52124,7 +52124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -73, y: -272}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139745745176
@@ -52257,7 +52257,7 @@ GameObject:
   - component: {fileID: 3425982139750365613}
   m_Layer: 7
   m_Name: 'SolToplama '
-  m_TagString: Iobje1Tek
+  m_TagString: Kobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52340,7 +52340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 250
   fiyatYazdirici: {fileID: 3425982139971990036}
   punchResimleri:
   - {fileID: 3425982140222480715}
@@ -52536,8 +52536,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139751153602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -32}
+  m_LocalScale: {x: 1.5, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140439876470}
@@ -52545,7 +52545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -63, y: -258}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139751153615
@@ -58083,7 +58083,7 @@ GameObject:
   - component: {fileID: 3425982139878198356}
   m_Layer: 0
   m_Name: 'SolToplama '
-  m_TagString: Kobje4
+  m_TagString: Iobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58166,7 +58166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 1000
   fiyatYazdirici: {fileID: 3425982140411821932}
   punchResimleri:
   - {fileID: 3425982140584738876}
@@ -60322,8 +60322,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982139919433724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -97}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140659383100}
@@ -60331,7 +60331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -55, y: -253.99991}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982139919433721
@@ -66781,7 +66781,7 @@ GameObject:
   - component: {fileID: 3425982140038955265}
   m_Layer: 0
   m_Name: 'SolToplama '
-  m_TagString: Kobje3
+  m_TagString: Iobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66864,7 +66864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 700
+  fiyat: 1000
   fiyatYazdirici: {fileID: 3425982140495485157}
   punchResimleri:
   - {fileID: 3425982139164243371}
@@ -67614,7 +67614,7 @@ GameObject:
   - component: {fileID: 3425982140050653925}
   m_Layer: 8
   m_Name: 'SolToplama '
-  m_TagString: Kobje1Tek
+  m_TagString: Iobje1Tek
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67697,7 +67697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 250
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982139233390659}
   punchResimleri:
   - {fileID: 3425982139397908299}
@@ -68581,7 +68581,7 @@ GameObject:
   - component: {fileID: 3425982140070949003}
   m_Layer: 0
   m_Name: 'SolToplama '
-  m_TagString: Kobje5
+  m_TagString: Iobje5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68664,7 +68664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 1000
+  fiyat: 1500
   fiyatYazdirici: {fileID: 3425982140340229146}
   punchResimleri:
   - {fileID: 3425982140773916206}
@@ -70060,8 +70060,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140090844322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -116}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139727302166}
@@ -70069,7 +70069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -67, y: -258}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140090844335
@@ -71380,8 +71380,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140116132429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -147}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140003125623}
@@ -71389,7 +71389,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -59, y: -196}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140116132430
@@ -74392,8 +74392,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140188640682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -77}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139728841448}
@@ -74401,7 +74401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -66, y: -273}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140188640695
@@ -78166,7 +78166,7 @@ GameObject:
   - component: {fileID: 3425982140254411234}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje5
+  m_TagString: Kobje5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78249,7 +78249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 1500
+  fiyat: 1000
   fiyatYazdirici: {fileID: 3425982140065850259}
   punchResimleri:
   - {fileID: 3425982139473399062}
@@ -82318,7 +82318,7 @@ GameObject:
   - component: {fileID: 3425982140328143342}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje4
+  m_TagString: Kobje4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82401,7 +82401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 1000
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982138986412216}
   punchResimleri:
   - {fileID: 3425982139728637346}
@@ -84623,8 +84623,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140365905251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -114}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140231013516}
@@ -84632,7 +84632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -59, y: -239}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140365905260
@@ -86544,7 +86544,7 @@ GameObject:
   - component: {fileID: 3425982140403681173}
   m_Layer: 0
   m_Name: 'SolToplama '
-  m_TagString: Kobje1
+  m_TagString: Iobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86627,7 +86627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 300
+  fiyat: 500
   fiyatYazdirici: {fileID: 3425982139930413489}
   punchResimleri:
   - {fileID: 3425982138979853513}
@@ -88217,8 +88217,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140456816059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -42}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982139592185805}
@@ -88226,7 +88226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -66, y: -260}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140456816004
@@ -89544,7 +89544,7 @@ GameObject:
   - component: {fileID: 3425982140486139523}
   m_Layer: 0
   m_Name: 'SolToplama '
-  m_TagString: Iobje2
+  m_TagString: Kobje2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89627,7 +89627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 250
   fiyatYazdirici: {fileID: 3425982139368333672}
   punchResimleri:
   - {fileID: 3425982140296879235}
@@ -97507,8 +97507,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140642020161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -136}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140152358890}
@@ -97516,7 +97516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -60, y: -248}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140642020162
@@ -97877,7 +97877,7 @@ GameObject:
   - component: {fileID: 3425982140647460961}
   m_Layer: 0
   m_Name: "Sa\u011FToplama"
-  m_TagString: Iobje3
+  m_TagString: Kobje3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97960,7 +97960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 1000
+  fiyat: 700
   fiyatYazdirici: {fileID: 3425982140187705572}
   punchResimleri:
   - {fileID: 3425982139600157687}
@@ -100898,8 +100898,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3425982140719460919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -37}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3425982140282168994}
@@ -100907,7 +100907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -53, y: -248}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3425982140719460912
@@ -108985,8 +108985,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4925780836210566659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -92}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4925780837298440533}
@@ -108994,7 +108994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -93}
+  m_AnchoredPosition: {x: -44, y: -249}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4925780836210566656
