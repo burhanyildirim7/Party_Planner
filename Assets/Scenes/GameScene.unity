@@ -167,7 +167,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326513068
 GameObject:
@@ -331,7 +331,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444020129
 GameObject:
@@ -455,7 +455,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -549,7 +549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &955729541
 GameObject:
@@ -612,7 +612,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -15189,7 +15189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1387863038
 GameObject:
@@ -15233,7 +15233,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1443049507
 GameObject:
@@ -44603,7 +44603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994317953
 GameObject:
@@ -44780,7 +44780,7 @@ Transform:
   - {fileID: 1443049508}
   - {fileID: 326513069}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2018247889
 MonoBehaviour:
@@ -44825,7 +44825,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2063141236
 MonoBehaviour:
@@ -44845,8 +44845,8 @@ MonoBehaviour:
   levels:
   - {fileID: 2025500508756560317, guid: e4457646063e0e645b94ef42c06be756, type: 3}
   - {fileID: 2025500508756560317, guid: 17c486a1c4b31504d9626db8bb9bda0d, type: 3}
-  - {fileID: 3652697828023029658, guid: 16c6e90cf8886e3469622ffe1a7e22b1, type: 3}
-  finish: {fileID: 3466828498841027557, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
+  - {fileID: 7464049336757817229, guid: 16c6e90cf8886e3469622ffe1a7e22b1, type: 3}
+  finish: {fileID: 3218842824694854401, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
 --- !u!1 &2080463388
 GameObject:
   m_ObjectHideFlags: 0
@@ -47986,7 +47986,7 @@ RectTransform:
   - {fileID: 2037673478225531756}
   - {fileID: 2037673476796106676}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -50842,7 +50842,7 @@ Animator:
   m_GameObject: {fileID: 2037673478225531763}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6cc72c1d0c1c3c4ea258d88f65cceee, type: 2}
+  m_Controller: {fileID: 9100000, guid: 709881b0de6399f439b72267c6a2be7e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -60624,7 +60624,7 @@ Transform:
   - {fileID: 1049067357}
   - {fileID: 1580720743}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &2970531395275168773
 CanvasRenderer:
@@ -60670,8 +60670,8 @@ MonoBehaviour:
   - {fileID: 8658054555574229746, guid: abf708d6f8e5cd04cb8b9b92f02a3c29, type: 3}
   - {fileID: 1772835553746478939, guid: 6ecf444ac1fcea04ebf674eb906a811b, type: 3}
   konserAlani_Objeler_Tek:
-  - {fileID: 1676882941746721744, guid: 02ab7049b7d257f4cb9f040f60d119d5, type: 3}
-  - {fileID: 5953810009921130103, guid: 674d1d41a0e0d2345b22afba6272c51d, type: 3}
+  - {fileID: 5977064174328369742, guid: aac9c5bc48aa2a140ace7efd6b7a38a0, type: 3}
+  - {fileID: 470343397344282749, guid: cc3d08cd844582b48bcf9824b32a4de9, type: 3}
   - {fileID: 1844962729765910323, guid: aed353b2d671d7f478bb4ae01d52d520, type: 3}
   - {fileID: 5791899190102662883, guid: aaaa23c5e8c7d2243b23ca81d4669d13, type: 3}
   - {fileID: 4948594563333450623, guid: 376861e97ae650f48940836c1aa754a4, type: 3}
@@ -60679,29 +60679,29 @@ MonoBehaviour:
   - {fileID: 365499257697328970, guid: 1dea5c30ac8939e498d5dac8aa3bec1a, type: 3}
   - {fileID: 4077728709376704514, guid: 1c050e78ad7070048a7426c50711198e, type: 3}
   davetli_Objeler:
-  - {fileID: 8439372715013866871, guid: 69b6abe6136c538428f30f2ee93a9158, type: 3}
-  - {fileID: 8439372715013866871, guid: 454fe73004e93e2469c4b88b28c4a00e, type: 3}
-  - {fileID: 5636199082234101601, guid: 12a573b67fe353449a4276a29b3ba680, type: 3}
-  - {fileID: 5636199082234101601, guid: 9b2aec02449436f4eaf100ab97ee74bf, type: 3}
-  - {fileID: 4159010434148601685, guid: b47297cbdc3ec954681481cb1642d50e, type: 3}
-  - {fileID: 7676417024703633255, guid: 76a38b559e1732e45a85fd23229bb61f, type: 3}
-  - {fileID: 4159010434148601685, guid: f77f1501137a9344a8921c14ab038494, type: 3}
-  - {fileID: 7676417024703633255, guid: 0219d6cfc665c454bb6d4c1b5c339f18, type: 3}
-  - {fileID: 4159010434148601685, guid: 5c20da7d428883d41a9eac13859bd6ca, type: 3}
-  - {fileID: 7676417024703633255, guid: 02e67cd333450334ca48fe734dada637, type: 3}
+  - {fileID: 2241701055861257680, guid: deffc0aa481e86c47af925aff11d05f0, type: 3}
+  - {fileID: 8481561361878889820, guid: 113537ad06eaf9c4c8672d546598568f, type: 3}
+  - {fileID: 6698785607893020330, guid: f5bb8b8e9fba52e49886990fd873482e, type: 3}
+  - {fileID: 8604127858268107807, guid: 5b4c7c75e4199de4888b850d7b9ce3db, type: 3}
+  - {fileID: 5530402665044548691, guid: 50c965925855ef14c9c63a9219738fb9, type: 3}
+  - {fileID: 3565101946100687148, guid: 255d4ff2b18b6f74cb0dd2b19b60211f, type: 3}
+  - {fileID: 9206380278733916681, guid: 4191687842212dc4ab7d3f556e0fd97d, type: 3}
+  - {fileID: 8434627494697306352, guid: 781db06afd1b8cb4bab93d368f9de4eb, type: 3}
+  - {fileID: 1087231636139080723, guid: 90482a4af80fd0741b4d08509d845e91, type: 3}
+  - {fileID: 6567103730103110409, guid: 77c82376bdc5a594695c900d7a1a919f, type: 3}
   davetli_Objeler_Tek:
-  - {fileID: 8439372715013866871, guid: 819fd57ff42d1634da828b3ed11db99c, type: 3}
-  - {fileID: 8439372715013866871, guid: 0e6ca66e894813646af24ee04be0677a, type: 3}
-  - {fileID: 8439372715013866871, guid: 00d7f0863e73c99439c415d479aba0e7, type: 3}
-  - {fileID: 8439372715013866871, guid: 297fa33e6cf279a479367b70fdd23edd, type: 3}
-  - {fileID: 8439372715013866871, guid: 1d2ebdbbb04a2d9499c660cb6386de53, type: 3}
-  - {fileID: 8439372715013866871, guid: b66d3567c2cea684794e7d60e28738a8, type: 3}
-  - {fileID: 8439372715013866871, guid: d21a925814e7a00409ad34c3a97eef74, type: 3}
-  - {fileID: 8439372715013866871, guid: a2ed60667d4bbf94f939673a194b9a9d, type: 3}
-  - {fileID: 8439372715013866871, guid: 0ab676e8ec1c1af4684832cb518839ba, type: 3}
-  - {fileID: 8439372715013866871, guid: 1cfc1bc6d310aaa4b9502bff8229813b, type: 3}
-  - {fileID: 8439372715013866871, guid: b1c9962efaf3d6f45876a79633665099, type: 3}
-  - {fileID: 8439372715013866871, guid: 98ce2e9e628582a4288851d8288d7f69, type: 3}
+  - {fileID: 7087445229365780461, guid: 6097af7c975dee44bb85e5c74c6c5299, type: 3}
+  - {fileID: 3964709400027669846, guid: 779f57065e7d63347ba976b4cfa1dc87, type: 3}
+  - {fileID: 6331891167806281903, guid: a915dd92a7e7d0040bfbf3ed1de05826, type: 3}
+  - {fileID: 8429967381012568465, guid: f8e52ab8831939544b5630edbdd50141, type: 3}
+  - {fileID: 1459988731570104797, guid: 65cd8fef1e19afb49aca94f4b5cea32f, type: 3}
+  - {fileID: 381167453255363678, guid: 6fdc6f49481f3a64bbe669ad6b64eaf0, type: 3}
+  - {fileID: 6019318053616474974, guid: e6430ed06b0712e49a87ec61abbbeb03, type: 3}
+  - {fileID: 7365774575533011473, guid: 5d8c9e535871fa64b8201a4d13ddf0c4, type: 3}
+  - {fileID: 7310270596467735096, guid: 0ea589e53d261dc49bd641125d4f42c1, type: 3}
+  - {fileID: 5791658998001228062, guid: 8fdc1e3d2007c06428efa5f86613a060, type: 3}
+  - {fileID: 251826020689387783, guid: 74fe412cdb35acc4f943ba450b22cb7b, type: 3}
+  - {fileID: 7185722257620384896, guid: cda568e08db34404c9c1e0f0c731c75b, type: 3}
   araba: {fileID: 6881951458042588019, guid: b565920f5b7017943bf3cee544a61256, type: 3}
   arabaKapasitesi: 5
   arabaOlusmaEfekt: {fileID: 2394445631678924146}
@@ -60738,7 +60738,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &3932175219862953492
 CanvasRenderer:
@@ -75045,48 +75045,6 @@ Transform:
   m_Father: {fileID: 4555601383285667475}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &4815687915612652273
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472867649819009828}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b0420f6decba3f042b8f00c1f7d55d11, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5698147514659654033
 GameObject:
   m_ObjectHideFlags: 0
@@ -75105,21 +75063,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5953739438736816542
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472867649819009828}
-  m_LocalRotation: {x: -0.5128818, y: -0.48677745, z: -0.48677734, w: 0.51288193}
-  m_LocalPosition: {x: -5.37, y: 0.23, z: 250.27313}
-  m_LocalScale: {x: 200, y: 200, z: 25}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -87.008}
 --- !u!224 &6076736282974628086
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75140,24 +75083,6 @@ RectTransform:
   m_AnchoredPosition: {x: -73, y: 0.000076293945}
   m_SizeDelta: {x: 109.1935, y: 102.1774}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &6472867649819009828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5953739438736816542}
-  - component: {fileID: 7291387088420419131}
-  - component: {fileID: 4815687915612652273}
-  m_Layer: 0
-  m_Name: Sahne
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!224 &6589184238872355215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75209,14 +75134,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!33 &7291387088420419131
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472867649819009828}
-  m_Mesh: {fileID: -5495902117074765545, guid: e5f72c90fd46676439e7698a43670528, type: 3}
 --- !u!222 &8065103501126037052
 CanvasRenderer:
   m_ObjectHideFlags: 0

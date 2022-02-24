@@ -109,7 +109,7 @@ public class CameraMovement : MonoBehaviour
 
     IEnumerator OyunSonuKameraKontrol4()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3.5f);
         digerKamerayaGeceilsinMi = true;
         target = GameObject.FindWithTag("KameraNoktasi").transform.GetChild(3).transform.gameObject;
 
@@ -117,7 +117,7 @@ public class CameraMovement : MonoBehaviour
         while (oyunBittiMi)
         {
             transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref velocity, Time.deltaTime * 20);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 40), 10 * Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.right * 30 + Vector3.up * 50), 10 * Time.deltaTime);
 
             yield return null;
         }

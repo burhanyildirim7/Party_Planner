@@ -418,7 +418,7 @@ public class Toplatici : MonoBehaviour
         fiyatYazdirici.text = "";
         mesh.enabled = false;
 
-
+       
         if (bolumIsmi == "Bolum1")
         {
             for (int i = 0; i < punchResimleri.Length; i++)

@@ -11,7 +11,7 @@ public class UIController : MonoBehaviour
     public Text gamePlayScoreText, winScreenScoreText, levelNoText, tapToStartScoreText, totalElmasText;
     public Animator ScoreTextAnim;
 
-    WaitForSeconds beklemeSuresi = new WaitForSeconds(6.5f); //sayac sistemi icin gereklidir
+    WaitForSeconds beklemeSuresi = new WaitForSeconds(4f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.05f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.015f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi3 = new WaitForSeconds(.025f); //sayac sistemi icin gereklidir
