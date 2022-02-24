@@ -12,6 +12,8 @@ public class BinaOzellikleri : MonoBehaviour
     [Header("ObjeOlustur")]
     private int leveldekiObjeSayisi = 0;
 
+    List<GameObject> kayitEdilecekEsyalar = new List<GameObject>();
+
     WaitForSeconds beklemeSuresi = new WaitForSeconds(.2f);
 
     public void InsaEt()
@@ -57,15 +59,26 @@ public class BinaOzellikleri : MonoBehaviour
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi.ToString(), objeTuru); //Burasi sebebiyle ayný leveli iki defa oynadiginda son oynadigindaki objeler diger level icin kalici olur
 
         leveldekiObjeSayisi++;
-        PlayerPrefs.SetInt("Punch_ObjeSayisi", leveldekiObjeSayisi);
     }
-
 
     public void Bolum2KayitEt(string levelIsmi, string objeTuru)  // Binanin ismi ve obje türü
     {
         PlayerPrefs.SetString(levelIsmi + leveldekiObjeSayisi, objeTuru);
 
         leveldekiObjeSayisi++;
+    }
+
+    public void digerBolumObjeSayisiBolum1()
+    {
+        PlayerPrefs.SetInt("Punch_ObjeSayisi", leveldekiObjeSayisi);
+
+    }
+
+    public void digerBolumObjeSayisiBolum2()
+    {
         PlayerPrefs.SetInt("KonserAlani_ObjeSayisi", leveldekiObjeSayisi);
     }
+
+
+    
 }

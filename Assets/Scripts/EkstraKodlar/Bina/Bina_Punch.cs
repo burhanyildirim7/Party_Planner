@@ -139,14 +139,15 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = obje4[0];
             obje.SetActive(true);
-            bardakOlusmaEfekt.Play();
             olusanEsyalar.Add(obje);
+            bardakOlusmaEfekt.Play();
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
             obje = obje4[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            bardakOlusmaEfekt.Play();
         }
     }
 
@@ -157,14 +158,15 @@ public class Bina_Punch : MonoBehaviour
         {
             obje = obje5[0];
             obje.SetActive(true);
-            sandalyeEfekt.Play();
             olusanEsyalar.Add(obje);
+            sandalyeEfekt.Play();
         }
         else if (isim == "Obje5Kotu(Clone)")
         {
             obje = obje5[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            sandalyeEfekt.Play();
         }
     }
 

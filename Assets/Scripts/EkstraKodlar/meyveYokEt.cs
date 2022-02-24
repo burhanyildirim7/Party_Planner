@@ -28,7 +28,7 @@ public class meyveYokEt : MonoBehaviour
         if(other.CompareTag("Kase"))
         {
             Instantiate(suyaDusmeEfekt, transform.position + Vector3.up * .25f, Quaternion.Euler(-Vector3.right));
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

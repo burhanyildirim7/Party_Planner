@@ -37,6 +37,7 @@ public class Toplatici : MonoBehaviour
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.25f); //Meyveyi yerlestirme suresi
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.45f); //Kapi rengini guncelleme suresi 
+    WaitForSeconds beklemeSuresi3 = new WaitForSeconds(.1f); //Kapi gecikme suresi
 
     private void Start()
     {
@@ -53,14 +54,15 @@ public class Toplatici : MonoBehaviour
 
         mesh = GetComponent<MeshRenderer>();
 
-        ResimiBelirleKapi();
         StartCoroutine(KapiRenginiGuncelle());
+        StartCoroutine(ResimiBelirleKapi());
     }
 
     //Kapida olusacak olan resimi belirler  
     //Level controller de restart level den ulasiliyor
-    public void ResimiBelirleKapi()
+    IEnumerator ResimiBelirleKapi()
     {
+        yield return beklemeSuresi3;
         mesh.enabled = true;
         mesh.material = renk[1];
 

@@ -24,7 +24,7 @@ public class LevelController : MonoBehaviour
 
     private void Start()
     {
-        totalLevelNo = PlayerPrefs.GetInt("level");   //UI CONTROLLER  NextLevelButtonClick  DE 3 levelde bir sifirlaniyor
+        totalLevelNo = PlayerPrefs.GetInt("level");
         if (totalLevelNo == 0)
         {
             totalLevelNo = 1;
@@ -69,14 +69,13 @@ public class LevelController : MonoBehaviour
         {
             currentFinishObj = Instantiate(finish, Vector3.forward * 245, Quaternion.Euler(Vector3.up * 180));
         }
-        currentLevelObj = Instantiate(levels[levelNo - 1], Vector3.zero, Quaternion.identity);
+   
         Elephant.LevelStarted(totalLevelNo);
-
-        // Debug.Log(PlayerPrefs.GetInt("level").ToString() + PlayerPrefs.GetString("OncekiLevelBolumIsmi"));
 
         if (PlayerPrefs.GetInt("level") == 1)
         {
             bolumunIsmi = "Bolum1";
+            currentLevelObj = Instantiate(levels[0], Vector3.zero, Quaternion.identity);
         }
 
         if (PlayerPrefs.GetInt("level") > 1)
@@ -84,14 +83,17 @@ public class LevelController : MonoBehaviour
             if (PlayerPrefs.GetInt("level") % 3 == 1)
             {
                 bolumunIsmi = "Bolum1";
+                currentLevelObj = Instantiate(levels[0], Vector3.zero, Quaternion.identity);
             }
             else if (PlayerPrefs.GetInt("level") % 3 == 2)
             {
                 bolumunIsmi = "Bolum2";
+                currentLevelObj = Instantiate(levels[1], Vector3.zero, Quaternion.identity);
             }
             else if (PlayerPrefs.GetInt("level") % 3 == 0)
             {
                 bolumunIsmi = "Bolum3";
+                currentLevelObj = Instantiate(levels[2], Vector3.zero, Quaternion.identity);
             }
         }
 
@@ -113,7 +115,6 @@ public class LevelController : MonoBehaviour
 
         if (PlayerPrefs.GetInt("level") % 3 == 0)
         {
-            PlayerPrefs.SetInt("level", 0);
             GameObject.FindWithTag("BuildingController").GetComponent<BinaOzellikleri>().Sifirla();
         }
         Elephant.LevelCompleted(totalLevelNo);

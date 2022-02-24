@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Bina_KonserAlani : MonoBehaviour
 {
-    [SerializeField] ParticleSystem insanDogusEfekti;
+    [SerializeField] ParticleSystem[] insanDogusEfekti;
+    [SerializeField] ParticleSystem yildizEfekti;
 
 
     [Header("SiraSayilari")]
@@ -56,6 +57,10 @@ public class Bina_KonserAlani : MonoBehaviour
 
     public void ObjeyiYerlestir(string isim)
     {
+        if(!yildizEfekti.isPlaying)
+        {
+            yildizEfekti.Play();
+        }
         Obje1Yerlestir(isim);
         Obje2Yerlestir(isim);
         Obje3Yerlestir(isim);
@@ -232,14 +237,15 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = obje2_Tek[0];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[0].Play();
         }
         else if (isim == "Obje2TekKotu(Clone)")
         {
             obje = obje2_Tek[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[0].Play();
         }
-        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
     }
 
     private void Obje3TekYerlestir(string isim) //insan
@@ -250,6 +256,7 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = obje3_Tek[0];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[1].Play();
 
         }
         else if (isim == "Obje3TekKotu(Clone)")
@@ -257,26 +264,29 @@ public class Bina_KonserAlani : MonoBehaviour
             obje = obje3_Tek[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[1].Play();
         }
-        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
     }
 
     private void Obje4TekYerlestir(string isim) //insan
     {
         GameObject obje;
+
         if (isim == "Obje4TekIyi(Clone)")
         {
             obje = obje4_Tek[0];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[2].Play();
         }
         else if (isim == "Obje4TekKotu(Clone)")
         {
             obje = obje4_Tek[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
+            insanDogusEfekti[2].Play();
         }
-        Instantiate(insanDogusEfekti, olusanEsyalar[olusanEsyalar.Count - 1].transform.position - Vector3.up * .5f, Quaternion.identity);
+        
     }
 
     private void SayiArtir(int sayi)
