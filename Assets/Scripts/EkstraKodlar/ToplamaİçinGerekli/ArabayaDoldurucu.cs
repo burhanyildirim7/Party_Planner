@@ -84,7 +84,7 @@ public class ArabayaDoldurucu : MonoBehaviour
         MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
         if (bolumIsmi == "Bolum1")
         {
-            PunchEsyaCikar(esyaIsmi);
+            PunchEsyaCikar(esyaIsmi, esyaLayeri);
         }
         else if (bolumIsmi == "Bolum2")
         {
@@ -96,40 +96,113 @@ public class ArabayaDoldurucu : MonoBehaviour
         }
     }
 
-    private void PunchEsyaCikar(string esyaIsmi)
+    private void PunchEsyaCikar(string esyaIsmi, string esyaLayeri)
     {
         if (esyaIsmi == "Iobje1")
         {
             uIController.ScoreArtir(score);
             IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[0]);
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[0]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[2]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[4]);
+            }
         }
         else if (esyaIsmi == "Kobje1")
         {
             KotuKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[1]);
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[1]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[3]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[5]);
+            }
         }
         else if (esyaIsmi == "Iobje2")
         {
             uIController.ScoreArtir(score);
             IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[2]);
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[6]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[8]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[10]);
+            }
         }
         else if (esyaIsmi == "Kobje2")
         {
-            KotuKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[3]);
+            uIController.ScoreArtir(score);
+            IyiKapiEfektOynat();
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[7]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[9]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[11]);
+            }
         }
         else if (esyaIsmi == "Iobje3")
         {
             uIController.ScoreArtir(score);
             IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[4]);
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[12]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[14]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[16]);
+            }
         }
         else if (esyaIsmi == "Kobje3")
         {
             KotuKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[5]);
+
+            if (esyaLayeri == "6")
+            {
+                esyaYerlestir(punch_Objeler[13]);
+            }
+            else if (esyaLayeri == "7")
+            {
+                esyaYerlestir(punch_Objeler[15]);
+            }
+            else if (esyaLayeri == "8")
+            {
+                esyaYerlestir(punch_Objeler[17]);
+            }
         }
         else if (esyaIsmi == "Iobje4")
         {
@@ -383,7 +456,6 @@ public class ArabayaDoldurucu : MonoBehaviour
             {
                 InsanYerlesitir(davetli_Objeler_Tek[10]);
             }
-            InsanYerlesitir(davetli_Objeler_Tek[2]);
         }
         else if (esyaIsmi == "Kobje2Tek")
         {

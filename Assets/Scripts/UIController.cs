@@ -74,7 +74,7 @@ public class UIController : MonoBehaviour
         {
             oncekiLevelScore += 1;
             scoreDoldurucu.value = oncekiLevelScore;
-            yield return new WaitForSeconds(.007f);
+            yield return new WaitForSeconds(.006f);
         }
     }
 

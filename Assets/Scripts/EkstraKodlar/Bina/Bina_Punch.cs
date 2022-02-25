@@ -29,9 +29,15 @@ public class Bina_Punch : MonoBehaviour
     [SerializeField] GameObject[] obje3;
     [SerializeField] GameObject[] obje4;
     [SerializeField] GameObject[] obje5;
+    [SerializeField] GameObject[] obje6;
+    [SerializeField] GameObject[] obje7;
+    [SerializeField] GameObject[] obje8;
+    [SerializeField] GameObject[] obje9;
+    [SerializeField] GameObject[] obje10;
+    [SerializeField] GameObject[] obje11;
 
 
-    
+
 
     private BinaOzellikleri binaOzellikleri;
 
@@ -74,6 +80,12 @@ public class Bina_Punch : MonoBehaviour
         Obje3Yerlestir(isim);
         Obje4Yerlestir(isim);
         Obje5Yerlestir(isim);
+        Obje6Yerlestir(isim);
+        Obje7Yerlestir(isim);
+        Obje8Yerlestir(isim);
+        Obje9Yerlestir(isim);
+        Obje10Yerlestir(isim);
+        Obje11Yerlestir(isim);
     }
 
     private void TitresimYap()
@@ -140,18 +152,14 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje4Iyi(Clone)")
         {
-            obje = obje4[0];
-            obje.SetActive(true);
+            obje = Instantiate(obje4[0], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-            bardakOlusmaEfekt.Play();
             TitresimYap();
         }
         else if (isim == "Obje4Kotu(Clone)")
         {
-            obje = obje4[1];
-            obje.SetActive(true);
+            obje = Instantiate(obje4[1], obje1Konumlari[0].transform.position, Quaternion.identity);
             olusanEsyalar.Add(obje);
-            bardakOlusmaEfekt.Play();
             TitresimYap();
         }
     }
@@ -161,21 +169,129 @@ public class Bina_Punch : MonoBehaviour
         GameObject obje;
         if (isim == "Obje5Iyi(Clone)")
         {
-            obje = obje5[0];
+            obje = Instantiate(obje5[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+        else if (isim == "Obje5Kotu(Clone)")
+        {
+            obje = Instantiate(obje5[1], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+    }
+
+    private void Obje6Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje6Iyi(Clone)")
+        {
+            obje = Instantiate(obje6[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+        else if (isim == "Obje6Kotu(Clone)")
+        {
+            obje = Instantiate(obje6[1], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+    }
+
+    private void Obje7Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje7Iyi(Clone)")
+        {
+            obje = Instantiate(obje7[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+        else if (isim == "Obje7Kotu(Clone)")
+        {
+            obje = Instantiate(obje7[1], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+    }
+
+    private void Obje8Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje8Iyi(Clone)")
+        {
+            obje = Instantiate(obje8[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+        else if (isim == "Obje8Kotu(Clone)")
+        {
+            obje = Instantiate(obje8[1], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+    }
+
+    private void Obje9Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje9Iyi(Clone)")
+        {
+            obje = Instantiate(obje9[0], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+        else if (isim == "Obje9Kotu(Clone)")
+        {
+            obje = Instantiate(obje9[1], obje1Konumlari[0].transform.position, Quaternion.identity);
+            olusanEsyalar.Add(obje);
+            TitresimYap();
+        }
+    }
+
+    private void Obje10Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje10Iyi(Clone)")
+        {
+            obje = obje10[0];
+            obje.SetActive(true);
+            olusanEsyalar.Add(obje);
+            bardakOlusmaEfekt.Play();
+            TitresimYap();
+        }
+        else if (isim == "Obje10Kotu(Clone)")
+        {
+            obje = obje10[1];
+            obje.SetActive(true);
+            olusanEsyalar.Add(obje);
+            bardakOlusmaEfekt.Play();
+            TitresimYap();
+        }
+    }
+
+    private void Obje11Yerlestir(string isim)
+    {
+        GameObject obje;
+        if (isim == "Obje11Iyi(Clone)")
+        {
+            obje = obje11[0];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             sandalyeEfekt.Play();
             TitresimYap();
         }
-        else if (isim == "Obje5Kotu(Clone)")
+        else if (isim == "Obje11Kotu(Clone)")
         {
-            obje = obje5[1];
+            obje = obje11[1];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);
             sandalyeEfekt.Play();
             TitresimYap();
         }
     }
+
+
 
 
 

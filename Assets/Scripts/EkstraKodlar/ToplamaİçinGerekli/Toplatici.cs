@@ -32,6 +32,9 @@ public class Toplatici : MonoBehaviour
     MeshRenderer mesh;
     BoxCollider collider;
 
+    [Header("Efekt")]
+    private ParticleSystem camKirilmaEfekt;
+
 
 
 
@@ -45,6 +48,7 @@ public class Toplatici : MonoBehaviour
         renderer = GetComponent<Renderer>();
         karakterPara = GameObject.FindWithTag("Player").GetComponent<KarakterPara>();
         arabayadoldurucu = GameObject.FindWithTag("Arabalar").GetComponent<ArabayaDoldurucu>();
+        camKirilmaEfekt = GameObject.FindWithTag("CamKirilmaEfekt").GetComponent<ParticleSystem>();
         bolumIsmi = LevelController.bolumunIsmi;
 
         collider = GetComponent<BoxCollider>();
@@ -87,43 +91,109 @@ public class Toplatici : MonoBehaviour
     {
         if (gameObject.tag == "Iobje1")
         {
-            punchResimleri[0].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[0].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[2].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[4].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje1")
         {
-            punchResimleri[1].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[1].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[3].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[5].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Iobje2")
         {
-            punchResimleri[2].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[6].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[8].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[10].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje2")
         {
-            punchResimleri[3].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[7].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[9].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[11].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Iobje3")
         {
-            punchResimleri[4].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[12].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[14].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[16].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Kobje3")
         {
-            punchResimleri[5].SetActive(true);
+            if (gameObject.layer == 6)
+            {
+                punchResimleri[13].SetActive(true);
+            }
+            else if (gameObject.layer == 7)
+            {
+                punchResimleri[15].SetActive(true);
+            }
+            else if (gameObject.layer == 8)
+            {
+                punchResimleri[17].SetActive(true);
+            }
         }
         else if (gameObject.tag == "Iobje4")
         {
-            punchResimleri[6].SetActive(true);
+            punchResimleri[18].SetActive(true);
         }
         else if (gameObject.tag == "Kobje4")
         {
-            punchResimleri[7].SetActive(true);
+            punchResimleri[19].SetActive(true);
         }
         else if (gameObject.tag == "Iobje5")
         {
-            punchResimleri[8].SetActive(true);
+            punchResimleri[20].SetActive(true);
         }
         else if (gameObject.tag == "Kobje5")
         {
-            punchResimleri[9].SetActive(true);
+            punchResimleri[21].SetActive(true);
         }
 
 
@@ -366,7 +436,6 @@ public class Toplatici : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
             if (GameController.para - fiyat >= 0)
             {
                 karakterPara.meyveSatinAl(fiyat);
@@ -376,7 +445,15 @@ public class Toplatici : MonoBehaviour
                 StartCoroutine(esyaCikarmaAyari());
                 DigerKapidanMeyveAlmayiPasiflestir();
             }
-           
+            else
+            {
+                collider.enabled = false;
+
+                ResimPasiflestir();
+                DigerKapidanMeyveAlmayiPasiflestir();
+                camKirilmaEfekt.transform.position = transform.position + Vector3.up * 1.5f;
+                camKirilmaEfekt.Play();
+            }
         }
     }
 

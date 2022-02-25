@@ -33,7 +33,7 @@ public class EsyaGonder : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Zemin")) //Yere dusen meyve icin gecerlidir
         {
-            transform.position = GameObject.FindWithTag("Player").transform.position - Vector3.forward * 20;
+            transform.position = GameObject.FindWithTag("Player").transform.position - Vector3.forward * 350;
         }
     }
 
