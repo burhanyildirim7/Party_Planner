@@ -5143,9 +5143,6 @@ MonoBehaviour:
   gamePlayScoreText: {fileID: 2037673478107303736}
   winScreenScoreText: {fileID: 2037673476534122959}
   levelNoText: {fileID: 2037673477986295945}
-  tapToStartScoreText: {fileID: 1455347960582755020}
-  totalElmasText: {fileID: 0}
-  ScoreTextAnim: {fileID: 2326140859153717883}
   scoreDoldurucu: {fileID: 0}
   ScoreYorumYazisi: []
 --- !u!4 &955729543
