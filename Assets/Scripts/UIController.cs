@@ -15,6 +15,7 @@ public class UIController : MonoBehaviour
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.015f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi3 = new WaitForSeconds(.025f); //sayac sistemi icin gereklidir
     WaitForSeconds beklemeSuresi4 = new WaitForSeconds(.03f); //sayac sistemi icin gereklidir
+    WaitForSeconds beklemeSuresi5 = new WaitForSeconds(.75f); //sayac sistemi icin gereklidir
 
 
     [Header("ScoreAyariIcinGereklidir")]
@@ -22,6 +23,7 @@ public class UIController : MonoBehaviour
     private int Score;
     [SerializeField] Slider scoreDoldurucu;
     [SerializeField] GameObject[] ScoreYorumYazisi;
+    [SerializeField] GameObject[] sonradanAktiflestirilecekler;
 
     // singleton yapisi burada kuruluyor.
     private void Awake()
@@ -56,7 +58,6 @@ public class UIController : MonoBehaviour
 
     public void ScoreArtir(int gelenSayi)    //ArabayaDoldurucu icerisinden geliyor
     {
-
         Score += gelenSayi;
     }
 
@@ -68,11 +69,12 @@ public class UIController : MonoBehaviour
 
     IEnumerator ScoreArtir()  //Win
     {
+        yield return beklemeSuresi5;
         while (Score >= oncekiLevelScore)
         {
             oncekiLevelScore += 1;
             scoreDoldurucu.value = oncekiLevelScore;
-            yield return new WaitForSeconds(.02f);
+            yield return new WaitForSeconds(.007f);
         }
     }
 
@@ -269,7 +271,22 @@ public class UIController : MonoBehaviour
         }
 
         yield return beklemeSuresi; //3f
-        StartCoroutine(ScoreArtir());
+        if(LevelController.bolumunIsmi == "Bolum3")
+        {
+            StartCoroutine(ScoreArtir());
+            for (int i = 0; i < sonradanAktiflestirilecekler.Length; i++)
+            {
+                sonradanAktiflestirilecekler[i].SetActive(true);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < sonradanAktiflestirilecekler.Length; i++)
+            {
+                sonradanAktiflestirilecekler[i].SetActive(false);
+            }
+        }
+      
         GamePanel.SetActive(false);
         WinPanel.SetActive(true);
         winScreenScoreText.text = "0";

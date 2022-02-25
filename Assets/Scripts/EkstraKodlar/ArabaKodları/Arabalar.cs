@@ -16,6 +16,7 @@ public class Arabalar : MonoBehaviour
 
     WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.04f);
     WaitForSeconds beklemeSuresi2 = new WaitForSeconds(1f);
+    WaitForSeconds beklemeSuresi3 = new WaitForSeconds(.2f);
 
     void Start()
     {
@@ -31,6 +32,19 @@ public class Arabalar : MonoBehaviour
     {
         yield return beklemeSuresi2;
         agent.speed = 6f;
+
+        while (true)
+        {
+            if (Vector3.Distance(transform.position, Karakter.position - hedef) >= 1f)
+            {
+                agent.speed = 9f;
+            }
+            else
+            {
+                agent.speed = 6f;
+            }
+            yield return beklemeSuresi3;
+        }
     }
    
 

@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &257983401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -675,7 +675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &731656140
 RectTransform:
   m_ObjectHideFlags: 0
@@ -835,7 +835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &884036625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -943,6 +943,14 @@ MonoBehaviour:
   - {fileID: 1610670638}
   - {fileID: 1495202505}
   - {fileID: 444020129}
+  sonradanAktiflestirilecekler:
+  - {fileID: 1714516105}
+  - {fileID: 2037673476851357704}
+  - {fileID: 988445161253249063}
+  - {fileID: 884036624}
+  - {fileID: 731656139}
+  - {fileID: 257983400}
+  - {fileID: 1228469947}
 --- !u!4 &955729543
 Transform:
   m_ObjectHideFlags: 0
@@ -15628,7 +15636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1228469948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45058,7 +45066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1714516106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45629,7 +45637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &988445161317224940
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49298,7 +49306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2037673476680140947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51316,26 +51324,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2037673478225531763}
   m_CullTransparentMesh: 1
---- !u!95 &2037673478225531759
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2037673478225531763}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 709881b0de6399f439b72267c6a2be7e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2037673478225531763
 GameObject:
   m_ObjectHideFlags: 0
@@ -51347,14 +51335,13 @@ GameObject:
   - component: {fileID: 2037673478225531756}
   - component: {fileID: 2037673478225531758}
   - component: {fileID: 2037673478225531757}
-  - component: {fileID: 2037673478225531759}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2070661309882696310
 GameObject:
   m_ObjectHideFlags: 0

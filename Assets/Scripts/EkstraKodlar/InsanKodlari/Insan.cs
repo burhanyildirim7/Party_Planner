@@ -15,7 +15,8 @@ public class Insan : MonoBehaviour
     bool sonKonumaYaklasildiMi = false;
 
 
-    WaitForSeconds beklemeSuresi = new WaitForSeconds(.2f);
+    WaitForSeconds beklemeSuresi1 = new WaitForSeconds(.04f);
+    WaitForSeconds beklemeSuresi2 = new WaitForSeconds(.2f);
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class Insan : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         StartCoroutine(KarakteriTakipEt());
-
+        StartCoroutine(HizBelirle());
     }
 
     public void InsaniGonder(GameObject hedef)  //Bina_Davetlilere gönderilmistir
@@ -39,12 +40,34 @@ public class Insan : MonoBehaviour
         }
     }
 
+    public void HedefDegistir()
+    {
+       
+    }
+
+
     IEnumerator KarakteriTakipEt()
     {
         while(true)
         {
             agent.SetDestination(player.transform.position - Vector3.forward);
-            yield return beklemeSuresi;
+            yield return beklemeSuresi1;
+        }
+    }
+
+    IEnumerator HizBelirle()
+    {
+        while(true)
+        {
+            if (Vector3.Distance(transform.position, player.transform.position - Vector3.forward) >= 1.5f)
+            {
+                agent.speed = 7.2f;
+            }
+            else
+            {
+                agent.speed = 6f;
+            }
+            yield return beklemeSuresi2;
         }
     }
 

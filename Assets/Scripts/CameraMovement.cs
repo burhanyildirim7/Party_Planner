@@ -7,8 +7,8 @@ public class CameraMovement : MonoBehaviour
    
     [Header("KameraTakibiIcinGerekli")]
     private GameObject Player;
-    private Vector3 aradakiFark;
-    public float kameraUzakligi;
+    [SerializeField] Vector3 aradakiFark;
+    [SerializeField] float rotasyon;
     Vector3 velocity = Vector3.zero;
     private bool digerKamerayaGeceilsinMi = false; //Bolum 3 icin gereklidir
 
@@ -24,7 +24,7 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        aradakiFark = transform.position - Player.transform.position;
+        //aradakiFark = transform.position - Player.transform.position;
         target = Player;
     }
 
@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (!oyunBittiMi)
         {
-            transform.position = Vector3.Lerp(transform.position, new Vector3(Player.transform.position.x, Player.transform.position.y + aradakiFark.y, Player.transform.position.z + aradakiFark.z), Time.deltaTime * 5f);
+            transform.position = Vector3.Lerp(transform.position, Player.transform.position + Vector3.up * aradakiFark.y + Vector3.forward * aradakiFark.z, Time.deltaTime * 5f);
         }
     }
 
@@ -62,7 +62,8 @@ public class CameraMovement : MonoBehaviour
 
     public void KameraOyunBasiKontrol()
     {
-        transform.rotation = Quaternion.Euler(Vector3.right * 17);
+        transform.position = Player.transform.position + Vector3.up * aradakiFark.y + Vector3.forward * aradakiFark.z;
+        transform.rotation = Quaternion.Euler(Vector3.right * 25);
         oyunBittiMi = false;
     }
 
