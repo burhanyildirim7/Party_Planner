@@ -71,6 +71,7 @@ public class UIController : MonoBehaviour
     IEnumerator ScoreArtir()  //Win
     {
         yield return beklemeSuresi5;
+        oncekiLevelScore = 0;
         while (Score >= oncekiLevelScore)
         {
             oncekiLevelScore += 2;
