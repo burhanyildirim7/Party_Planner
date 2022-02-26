@@ -208,36 +208,26 @@ public class ArabayaDoldurucu : MonoBehaviour
         {
             uIController.ScoreArtir(score);
             IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[6]);
+            esyaYerlestir(punch_Objeler[18]);
         }
         else if (esyaIsmi == "Kobje4")
         {
             KotuKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[7]);
+            esyaYerlestir(punch_Objeler[19]);
         }
         else if (esyaIsmi == "Iobje5")
         {
             uIController.ScoreArtir(score);
             IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[8]);
+            esyaYerlestir(punch_Objeler[20]);
         }
         else if (esyaIsmi == "Kobje5")
         {
             KotuKapiEfektOynat();
-            esyaYerlestir(punch_Objeler[9]);
+            esyaYerlestir(punch_Objeler[21]);
         }
 
-        if (esyaIsmi == "Kobje1Tek")
-        {
-            KotuKapiEfektOynat();
-            uIController.ScoreArtir(score);
-            esyaYerlestir(punch_Objeler_Tek[0]);
-        }
-        else if (esyaIsmi == "Iobje1Tek")
-        {
-            IyiKapiEfektOynat();
-            esyaYerlestir(punch_Objeler_Tek[1]);
-        }
+
         hedefEsya = punchAlani;
     }
 
@@ -494,7 +484,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Araba olusturma kismi burasidir
     void esyaYerlestir(GameObject esya)
     {
-        GameObject gelenEsya = Instantiate(esya, tumArabalar[tumArabalar.Count - 1].transform.position + Vector3.up * .3f + Vector3.right * Random.Range(-.1f, .1f), Quaternion.identity);
+        GameObject gelenEsya = Instantiate(esya, tumArabalar[tumArabalar.Count - 1].transform.position + Vector3.up * .5f + Vector3.right * Random.Range(-.1f, .1f), Quaternion.identity);
         gelenEsya.transform.parent = tumArabalar[tumArabalar.Count - 1].transform;
         tumEsyalar.Add(gelenEsya);
 
@@ -602,7 +592,7 @@ public class ArabayaDoldurucu : MonoBehaviour
     //Insanlarin olusturulmasi ile ilgilidir
     private void InsanYerlesitir(GameObject insan)
     {
-        GameObject gelenInsan = Instantiate(insan, GameObject.FindWithTag("Player").transform.position - Vector3.forward * 5, Quaternion.identity);
+        GameObject gelenInsan = Instantiate(insan, GameObject.FindWithTag("Player").transform.position - Vector3.forward * 8, Quaternion.identity);
         tumInsanlar.Add(gelenInsan);
     }
 

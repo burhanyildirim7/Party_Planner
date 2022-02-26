@@ -309,9 +309,8 @@ public class Bina_KonserAlani : MonoBehaviour
     private void Obje4TekYerlestir(string isim) //insan
     {
         GameObject obje;
-
         if (isim == "Obje4TekIyi(Clone)")
-        {
+        {  
             obje = obje4_Tek[0];
             obje.SetActive(true);
             olusanEsyalar.Add(obje);

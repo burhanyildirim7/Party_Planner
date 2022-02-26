@@ -1033,7 +1033,7 @@ GameObject:
   - component: {fileID: -6676484861675383097}
   - component: {fileID: -4516476036812465359}
   m_Layer: 0
-  m_Name: obje2TekIyi
+  m_Name: Obje2TekIyi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

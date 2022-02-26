@@ -46438,8 +46438,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.5235988
-      minScalar: 0.5235988
+      scalar: -0.87266463
+      minScalar: 0.87266463
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -46491,8 +46491,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.5235988
-      minScalar: 0.5235988
+      scalar: -0.87266463
+      minScalar: 0.87266463
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -46544,8 +46544,8 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.5235988
-      minScalar: 0.5235988
+      scalar: -0.87266463
+      minScalar: 0.87266463
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -46785,7 +46785,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -46895,7 +46895,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -50219,7 +50219,7 @@ MonoBehaviour:
   - {fileID: 7464049336757817229, guid: 13e2a64f52726a346a748c2264a8eec0, type: 3}
   - {fileID: 7464049336757817229, guid: 861bed4a5fd9b9d4aa7720903a1a9dad, type: 3}
   - {fileID: 7464049336757817229, guid: 16c6e90cf8886e3469622ffe1a7e22b1, type: 3}
-  finish: {fileID: 1146706683148216873, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
+  finish: {fileID: 7350573023216488032, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
 --- !u!1 &2080463388
 GameObject:
   m_ObjectHideFlags: 0
@@ -66007,12 +66007,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punch_Objeler:
-  - {fileID: 1729758019534196, guid: f41823a4b16ed694780d655c0fed2896, type: 3}
-  - {fileID: 2635579702523043919, guid: 6c8c5d388332aa547b6299f8c7256fa5, type: 3}
-  - {fileID: 1181162239190822, guid: 936cb289d1efae144bedb5bfb118ce68, type: 3}
-  - {fileID: 1839249793111828, guid: 9d3c90a2dba58924e8ed17a86aa43d49, type: 3}
-  - {fileID: 1914988455468238, guid: 0d9904eaba5f3294aa5be7771b4609a6, type: 3}
-  - {fileID: 1813334353150966, guid: b8ece3baa88a7654cabee2985f2690ea, type: 3}
+  - {fileID: 1763123759574736, guid: 452170fa7468ead45845f89d5b44c05e, type: 3}
+  - {fileID: 1239652667451144, guid: d0172cabea146224bb6097e202216270, type: 3}
+  - {fileID: 1634028590040330, guid: ae9ef55eb5b8fd240adbafb53b5ab894, type: 3}
+  - {fileID: 1634028590040330, guid: f56adba1d705e904b880ca0a91f058e7, type: 3}
+  - {fileID: 7929697659004423712, guid: ca0a192489af5484890a5e8ad2c29d34, type: 3}
+  - {fileID: 5471311237188062897, guid: 0fd776c338d9b964a8c7ef60418451d9, type: 3}
+  - {fileID: 1890354437817676, guid: 3716e4486286ec641a35f6066de8d156, type: 3}
+  - {fileID: 1890354437817676, guid: 563106ee6016fed47a27014490c22593, type: 3}
+  - {fileID: 1204804759395026, guid: 55dff5a9d0232aa41bcb525d10a568f9, type: 3}
+  - {fileID: 1793218661941054, guid: f05d9f4186e826442902b7d6151021f6, type: 3}
+  - {fileID: 1229596291006182, guid: 40355846b12e4d549b7c6cca16bbc9ca, type: 3}
+  - {fileID: 1418654568197628, guid: b6d0f46c90fcd584e92ca42c32c5cc57, type: 3}
+  - {fileID: 3841889996996222134, guid: dfb946d3b15fec947b473df4d685aa55, type: 3}
+  - {fileID: 5490007543794747572, guid: b8607f98abe4ac543a49635125d8dc1c, type: 3}
+  - {fileID: 1773814135996612, guid: 95b7cf92c82ff494494acaeaf78fe863, type: 3}
+  - {fileID: 1914988455468238, guid: a91c2bd76bd032e4590a2f372ce24e7d, type: 3}
+  - {fileID: 4839417567915996549, guid: cdb570c989989504b847983d4f49e7ce, type: 3}
+  - {fileID: 259038378052406618, guid: 0e41ee1b3998d8b46a4e7920ed22c7da, type: 3}
   - {fileID: 4479825481948057815, guid: 6e8a3a153c721da4486a4b61f9fe9dfe, type: 3}
   - {fileID: 8492163032622028845, guid: 0d6942e8a820d0647a1d3b716996a039, type: 3}
   - {fileID: 2830361676993368489, guid: bdbfee0b5f142514bbebce9a62ea8543, type: 3}
@@ -66063,7 +66075,7 @@ MonoBehaviour:
   - {fileID: 251826020689387783, guid: 74fe412cdb35acc4f943ba450b22cb7b, type: 3}
   - {fileID: 7185722257620384896, guid: cda568e08db34404c9c1e0f0c731c75b, type: 3}
   araba: {fileID: 6881951458042588019, guid: b565920f5b7017943bf3cee544a61256, type: 3}
-  arabaKapasitesi: 5
+  arabaKapasitesi: 4
   arabaOlusmaEfekt: {fileID: 2394445631678924146}
   iyiKapiEfekt: {fileID: 1068404907}
   kotuKapiEfekt: {fileID: 1595872567}

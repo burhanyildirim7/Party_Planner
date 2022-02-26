@@ -41,6 +41,7 @@ public class UIController : MonoBehaviour
             oncekiLevelScore = PlayerPrefs.GetInt("Score");
             Score = oncekiLevelScore;
         }
+        //Time.timeScale = 2.5f;
     }
 
     private void Start()
@@ -72,9 +73,9 @@ public class UIController : MonoBehaviour
         yield return beklemeSuresi5;
         while (Score >= oncekiLevelScore)
         {
-            oncekiLevelScore += 1;
+            oncekiLevelScore += 2;
             scoreDoldurucu.value = oncekiLevelScore;
-            yield return new WaitForSeconds(.006f);
+            yield return new WaitForSeconds(.0015f);
         }
     }
 

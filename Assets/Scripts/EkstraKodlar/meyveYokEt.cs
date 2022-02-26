@@ -18,7 +18,7 @@ public class meyveYokEt : MonoBehaviour
     {
         while(true)
         {
-            transform.localScale *= .95f;
+            transform.localScale *= .9f;
             yield return beklemeSuresi;
         }
     }
@@ -32,7 +32,7 @@ public class meyveYokEt : MonoBehaviour
                 MoreMountains.NiceVibrations.MMVibrationManager.Haptic(MoreMountains.NiceVibrations.HapticTypes.MediumImpact);
             }*/
 
-            Instantiate(suyaDusmeEfekt, transform.position + Vector3.up * .25f, Quaternion.Euler(-Vector3.right));
+            Instantiate(suyaDusmeEfekt, transform.position + Vector3.up * .175f, Quaternion.Euler(-Vector3.right * 90));
             gameObject.SetActive(false);
         }
     }

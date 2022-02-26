@@ -12369,7 +12369,7 @@ GameObject:
   - component: {fileID: 3498398160796286322}
   m_Layer: 6
   m_Name: "Sa\u011FToplama"
-  m_TagString: Kobje1
+  m_TagString: Iobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12452,7 +12452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 250
+  fiyat: 500
   fiyatYazdirici: {fileID: 6313919253162777366}
   punchResimleri:
   - {fileID: 4925780837632872387}
@@ -13016,7 +13016,7 @@ GameObject:
   - component: {fileID: 7539836623713414342}
   m_Layer: 6
   m_Name: SolToplama
-  m_TagString: Iobje1
+  m_TagString: Kobje1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13099,7 +13099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7901f6ebfb84fe4ca092c55ff616b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fiyat: 500
+  fiyat: 250
   fiyatYazdirici: {fileID: 7939614507783561553}
   punchResimleri:
   - {fileID: 3198128470640829803}
@@ -68196,7 +68196,7 @@ RectTransform:
   m_GameObject: {fileID: 4925780837157457454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.71921, z: 1}
+  m_LocalScale: {x: 0.91161, y: 0.65563905, z: 0.91161}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6313919252858987047}
@@ -68235,7 +68235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 861bc34fc00c79d45b636ef429e11d4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9faf1b5c9a4d1904fb65cb76ecd49d1e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -68862,7 +68862,7 @@ RectTransform:
   m_GameObject: {fileID: 4925780837632872387}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -50}
-  m_LocalScale: {x: 0.5593558, y: 0.57601005, z: 1}
+  m_LocalScale: {x: 0.68848217, y: 0.70898104, z: 1.2308483}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6313919252858987047}
@@ -68901,7 +68901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9faf1b5c9a4d1904fb65cb76ecd49d1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 861bc34fc00c79d45b636ef429e11d4a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -97919,7 +97919,7 @@ RectTransform:
   m_GameObject: {fileID: 6901757944177988274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.71921, z: 1}
+  m_LocalScale: {x: 0.6475819, y: 0.566644, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5043975192655629536}
@@ -97927,7 +97927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: -228}
+  m_AnchoredPosition: {x: -29, y: -200}
   m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4727776283200361976
@@ -97958,7 +97958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 861bc34fc00c79d45b636ef429e11d4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9faf1b5c9a4d1904fb65cb76ecd49d1e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
