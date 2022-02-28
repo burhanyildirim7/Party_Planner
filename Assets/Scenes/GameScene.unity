@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4770398, g: 0.79908794, b: 0.8987446, a: 1}
+  m_IndirectSpecularColor: {r: 0.47884, g: 0.8001845, b: 0.90072787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -50697,7 +50697,7 @@ MonoBehaviour:
   - {fileID: 7464049336757817229, guid: 13e2a64f52726a346a748c2264a8eec0, type: 3}
   - {fileID: 7464049336757817229, guid: 861bed4a5fd9b9d4aa7720903a1a9dad, type: 3}
   - {fileID: 7464049336757817229, guid: 16c6e90cf8886e3469622ffe1a7e22b1, type: 3}
-  finish: {fileID: 7350573023216488032, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
+  finish: {fileID: 8171440645877983034, guid: 0e84e398a0f3e4441a8eccec0f334a3c, type: 3}
 --- !u!1 &2080463388
 GameObject:
   m_ObjectHideFlags: 0
@@ -50863,7 +50863,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 300
   m_WholeNumbers: 0
-  m_Value: 300
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -51675,7 +51675,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -66540,8 +66540,8 @@ MonoBehaviour:
   davetli_Objeler:
   - {fileID: 2241701055861257680, guid: deffc0aa481e86c47af925aff11d05f0, type: 3}
   - {fileID: 8481561361878889820, guid: 113537ad06eaf9c4c8672d546598568f, type: 3}
-  - {fileID: 6698785607893020330, guid: f5bb8b8e9fba52e49886990fd873482e, type: 3}
-  - {fileID: 8604127858268107807, guid: 5b4c7c75e4199de4888b850d7b9ce3db, type: 3}
+  - {fileID: 1569960547764022025, guid: e8d72630307465a42b8ea55a2d0c1ae6, type: 3}
+  - {fileID: 5286171170675322240, guid: 667256cc828d1fc41973c51524410a42, type: 3}
   - {fileID: 5530402665044548691, guid: 50c965925855ef14c9c63a9219738fb9, type: 3}
   - {fileID: 3565101946100687148, guid: 255d4ff2b18b6f74cb0dd2b19b60211f, type: 3}
   - {fileID: 9206380278733916681, guid: 4191687842212dc4ab7d3f556e0fd97d, type: 3}
@@ -66551,14 +66551,14 @@ MonoBehaviour:
   davetli_Objeler_Tek:
   - {fileID: 7087445229365780461, guid: 6097af7c975dee44bb85e5c74c6c5299, type: 3}
   - {fileID: 3964709400027669846, guid: 779f57065e7d63347ba976b4cfa1dc87, type: 3}
-  - {fileID: 6331891167806281903, guid: a915dd92a7e7d0040bfbf3ed1de05826, type: 3}
-  - {fileID: 8429967381012568465, guid: f8e52ab8831939544b5630edbdd50141, type: 3}
+  - {fileID: 3602842902174763488, guid: 929bc65beb1c1a845852773fa5ad9737, type: 3}
+  - {fileID: 5172325618959976647, guid: cc48c84cad7fa9b44a63f04f16879e23, type: 3}
   - {fileID: 1459988731570104797, guid: 65cd8fef1e19afb49aca94f4b5cea32f, type: 3}
   - {fileID: 381167453255363678, guid: 6fdc6f49481f3a64bbe669ad6b64eaf0, type: 3}
   - {fileID: 6019318053616474974, guid: e6430ed06b0712e49a87ec61abbbeb03, type: 3}
   - {fileID: 7365774575533011473, guid: 5d8c9e535871fa64b8201a4d13ddf0c4, type: 3}
-  - {fileID: 7310270596467735096, guid: 0ea589e53d261dc49bd641125d4f42c1, type: 3}
-  - {fileID: 5791658998001228062, guid: 8fdc1e3d2007c06428efa5f86613a060, type: 3}
+  - {fileID: 8210422505731684816, guid: 6285311c7e6f9344bb7943c8af38d888, type: 3}
+  - {fileID: 7545472720097792410, guid: 297b3d32c48b37844b68620fe0bb35b6, type: 3}
   - {fileID: 251826020689387783, guid: 74fe412cdb35acc4f943ba450b22cb7b, type: 3}
   - {fileID: 7185722257620384896, guid: cda568e08db34404c9c1e0f0c731c75b, type: 3}
   araba: {fileID: 6881951458042588019, guid: b565920f5b7017943bf3cee544a61256, type: 3}
